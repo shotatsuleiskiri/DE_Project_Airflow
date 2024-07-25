@@ -1,0 +1,50 @@
+[2024-07-25T19:02:42.669+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dvtobv.film manual__2024-07-25T19:02:41.790494+00:00 [queued]>
+[2024-07-25T19:02:42.675+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dvtobv.film manual__2024-07-25T19:02:41.790494+00:00 [queued]>
+[2024-07-25T19:02:42.676+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-25T19:02:42.682+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film> on 2024-07-25 19:02:41.790494+00:00
+[2024-07-25T19:02:42.685+0000] {standard_task_runner.py:60} INFO - Started process 118 to run task
+[2024-07-25T19:02:42.687+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dvtobv', 'film', 'manual__2024-07-25T19:02:41.790494+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpivk_g8kw']
+[2024-07-25T19:02:42.689+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask film
+[2024-07-25T19:02:42.717+0000] {task_command.py:423} INFO - Running <TaskInstance: dvtobv.film manual__2024-07-25T19:02:41.790494+00:00 [running]> on host 8cde1e83ea49
+[2024-07-25T19:02:42.758+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dvtobv' AIRFLOW_CTX_TASK_ID='film' AIRFLOW_CTX_EXECUTION_DATE='2024-07-25T19:02:41.790494+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-25T19:02:41.790494+00:00'
+[2024-07-25T19:02:42.761+0000] {logging_mixin.py:188} INFO - table:stage film dvtobv
+[2024-07-25T19:02:42.761+0000] {logging_mixin.py:188} INFO - else
+[2024-07-25T19:02:42.773+0000] {logging_mixin.py:188} INFO - tabletype full
+[2024-07-25T19:02:42.773+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-07-25T19:02:42.774+0000] {logging_mixin.py:188} INFO - else
+[2024-07-25T19:02:42.780+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'tableType'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 53, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 41, in execute
+    DVToBV().create_full().some_function(table, stage)
+  File "/app/concretestage/DVToBV.py", line 27, in some_function
+    TableType = df['tableType'].values[0]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'tableType'
+[2024-07-25T19:02:42.787+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dvtobv, task_id=film, execution_date=20240725T190241, start_date=20240725T190242, end_date=20240725T190242
+[2024-07-25T19:02:42.899+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task film ('tableType'; 118)
+[2024-07-25T19:02:42.908+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-25T19:02:42.920+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,22 @@
+[2024-06-13T18:39:49.005+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country manual__2024-06-13T18:39:46.623538+00:00 [queued]>
+[2024-06-13T18:39:49.039+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country manual__2024-06-13T18:39:46.623538+00:00 [queued]>
+[2024-06-13T18:39:49.041+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-13T18:39:49.053+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-06-13 18:39:46.623538+00:00
+[2024-06-13T18:39:49.061+0000] {standard_task_runner.py:60} INFO - Started process 438 to run task
+[2024-06-13T18:39:49.067+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'manual__2024-06-13T18:39:46.623538+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpvctj_c2c']
+[2024-06-13T18:39:49.076+0000] {standard_task_runner.py:88} INFO - Job 24: Subtask country
+[2024-06-13T18:39:49.215+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country manual__2024-06-13T18:39:46.623538+00:00 [running]> on host 01e60193086e
+[2024-06-13T18:39:50.762+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-06-13T18:39:46.623538+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-13T18:39:46.623538+00:00'
+[2024-06-13T18:39:50.765+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-06-13T18:39:50.769+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: full 
+ schema: public 
+ table:category
+[2024-06-13T18:39:50.871+0000] {logging_mixin.py:188} INFO - <class 'list'>
+[2024-06-13T18:39:50.875+0000] {logging_mixin.py:188} INFO - [(1, 'Action', datetime.datetime(2006, 2, 15, 9, 46, 27)), (2, 'Animation', datetime.datetime(2006, 2, 15, 9, 46, 27)), (3, 'Children', datetime.datetime(2006, 2, 15, 9, 46, 27)), (4, 'Classics', datetime.datetime(2006, 2, 15, 9, 46, 27)), (5, 'Comedy', datetime.datetime(2006, 2, 15, 9, 46, 27)), (6, 'Documentary', datetime.datetime(2006, 2, 15, 9, 46, 27)), (7, 'Drama', datetime.datetime(2006, 2, 15, 9, 46, 27)), (8, 'Family', datetime.datetime(2006, 2, 15, 9, 46, 27)), (9, 'Foreign', datetime.datetime(2006, 2, 15, 9, 46, 27)), (10, 'Games', datetime.datetime(2006, 2, 15, 9, 46, 27)), (11, 'Horror', datetime.datetime(2006, 2, 15, 9, 46, 27)), (12, 'Music', datetime.datetime(2006, 2, 15, 9, 46, 27)), (13, 'New', datetime.datetime(2006, 2, 15, 9, 46, 27)), (14, 'Sci-Fi', datetime.datetime(2006, 2, 15, 9, 46, 27)), (15, 'Sports', datetime.datetime(2006, 2, 15, 9, 46, 27)), (16, 'Travel', datetime.datetime(2006, 2, 15, 9, 46, 27))] 
+: sourceDF
+[2024-06-13T18:39:50.882+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-13T18:39:50.930+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240613T183946, start_date=20240613T183949, end_date=20240613T183950
+[2024-06-13T18:39:51.005+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-13T18:39:51.095+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

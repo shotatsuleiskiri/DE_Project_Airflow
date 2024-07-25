@@ -1,0 +1,150 @@
+[2024-07-23T17:12:33.339+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T17:12:33.356+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T17:12:33.363+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T17:12:33.405+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T17:12:33.414+0000] {standard_task_runner.py:60} INFO - Started process 86 to run task
+[2024-07-23T17:12:33.422+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpou7wbhxv']
+[2024-07-23T17:12:33.429+0000] {standard_task_runner.py:88} INFO - Job 25: Subtask city
+[2024-07-23T17:12:33.521+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host f59a56d3cdcb
+[2024-07-23T17:12:33.666+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T17:12:33.676+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T17:12:35.063+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T17:12:35.094+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T17:12:35.103+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T171233, end_date=20240723T171235
+[2024-07-23T17:12:35.128+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T17:12:35.157+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T17:54:16.364+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T17:54:16.375+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T17:54:16.384+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T17:54:16.446+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T17:54:16.451+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-23T17:54:16.474+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2jgxumm7']
+[2024-07-23T17:54:16.479+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask city
+[2024-07-23T17:54:16.645+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host 3c1c8f0ee07d
+[2024-07-23T17:54:17.531+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T17:54:17.546+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T17:54:18.070+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T17:54:18.081+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T17:54:18.089+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T175416, end_date=20240723T175418
+[2024-07-23T17:54:18.132+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T17:54:18.159+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T18:01:02.156+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:01:02.175+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:01:02.176+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T18:01:02.221+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T18:01:02.237+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-07-23T18:01:02.247+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpm6qwkhhk']
+[2024-07-23T18:01:02.261+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask city
+[2024-07-23T18:01:02.405+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host 315a231b27e5
+[2024-07-23T18:01:03.350+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T18:01:03.358+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T18:01:03.647+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T18:01:03.668+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T18:01:03.675+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T180102, end_date=20240723T180103
+[2024-07-23T18:01:03.717+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T18:01:03.729+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T18:04:01.159+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:04:01.175+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:04:01.179+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T18:04:01.202+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T18:04:01.215+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-23T18:04:01.222+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp156_1_rp']
+[2024-07-23T18:04:01.230+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask city
+[2024-07-23T18:04:01.337+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host e53715a5cddb
+[2024-07-23T18:04:02.319+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T18:04:02.320+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T18:04:02.656+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T18:04:02.679+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T18:04:02.694+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T180401, end_date=20240723T180402
+[2024-07-23T18:04:02.733+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T18:04:02.781+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T18:06:48.049+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:06:48.066+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:06:48.066+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T18:06:48.098+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T18:06:48.117+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-23T18:06:48.160+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp88f4ddy0']
+[2024-07-23T18:06:48.171+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask city
+[2024-07-23T18:06:48.347+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host 4611c3991cbb
+[2024-07-23T18:06:49.176+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T18:06:49.186+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T18:06:49.437+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T18:06:49.459+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T18:06:49.467+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T180648, end_date=20240723T180649
+[2024-07-23T18:06:49.493+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T18:06:49.550+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T18:29:37.653+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:29:37.668+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T18:29:37.673+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T18:29:37.691+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T18:29:37.700+0000] {standard_task_runner.py:60} INFO - Started process 101 to run task
+[2024-07-23T18:29:37.706+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpzvtnvv93']
+[2024-07-23T18:29:37.714+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask city
+[2024-07-23T18:29:37.846+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host c954f6e68ded
+[2024-07-23T18:29:38.750+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T18:29:38.752+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T18:29:38.919+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T18:29:38.936+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T18:29:38.943+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T182937, end_date=20240723T182938
+[2024-07-23T18:29:38.981+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T18:29:38.994+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T19:03:40.527+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:03:40.540+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:03:40.543+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T19:03:40.568+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T19:03:40.589+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-23T19:03:40.608+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpbodj8jte']
+[2024-07-23T19:03:40.621+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask city
+[2024-07-23T19:03:40.754+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host fc8d45b704f5
+[2024-07-23T19:03:41.535+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T19:03:41.539+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T19:03:41.893+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T19:03:41.911+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T19:03:41.923+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T190340, end_date=20240723T190341
+[2024-07-23T19:03:41.953+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T19:03:41.965+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T19:14:05.178+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:14:05.213+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:14:05.217+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T19:14:05.245+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T19:14:05.254+0000] {standard_task_runner.py:60} INFO - Started process 110 to run task
+[2024-07-23T19:14:05.273+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpmsva1vfy']
+[2024-07-23T19:14:05.281+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask city
+[2024-07-23T19:14:05.397+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host 232d821b4a3b
+[2024-07-23T19:14:06.355+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T19:14:06.358+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T19:14:06.782+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T19:14:06.791+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T19:14:06.799+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T191405, end_date=20240723T191406
+[2024-07-23T19:14:06.835+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T19:14:06.848+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T19:16:53.842+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:16:53.887+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:16:53.890+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T19:16:53.930+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T19:16:53.944+0000] {standard_task_runner.py:60} INFO - Started process 108 to run task
+[2024-07-23T19:16:53.970+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwge_au2h']
+[2024-07-23T19:16:53.998+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask city
+[2024-07-23T19:16:54.191+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host edd08a02182b
+[2024-07-23T19:16:55.294+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T19:16:55.296+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T19:16:55.587+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T19:16:55.612+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T19:16:55.625+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T191653, end_date=20240723T191655
+[2024-07-23T19:16:55.663+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T19:16:55.716+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-23T19:24:54.771+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:24:54.784+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [queued]>
+[2024-07-23T19:24:54.786+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-23T19:24:54.808+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-22 00:00:00+00:00
+[2024-07-23T19:24:54.819+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-23T19:24:54.822+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'scheduled__2024-07-22T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxq9_6mbj']
+[2024-07-23T19:24:54.829+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask city
+[2024-07-23T19:24:54.933+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city scheduled__2024-07-22T00:00:00+00:00 [running]> on host b19a9c320dfd
+[2024-07-23T19:24:55.570+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-22T00:00:00+00:00'
+[2024-07-23T19:24:55.574+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-23T19:24:56.459+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-23T19:24:56.497+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-23T19:24:56.507+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240722T000000, start_date=20240723T192454, end_date=20240723T192456
+[2024-07-23T19:24:56.533+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-23T19:24:56.586+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

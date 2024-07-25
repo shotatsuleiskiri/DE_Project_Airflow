@@ -1,0 +1,242 @@
+[2024-07-08T18:13:46.724+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:13:46.745+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:13:46.746+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-08T18:13:46.799+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-07 00:00:00+00:00
+[2024-07-08T18:13:46.804+0000] {standard_task_runner.py:60} INFO - Started process 128 to run task
+[2024-07-08T18:13:46.813+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'category', 'scheduled__2024-07-07T00:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6819r9mz']
+[2024-07-08T18:13:46.818+0000] {standard_task_runner.py:88} INFO - Job 38: Subtask category
+[2024-07-08T18:13:46.920+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [running]> on host 091922596b62
+[2024-07-08T18:13:47.098+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-07T00:00:00+00:00'
+[2024-07-08T18:13:47.103+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-08T18:13:47.109+0000] {logging_mixin.py:188} INFO - table: category
+[2024-07-08T18:13:47.115+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:category
+[2024-07-08T18:13:47.116+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'SqlToStaging'
+[2024-07-08T18:13:47.147+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 0    category
+Name: sourcetablename, dtype: object 0    public
+Name: sourceschema, dtype: object
+[2024-07-08T18:13:47.180+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 34, in some_function
+    sourceDF = getDF(df['sourcedbname'], df['sourcetablename'], df['sourceschema'])
+  File "/app/myFramework/utils/utils.py", line 22, in getDF
+    cur = conn.getCursor(source_dbname)
+  File "/app/myFramework/source/posgresql/connect.py", line 6, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (192.168.0.3), port 9999 failed: FATAL:  database "0    dvdrental
+Name: sourcedbname, dtype: object" does not exist
+
+[2024-07-08T18:13:47.555+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=category, execution_date=20240707T000000, start_date=20240708T181346, end_date=20240708T181347
+[2024-07-08T18:13:47.591+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 38 for task category (connection to server at "postgres_db" (192.168.0.3), port 9999 failed: FATAL:  database "0    dvdrental
+Name: sourcedbname, dtype: object" does not exist
+; 128)
+[2024-07-08T18:13:47.628+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-08T18:13:47.669+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-08T18:17:21.429+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:17:21.444+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:17:21.457+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-08T18:17:21.488+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-07 00:00:00+00:00
+[2024-07-08T18:17:21.503+0000] {standard_task_runner.py:60} INFO - Started process 85 to run task
+[2024-07-08T18:17:21.508+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'category', 'scheduled__2024-07-07T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp7u912jrh']
+[2024-07-08T18:17:21.541+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask category
+[2024-07-08T18:17:21.724+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [running]> on host 0c73c124d202
+[2024-07-08T18:17:21.974+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-07T00:00:00+00:00'
+[2024-07-08T18:17:21.995+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-08T18:17:22.000+0000] {logging_mixin.py:188} INFO - table: category
+[2024-07-08T18:17:22.001+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:category
+[2024-07-08T18:17:22.005+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'SqlToStaging'
+[2024-07-08T18:17:23.905+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 0    category
+Name: sourcetablename, dtype: object 0    public
+Name: sourceschema, dtype: object
+[2024-07-08T18:17:23.932+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 34, in some_function
+    sourceDF = getDF(df['sourcedbname'], df['sourcetablename'], df['sourceschema'])
+  File "/app/myFramework/utils/utils.py", line 22, in getDF
+    cur = conn.getCursor(source_dbname)
+  File "/app/myFramework/source/posgresql/connect.py", line 6, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.18.0.5), port 9999 failed: FATAL:  database "0    dvdrental
+Name: sourcedbname, dtype: object" does not exist
+
+[2024-07-08T18:17:23.979+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=category, execution_date=20240707T000000, start_date=20240708T181721, end_date=20240708T181723
+[2024-07-08T18:17:24.023+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task category (connection to server at "postgres_db" (172.18.0.5), port 9999 failed: FATAL:  database "0    dvdrental
+Name: sourcedbname, dtype: object" does not exist
+; 85)
+[2024-07-08T18:17:24.060+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-08T18:17:24.110+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-08T18:19:48.894+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:19:48.928+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:19:48.930+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-08T18:19:48.970+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-07 00:00:00+00:00
+[2024-07-08T18:19:48.993+0000] {standard_task_runner.py:60} INFO - Started process 101 to run task
+[2024-07-08T18:19:49.016+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'category', 'scheduled__2024-07-07T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpd2jdow39']
+[2024-07-08T18:19:49.046+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask category
+[2024-07-08T18:19:49.202+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [running]> on host 987b4d541fd1
+[2024-07-08T18:19:49.453+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-07T00:00:00+00:00'
+[2024-07-08T18:19:49.458+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-08T18:19:49.463+0000] {logging_mixin.py:188} INFO - table: category
+[2024-07-08T18:19:49.465+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:category
+[2024-07-08T18:19:49.466+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'SqlToStaging'
+[2024-07-08T18:19:50.184+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 0    category
+Name: sourcetablename, dtype: object 0    public
+Name: sourceschema, dtype: object
+[2024-07-08T18:19:50.186+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-08T18:19:50.201+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=SqlToStaging, task_id=category, execution_date=20240707T000000, start_date=20240708T181948, end_date=20240708T181950
+[2024-07-08T18:19:50.245+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-08T18:19:50.302+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-08T18:26:44.189+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:26:44.249+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:26:44.256+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-08T18:26:44.291+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-07 00:00:00+00:00
+[2024-07-08T18:26:44.306+0000] {standard_task_runner.py:60} INFO - Started process 103 to run task
+[2024-07-08T18:26:44.309+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'category', 'scheduled__2024-07-07T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpvlgjg_np']
+[2024-07-08T18:26:44.312+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask category
+[2024-07-08T18:26:44.426+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [running]> on host 7f814bc03799
+[2024-07-08T18:26:44.634+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-07T00:00:00+00:00'
+[2024-07-08T18:26:44.642+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-08T18:26:44.643+0000] {logging_mixin.py:188} INFO - table: category
+[2024-07-08T18:26:44.647+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:category
+[2024-07-08T18:26:44.650+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'SqlToStaging'
+[2024-07-08T18:26:44.701+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 0    category
+Name: sourcetablename, dtype: object 0    public
+Name: sourceschema, dtype: object
+[2024-07-08T18:26:44.734+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 34, in some_function
+    sourceDF = getDF(df['sourcedbname'], df['sourcetablename'], df['sourceschema'])
+  File "/app/myFramework/utils/utils.py", line 22, in getDF
+    cur = conn.getCursor(source_dbname)
+  File "/app/myFramework/source/posgresql/connect.py", line 6, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.20.0.5), port 9999 failed: FATAL:  database "0    dvdrental
+Name: sourcedbname, dtype: object" does not exist
+
+[2024-07-08T18:26:45.370+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=category, execution_date=20240707T000000, start_date=20240708T182644, end_date=20240708T182645
+[2024-07-08T18:26:45.400+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 17 for task category (connection to server at "postgres_db" (172.20.0.5), port 9999 failed: FATAL:  database "0    dvdrental
+Name: sourcedbname, dtype: object" does not exist
+; 103)
+[2024-07-08T18:26:45.449+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-08T18:26:45.559+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-08T18:32:10.825+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:32:10.855+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:32:10.868+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-08T18:32:10.930+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-07 00:00:00+00:00
+[2024-07-08T18:32:10.950+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-08T18:32:10.957+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'category', 'scheduled__2024-07-07T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpn2fk9g5w']
+[2024-07-08T18:32:10.978+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask category
+[2024-07-08T18:32:11.364+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [running]> on host 7f77c3b92645
+[2024-07-08T18:32:11.667+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-07T00:00:00+00:00'
+[2024-07-08T18:32:11.674+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-08T18:32:11.683+0000] {logging_mixin.py:188} INFO - table: category
+[2024-07-08T18:32:11.705+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:category
+[2024-07-08T18:32:11.713+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'SqlToStaging'
+[2024-07-08T18:32:12.747+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 0    category
+Name: sourcetablename, dtype: object 0    public
+Name: sourceschema, dtype: object
+[2024-07-08T18:32:12.770+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-08T18:32:12.794+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=SqlToStaging, task_id=category, execution_date=20240707T000000, start_date=20240708T183210, end_date=20240708T183212
+[2024-07-08T18:32:12.851+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-08T18:32:12.977+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-08T18:35:58.978+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:35:59.002+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [queued]>
+[2024-07-08T18:35:59.007+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-08T18:35:59.049+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-07 00:00:00+00:00
+[2024-07-08T18:35:59.066+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-08T18:35:59.082+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'category', 'scheduled__2024-07-07T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6x51hyc_']
+[2024-07-08T18:35:59.089+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask category
+[2024-07-08T18:35:59.248+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.category scheduled__2024-07-07T00:00:00+00:00 [running]> on host a9b6fbb697c1
+[2024-07-08T18:36:00.620+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-07T00:00:00+00:00'
+[2024-07-08T18:36:00.634+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-08T18:36:00.636+0000] {logging_mixin.py:188} INFO - table: category
+[2024-07-08T18:36:00.637+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:category
+[2024-07-08T18:36:00.638+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'SqlToStaging'
+[2024-07-08T18:36:00.641+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 138, in get_data_from_conf_table
+    cur = conn.getCursor("postgres")
+  File "/app/myFramework/source/posgresql/connect.py", line 6, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "0.0.0.0", port 9999 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2024-07-08T18:36:00.661+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=category, execution_date=20240707T000000, start_date=20240708T183558, end_date=20240708T183600
+[2024-07-08T18:36:00.676+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 15 for task category (connection to server at "0.0.0.0", port 9999 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+; 100)
+[2024-07-08T18:36:00.719+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-08T18:36:00.743+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

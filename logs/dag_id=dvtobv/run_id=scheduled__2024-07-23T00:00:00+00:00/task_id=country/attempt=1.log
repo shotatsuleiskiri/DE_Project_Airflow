@@ -1,0 +1,38 @@
+[2024-07-24T19:49:40.013+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dvtobv.country scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T19:49:40.036+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dvtobv.country scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T19:49:40.038+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T19:49:40.081+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-23 00:00:00+00:00
+[2024-07-24T19:49:40.120+0000] {standard_task_runner.py:60} INFO - Started process 109 to run task
+[2024-07-24T19:49:40.147+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dvtobv', 'country', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpbsuy1yde']
+[2024-07-24T19:49:40.163+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask country
+[2024-07-24T19:49:40.416+0000] {task_command.py:423} INFO - Running <TaskInstance: dvtobv.country scheduled__2024-07-23T00:00:00+00:00 [running]> on host 8ab20c69e78f
+[2024-07-24T19:49:41.808+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dvtobv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T19:49:41.810+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'dvtobv'
+[2024-07-24T19:49:41.832+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 43, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 36, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 16 elements
+[2024-07-24T19:49:41.846+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dvtobv, task_id=country, execution_date=20240723T000000, start_date=20240724T194940, end_date=20240724T194941
+[2024-07-24T19:49:41.859+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 15 for task country (Length mismatch: Expected axis has 0 elements, new values have 16 elements; 109)
+[2024-07-24T19:49:41.892+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-24T19:49:41.944+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,437 @@
+[2024-07-02T18:42:24.343+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:42:24.351+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:42:24.356+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T18:42:24.371+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T18:42:24.381+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-02T18:42:24.395+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpo46_5y17']
+[2024-07-02T18:42:24.400+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask rental
+[2024-07-02T18:42:24.572+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 5b7251376729
+[2024-07-02T18:42:25.906+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T18:42:25.926+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: process_table() missing 1 required positional argument: 'table_type'
+[2024-07-02T18:42:25.933+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T184224, end_date=20240702T184225
+[2024-07-02T18:42:25.949+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 15 for task rental (process_table() missing 1 required positional argument: 'table_type'; 89)
+[2024-07-02T18:42:25.970+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T18:42:26.070+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T18:50:28.357+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:50:28.368+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:50:28.373+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T18:50:28.406+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T18:50:28.433+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-02T18:50:28.437+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpivslyjo1']
+[2024-07-02T18:50:28.444+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask rental
+[2024-07-02T18:50:28.559+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host e236fd1115af
+[2024-07-02T18:50:29.463+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T18:50:29.472+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T18:50:29.487+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T18:50:29.493+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T18:50:29.510+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 25, in some_function
+    sourceDF = getDF(yaml.getSourceDBName(), yaml.getTSourceTableName(),yaml.getSourceSchema())
+  File "/app/myFramework/utils/readYaml.py", line 25, in getSourceDBName
+    return self.getYaml()['SourceDBName']
+  File "/app/myFramework/utils/readYaml.py", line 18, in getYaml
+    return yaml_data[self.key]
+KeyError: 'public.rental'
+[2024-07-02T18:50:29.566+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T185028, end_date=20240702T185029
+[2024-07-02T18:50:29.613+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 11 for task rental ('public.rental'; 93)
+[2024-07-02T18:50:29.659+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T18:50:29.696+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:20:12.953+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:20:12.971+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:20:12.976+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:20:13.048+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:20:13.064+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-02T20:20:13.077+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkeb4bcee']
+[2024-07-02T20:20:13.084+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask rental
+[2024-07-02T20:20:13.372+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 881b4526a2de
+[2024-07-02T20:20:13.813+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:20:13.822+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:20:13.830+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:20:13.831+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T20:20:13.859+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 29, in some_function
+    print(get_data_from_conf_table("staff", "SqlToStaging"))
+  File "/app/myFramework/utils/utils.py", line 137, in get_data_from_conf_table
+    cur = conn.getCursor("Postgres")
+  File "/app/myFramework/source/posgresql/connect.py", line 6, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.20.0.3), port 9999 failed: FATAL:  database "Postgres" does not exist
+
+[2024-07-02T20:20:15.061+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T202012, end_date=20240702T202015
+[2024-07-02T20:20:15.134+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3 for task rental (connection to server at "postgres_db" (172.20.0.3), port 9999 failed: FATAL:  database "Postgres" does not exist
+; 90)
+[2024-07-02T20:20:15.171+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:20:15.253+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:22:14.201+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:22:14.215+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:22:14.217+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:22:14.254+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:22:14.260+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-02T20:22:14.302+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfh0kn9ix']
+[2024-07-02T20:22:14.308+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask rental
+[2024-07-02T20:22:14.451+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host b2ca66e4d1f6
+[2024-07-02T20:22:15.916+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:22:15.940+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:22:15.957+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:22:15.962+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T20:22:16.115+0000] {logging_mixin.py:188} INFO -    0      1          2       3     4   ...    10    11    12            13    14
+0   9  staff  dvdrental  public  full  ...  None  None  None  SqlToStaging  None
+
+[1 rows x 15 columns]
+[2024-07-02T20:22:16.120+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:22:16.139+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T202214, end_date=20240702T202216
+[2024-07-02T20:22:16.201+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:22:16.300+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:25:37.632+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:25:37.662+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:25:37.664+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:25:37.715+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:25:37.735+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-02T20:25:37.757+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpp8e7ct7i']
+[2024-07-02T20:25:37.779+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask rental
+[2024-07-02T20:25:37.920+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host e847a37dafab
+[2024-07-02T20:25:39.062+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:25:39.072+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:25:39.078+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:25:39.082+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T20:25:39.299+0000] {logging_mixin.py:188} INFO - <class 'pandas.core.frame.DataFrame'>
+[2024-07-02T20:25:39.346+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   9           staff    dvdrental  ...  None  SqlToStaging          None
+
+[1 rows x 15 columns]
+[2024-07-02T20:25:39.349+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:25:39.364+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T202537, end_date=20240702T202539
+[2024-07-02T20:25:39.439+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:25:39.482+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:33:53.659+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:33:53.674+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:33:53.684+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:33:53.722+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:33:53.727+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-02T20:33:53.741+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpumm_znyi']
+[2024-07-02T20:33:53.746+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask rental
+[2024-07-02T20:33:53.927+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 99fbc1087931
+[2024-07-02T20:33:55.388+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:33:55.394+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:33:55.395+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:33:55.396+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T20:33:55.432+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'SourceDBName'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    print(f"{df['SourceDBName']} \n {df['SourceTableName']} \n {df['SourceSchema']}")
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'SourceDBName'
+[2024-07-02T20:33:55.448+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T203353, end_date=20240702T203355
+[2024-07-02T20:33:55.475+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task rental ('SourceDBName'; 92)
+[2024-07-02T20:33:55.494+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:33:55.517+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:36:08.026+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:36:08.053+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:36:08.062+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:36:08.107+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:36:08.140+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-02T20:36:08.144+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpreh6oy7h']
+[2024-07-02T20:36:08.155+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask rental
+[2024-07-02T20:36:08.272+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 8ef3b2afa95a
+[2024-07-02T20:36:09.120+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:36:09.122+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:36:09.123+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:36:09.124+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T20:36:09.194+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 
+ 0    staff
+Name: sourcetablename, dtype: object 
+ 0    public
+Name: sourceschema, dtype: object
+[2024-07-02T20:36:09.199+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:36:09.218+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T203608, end_date=20240702T203609
+[2024-07-02T20:36:09.283+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:36:09.322+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:40:31.071+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:40:31.095+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:40:31.098+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:40:31.138+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:40:31.142+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-02T20:40:31.154+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpewfz4g79']
+[2024-07-02T20:40:31.181+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask rental
+[2024-07-02T20:40:31.409+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host f7a45131ad00
+[2024-07-02T20:40:33.087+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:40:33.093+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:40:33.097+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:40:33.104+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T20:40:33.130+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 29, in some_function
+    df = get_data_from_conf_table(table, stage)
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-02T20:40:33.156+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T204031, end_date=20240702T204033
+[2024-07-02T20:40:33.170+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task rental (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 89)
+[2024-07-02T20:40:33.200+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:40:33.242+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:44:45.067+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:44:45.075+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:44:45.077+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:44:45.125+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:44:45.151+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-02T20:44:45.169+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqremle8u']
+[2024-07-02T20:44:45.194+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask rental
+[2024-07-02T20:44:45.305+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 28c1247628aa
+[2024-07-02T20:44:46.548+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:44:46.549+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:44:46.551+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:44:46.551+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:rental
+[2024-07-02T20:44:46.552+0000] {logging_mixin.py:188} INFO - sqltostaging rental
+[2024-07-02T20:44:46.553+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:44:46.571+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T204445, end_date=20240702T204446
+[2024-07-02T20:44:46.629+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:44:46.687+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:47:20.752+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:47:20.796+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:47:20.803+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:47:20.819+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:47:20.835+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-02T20:47:20.843+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpf0ttn_8z']
+[2024-07-02T20:47:20.853+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask rental
+[2024-07-02T20:47:20.948+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 0dbf5a897656
+[2024-07-02T20:47:22.019+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:47:22.024+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:47:22.031+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:47:22.070+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+TypeError: execute() missing 2 required positional arguments: 'type' and 'schema'
+[2024-07-02T20:47:22.115+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T204720, end_date=20240702T204722
+[2024-07-02T20:47:22.181+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task rental (execute() missing 2 required positional arguments: 'type' and 'schema'; 96)
+[2024-07-02T20:47:22.248+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:47:22.421+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:49:58.190+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:49:58.209+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:49:58.209+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:49:58.245+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:49:58.255+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-02T20:49:58.268+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqd_c3kb4']
+[2024-07-02T20:49:58.275+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask rental
+[2024-07-02T20:49:58.397+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 82e116e15bed
+[2024-07-02T20:49:59.796+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:49:59.808+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:49:59.813+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:49:59.816+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:rental
+[2024-07-02T20:49:59.817+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, table)
+TypeError: some_function() missing 2 required positional arguments: 'schema' and 'table'
+[2024-07-02T20:49:59.829+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T204958, end_date=20240702T204959
+[2024-07-02T20:49:59.846+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task rental (some_function() missing 2 required positional arguments: 'schema' and 'table'; 89)
+[2024-07-02T20:49:59.887+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:49:59.912+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:51:51.274+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:51:51.312+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:51:51.315+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:51:51.397+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:51:51.402+0000] {standard_task_runner.py:60} INFO - Started process 97 to run task
+[2024-07-02T20:51:51.432+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmphcyamr77']
+[2024-07-02T20:51:51.437+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask rental
+[2024-07-02T20:51:51.630+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host 910796d1882f
+[2024-07-02T20:51:52.981+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:51:52.985+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:51:52.989+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:51:52.990+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:rental
+[2024-07-02T20:51:53.023+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, table)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    df = get_data_from_conf_table(table, stage)
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-02T20:51:53.038+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T205151, end_date=20240702T205153
+[2024-07-02T20:51:53.046+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 13 for task rental (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 97)
+[2024-07-02T20:51:53.114+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:51:53.163+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:54:17.480+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:54:17.496+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:54:17.506+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:54:17.547+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:54:17.555+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-02T20:54:17.568+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'rental', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkpevt_o4']
+[2024-07-02T20:54:17.577+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask rental
+[2024-07-02T20:54:17.783+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.rental scheduled__2024-07-01T00:00:00+00:00 [running]> on host df9727a9ba29
+[2024-07-02T20:54:18.025+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:54:18.027+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:54:18.028+0000] {logging_mixin.py:188} INFO - table: rental
+[2024-07-02T20:54:18.032+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:rental
+[2024-07-02T20:54:18.162+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 
+ 0    staff
+Name: sourcetablename, dtype: object 
+ 0    public
+Name: sourceschema, dtype: object
+[2024-07-02T20:54:18.173+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:54:18.935+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=rental, execution_date=20240701T000000, start_date=20240702T205417, end_date=20240702T205418
+[2024-07-02T20:54:19.046+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:54:19.083+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

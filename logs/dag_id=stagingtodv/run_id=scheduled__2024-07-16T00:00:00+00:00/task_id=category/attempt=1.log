@@ -1,0 +1,16 @@
+[2024-07-22T18:39:24.654+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-16T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:24.697+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-16T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:24.703+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T18:39:24.788+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-16 00:00:00+00:00
+[2024-07-22T18:39:24.797+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-22T18:39:24.813+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'category', 'scheduled__2024-07-16T00:00:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2nbwyau1']
+[2024-07-22T18:39:24.839+0000] {standard_task_runner.py:88} INFO - Job 24: Subtask category
+[2024-07-22T18:39:25.167+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.category scheduled__2024-07-16T00:00:00+00:00 [running]> on host ef8b8dee6045
+[2024-07-22T18:39:25.639+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-16T00:00:00+00:00'
+[2024-07-22T18:39:25.653+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'stagingtodv'
+[2024-07-22T18:39:26.491+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'stagingtodv'
+[2024-07-22T18:39:27.883+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='category';
+[2024-07-22T18:39:27.958+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T18:39:27.995+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=category, execution_date=20240716T000000, start_date=20240722T183924, end_date=20240722T183927
+[2024-07-22T18:39:28.126+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T18:39:28.208+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

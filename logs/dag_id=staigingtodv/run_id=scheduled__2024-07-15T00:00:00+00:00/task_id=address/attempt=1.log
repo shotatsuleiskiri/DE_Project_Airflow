@@ -1,0 +1,148 @@
+[2024-07-16T16:54:48.878+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:54:48.897+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:54:48.903+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T16:54:48.943+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): address> on 2024-07-15 00:00:00+00:00
+[2024-07-16T16:54:48.952+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-16T16:54:48.971+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'address', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp3a6_zdqn']
+[2024-07-16T16:54:48.981+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask address
+[2024-07-16T16:54:49.110+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [running]> on host d9cb41fade7e
+[2024-07-16T16:54:49.306+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='address' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T16:54:50.376+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T16:54:50.394+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=address, execution_date=20240715T000000, start_date=20240716T165448, end_date=20240716T165450
+[2024-07-16T16:54:50.417+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task address (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 93)
+[2024-07-16T16:54:50.453+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T16:54:50.502+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T16:58:22.044+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:58:22.088+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:58:22.095+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T16:58:22.132+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): address> on 2024-07-15 00:00:00+00:00
+[2024-07-16T16:58:22.142+0000] {standard_task_runner.py:60} INFO - Started process 98 to run task
+[2024-07-16T16:58:22.154+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'address', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp81njf7dh']
+[2024-07-16T16:58:22.162+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask address
+[2024-07-16T16:58:22.407+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [running]> on host bd70e8223b94
+[2024-07-16T16:58:23.609+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='address' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T16:58:23.662+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T16:58:23.703+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=address, execution_date=20240715T000000, start_date=20240716T165822, end_date=20240716T165823
+[2024-07-16T16:58:23.769+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task address (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 98)
+[2024-07-16T16:58:23.798+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T16:58:23.895+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T17:06:16.480+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:06:16.502+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:06:16.507+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T17:06:16.527+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): address> on 2024-07-15 00:00:00+00:00
+[2024-07-16T17:06:16.532+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-16T17:06:16.562+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'address', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpktkcutre']
+[2024-07-16T17:06:16.577+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask address
+[2024-07-16T17:06:16.796+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [running]> on host d972e0703431
+[2024-07-16T17:06:18.007+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='address' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T17:06:18.081+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T17:06:18.097+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=address, execution_date=20240715T000000, start_date=20240716T170616, end_date=20240716T170618
+[2024-07-16T17:06:18.117+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 14 for task address (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 94)
+[2024-07-16T17:06:18.142+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T17:06:18.201+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T17:10:13.472+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:10:13.498+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:10:13.500+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T17:10:13.531+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): address> on 2024-07-15 00:00:00+00:00
+[2024-07-16T17:10:13.554+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-16T17:10:13.591+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'address', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpylcd9bze']
+[2024-07-16T17:10:13.618+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask address
+[2024-07-16T17:10:13.821+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.address scheduled__2024-07-15T00:00:00+00:00 [running]> on host a8165c4616a2
+[2024-07-16T17:10:15.106+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='address' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T17:10:15.153+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T17:10:15.171+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=address, execution_date=20240715T000000, start_date=20240716T171013, end_date=20240716T171015
+[2024-07-16T17:10:15.197+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 7 for task address (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 94)
+[2024-07-16T17:10:15.230+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T17:10:15.280+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

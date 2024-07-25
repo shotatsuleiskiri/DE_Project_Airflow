@@ -1,0 +1,35 @@
+[2024-07-10T20:28:09.213+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.staff manual__2024-07-10T20:28:06.951158+00:00 [queued]>
+[2024-07-10T20:28:09.222+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.staff manual__2024-07-10T20:28:06.951158+00:00 [queued]>
+[2024-07-10T20:28:09.232+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-10T20:28:09.276+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): staff> on 2024-07-10 20:28:06.951158+00:00
+[2024-07-10T20:28:09.336+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'staff', 'manual__2024-07-10T20:28:06.951158+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp301mhz7k']
+[2024-07-10T20:28:09.341+0000] {standard_task_runner.py:88} INFO - Job 23: Subtask staff
+[2024-07-10T20:28:09.341+0000] {standard_task_runner.py:60} INFO - Started process 203 to run task
+[2024-07-10T20:28:09.479+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.staff manual__2024-07-10T20:28:06.951158+00:00 [running]> on host d72f5bf26a9d
+[2024-07-10T20:28:09.893+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='staff' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T20:28:06.951158+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-10T20:28:06.951158+00:00'
+[2024-07-10T20:28:10.003+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'staff' and Stage = 'sqltostaging'
+[2024-07-10T20:28:10.624+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   9           staff    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-10T20:28:10.632+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 44, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 26, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 38, in some_function
+    sourceDF = getDF(sourcedbname,sourcetablename , sourceschema)
+TypeError: getDF() missing 3 required positional arguments: 'filterColumn', 'dateFrom', and 'dateTo'
+[2024-07-10T20:28:10.643+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=staff, execution_date=20240710T202806, start_date=20240710T202809, end_date=20240710T202810
+[2024-07-10T20:28:10.690+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 23 for task staff (getDF() missing 3 required positional arguments: 'filterColumn', 'dateFrom', and 'dateTo'; 203)
+[2024-07-10T20:28:10.845+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-10T20:28:10.934+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

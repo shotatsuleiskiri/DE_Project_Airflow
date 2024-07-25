@@ -1,0 +1,41 @@
+[2024-07-02T18:45:21.201+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.customer manual__2024-07-02T18:45:18.498280+00:00 [queued]>
+[2024-07-02T18:45:21.248+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.customer manual__2024-07-02T18:45:18.498280+00:00 [queued]>
+[2024-07-02T18:45:21.252+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T18:45:21.287+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-02 18:45:18.498280+00:00
+[2024-07-02T18:45:21.292+0000] {standard_task_runner.py:60} INFO - Started process 231 to run task
+[2024-07-02T18:45:21.317+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'customer', 'manual__2024-07-02T18:45:18.498280+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpbtml33vk']
+[2024-07-02T18:45:21.329+0000] {standard_task_runner.py:88} INFO - Job 40: Subtask customer
+[2024-07-02T18:45:21.451+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.customer manual__2024-07-02T18:45:18.498280+00:00 [running]> on host 5b7251376729
+[2024-07-02T18:45:21.674+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T18:45:18.498280+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-02T18:45:18.498280+00:00'
+[2024-07-02T18:45:21.684+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T18:45:21.693+0000] {logging_mixin.py:188} INFO - table: customer
+[2024-07-02T18:45:21.696+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:customer
+[2024-07-02T18:45:21.698+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 25, in some_function
+    sourceDF = getDF(yaml.getSourceDBName(), yaml.getTSourceTableName(),yaml.getSourceSchema())
+  File "/app/myFramework/utils/readYaml.py", line 25, in getSourceDBName
+    return self.getYaml()['SourceDBName']
+  File "/app/myFramework/utils/readYaml.py", line 15, in getYaml
+    with open(yaml_file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/app/conf/sqltostaging/FULL.yaml'
+[2024-07-02T18:45:21.753+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=customer, execution_date=20240702T184518, start_date=20240702T184521, end_date=20240702T184521
+[2024-07-02T18:45:22.430+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 40 for task customer ([Errno 2] No such file or directory: '/app/conf/sqltostaging/FULL.yaml'; 231)
+[2024-07-02T18:45:22.482+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T18:45:23.113+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

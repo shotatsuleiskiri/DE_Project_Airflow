@@ -1,0 +1,22 @@
+[2024-07-22T20:27:46.541+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.language manual__2024-07-22T20:27:43.482203+00:00 [queued]>
+[2024-07-22T20:27:46.555+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.language manual__2024-07-22T20:27:43.482203+00:00 [queued]>
+[2024-07-22T20:27:46.559+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:27:46.589+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): language> on 2024-07-22 20:27:43.482203+00:00
+[2024-07-22T20:27:46.605+0000] {standard_task_runner.py:60} INFO - Started process 355 to run task
+[2024-07-22T20:27:46.623+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'language', 'manual__2024-07-22T20:27:43.482203+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxczs_sew']
+[2024-07-22T20:27:46.638+0000] {standard_task_runner.py:88} INFO - Job 43: Subtask language
+[2024-07-22T20:27:46.814+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.language manual__2024-07-22T20:27:43.482203+00:00 [running]> on host 78ac63ab6c84
+[2024-07-22T20:27:47.088+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='language' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T20:27:43.482203+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-22T20:27:43.482203+00:00'
+[2024-07-22T20:27:47.094+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'language' and Stage = 'stagingtodv'
+[2024-07-22T20:27:48.139+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF    0                     1                   2
+0  1  English              2006-02-15 10:02:19
+1  2  Italian              2006-02-15 10:02:19
+2  3  Japanese             2006-02-15 10:02:19
+3  4  Mandarin             2006-02-15 10:02:19
+4  5  French               2006-02-15 10:02:19
+5  6  German               2006-02-15 10:02:19
+[2024-07-22T20:27:48.311+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='language';
+[2024-07-22T20:27:48.334+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:27:48.347+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=language, execution_date=20240722T202743, start_date=20240722T202746, end_date=20240722T202748
+[2024-07-22T20:27:48.387+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:27:48.401+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

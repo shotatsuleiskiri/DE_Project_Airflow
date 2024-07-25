@@ -1,0 +1,131 @@
+[2024-07-25T18:18:56.057+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:18:56.084+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:18:56.087+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-25T18:18:56.144+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-24 00:00:00+00:00
+[2024-07-25T18:18:56.172+0000] {standard_task_runner.py:60} INFO - Started process 121 to run task
+[2024-07-25T18:18:56.179+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'category', 'scheduled__2024-07-24T00:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6mmcvenq']
+[2024-07-25T18:18:56.187+0000] {standard_task_runner.py:88} INFO - Job 47: Subtask category
+[2024-07-25T18:18:56.316+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [running]> on host 7dd317f3ab25
+[2024-07-25T18:18:56.538+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-24T00:00:00+00:00'
+[2024-07-25T18:18:56.549+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'stagingtodv'
+[2024-07-25T18:18:58.024+0000] {logging_mixin.py:188} INFO - genaretedDF     category_id         name         last_update
+0           NaN       Action 2006-02-15 09:46:27
+1           NaN    Animation 2006-02-15 09:46:27
+2           NaN     Children 2006-02-15 09:46:27
+3           NaN     Classics 2006-02-15 09:46:27
+4           NaN       Comedy 2006-02-15 09:46:27
+5           NaN  Documentary 2006-02-15 09:46:27
+6           NaN        Drama 2006-02-15 09:46:27
+7           NaN       Family 2006-02-15 09:46:27
+8           NaN      Foreign 2006-02-15 09:46:27
+9           NaN        Games 2006-02-15 09:46:27
+10          NaN       Horror 2006-02-15 09:46:27
+11          NaN        Music 2006-02-15 09:46:27
+12          NaN          New 2006-02-15 09:46:27
+13          NaN       Sci-Fi 2006-02-15 09:46:27
+14          NaN       Sports 2006-02-15 09:46:27
+15          NaN       Travel 2006-02-15 09:46:27
+[2024-07-25T18:18:58.293+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='category';
+[2024-07-25T18:18:58.343+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-25T18:18:58.376+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=category, execution_date=20240724T000000, start_date=20240725T181856, end_date=20240725T181858
+[2024-07-25T18:18:58.453+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-25T18:18:58.492+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-25T18:23:25.826+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:23:25.854+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:23:25.862+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-25T18:23:25.907+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-24 00:00:00+00:00
+[2024-07-25T18:23:25.950+0000] {standard_task_runner.py:60} INFO - Started process 123 to run task
+[2024-07-25T18:23:25.954+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'category', 'scheduled__2024-07-24T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfnt9u0nz']
+[2024-07-25T18:23:25.968+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask category
+[2024-07-25T18:23:26.115+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [running]> on host a4fb48be9e83
+[2024-07-25T18:23:26.352+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-24T00:00:00+00:00'
+[2024-07-25T18:23:26.364+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'stagingtodv'
+[2024-07-25T18:23:27.038+0000] {logging_mixin.py:188} INFO - genaretedDF     category_id         name         last_update
+0           NaN       Action 2006-02-15 09:46:27
+1           NaN    Animation 2006-02-15 09:46:27
+2           NaN     Children 2006-02-15 09:46:27
+3           NaN     Classics 2006-02-15 09:46:27
+4           NaN       Comedy 2006-02-15 09:46:27
+5           NaN  Documentary 2006-02-15 09:46:27
+6           NaN        Drama 2006-02-15 09:46:27
+7           NaN       Family 2006-02-15 09:46:27
+8           NaN      Foreign 2006-02-15 09:46:27
+9           NaN        Games 2006-02-15 09:46:27
+10          NaN       Horror 2006-02-15 09:46:27
+11          NaN        Music 2006-02-15 09:46:27
+12          NaN          New 2006-02-15 09:46:27
+13          NaN       Sci-Fi 2006-02-15 09:46:27
+14          NaN       Sports 2006-02-15 09:46:27
+15          NaN       Travel 2006-02-15 09:46:27
+[2024-07-25T18:23:27.753+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='category';
+[2024-07-25T18:23:27.819+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-25T18:23:27.842+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=category, execution_date=20240724T000000, start_date=20240725T182325, end_date=20240725T182327
+[2024-07-25T18:23:27.945+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-25T18:23:28.056+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-25T18:26:46.763+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:26:46.775+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:26:46.781+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-25T18:26:46.815+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-24 00:00:00+00:00
+[2024-07-25T18:26:46.829+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'category', 'scheduled__2024-07-24T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpld3bbb1b']
+[2024-07-25T18:26:46.838+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask category
+[2024-07-25T18:26:46.824+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-25T18:26:46.999+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.category scheduled__2024-07-24T00:00:00+00:00 [running]> on host 92d017e1ac63
+[2024-07-25T18:26:48.278+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-24T00:00:00+00:00'
+[2024-07-25T18:26:48.285+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'stagingtodv'
+[2024-07-25T18:26:48.405+0000] {logging_mixin.py:188} INFO - sourceDF     :     category_id         name         last_update
+0             1       Action 2006-02-15 09:46:27
+1             2    Animation 2006-02-15 09:46:27
+2             3     Children 2006-02-15 09:46:27
+3             4     Classics 2006-02-15 09:46:27
+4             5       Comedy 2006-02-15 09:46:27
+5             6  Documentary 2006-02-15 09:46:27
+6             7        Drama 2006-02-15 09:46:27
+7             8       Family 2006-02-15 09:46:27
+8             9      Foreign 2006-02-15 09:46:27
+9            10        Games 2006-02-15 09:46:27
+10           11       Horror 2006-02-15 09:46:27
+11           12        Music 2006-02-15 09:46:27
+12           13          New 2006-02-15 09:46:27
+13           14       Sci-Fi 2006-02-15 09:46:27
+14           15       Sports 2006-02-15 09:46:27
+15           16       Travel 2006-02-15 09:46:27
+[2024-07-25T18:26:48.452+0000] {logging_mixin.py:188} INFO - dest_col_list ['category_id', 'name', 'last_update']
+[2024-07-25T18:26:48.467+0000] {logging_mixin.py:188} INFO - generatenaturalDF     category_id         name         last_update  source_category_id
+0             1       Action 2006-02-15 09:46:27                   1
+1             2    Animation 2006-02-15 09:46:27                   2
+2             3     Children 2006-02-15 09:46:27                   3
+3             4     Classics 2006-02-15 09:46:27                   4
+4             5       Comedy 2006-02-15 09:46:27                   5
+5             6  Documentary 2006-02-15 09:46:27                   6
+6             7        Drama 2006-02-15 09:46:27                   7
+7             8       Family 2006-02-15 09:46:27                   8
+8             9      Foreign 2006-02-15 09:46:27                   9
+9            10        Games 2006-02-15 09:46:27                  10
+10           11       Horror 2006-02-15 09:46:27                  11
+11           12        Music 2006-02-15 09:46:27                  12
+12           13          New 2006-02-15 09:46:27                  13
+13           14       Sci-Fi 2006-02-15 09:46:27                  14
+14           15       Sports 2006-02-15 09:46:27                  15
+15           16       Travel 2006-02-15 09:46:27                  16
+[2024-07-25T18:26:48.476+0000] {logging_mixin.py:188} INFO - genaretedDF     category_id         name         last_update
+0           NaN       Action 2006-02-15 09:46:27
+1           NaN    Animation 2006-02-15 09:46:27
+2           NaN     Children 2006-02-15 09:46:27
+3           NaN     Classics 2006-02-15 09:46:27
+4           NaN       Comedy 2006-02-15 09:46:27
+5           NaN  Documentary 2006-02-15 09:46:27
+6           NaN        Drama 2006-02-15 09:46:27
+7           NaN       Family 2006-02-15 09:46:27
+8           NaN      Foreign 2006-02-15 09:46:27
+9           NaN        Games 2006-02-15 09:46:27
+10          NaN       Horror 2006-02-15 09:46:27
+11          NaN        Music 2006-02-15 09:46:27
+12          NaN          New 2006-02-15 09:46:27
+13          NaN       Sci-Fi 2006-02-15 09:46:27
+14          NaN       Sports 2006-02-15 09:46:27
+15          NaN       Travel 2006-02-15 09:46:27
+[2024-07-25T18:26:48.813+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='category';
+[2024-07-25T18:26:48.851+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-25T18:26:48.867+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=category, execution_date=20240724T000000, start_date=20240725T182646, end_date=20240725T182648
+[2024-07-25T18:26:48.934+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-25T18:26:48.995+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

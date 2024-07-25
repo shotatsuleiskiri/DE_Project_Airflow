@@ -1,0 +1,391 @@
+[2024-07-16T16:34:40.642+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:34:40.678+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:34:40.679+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T16:34:40.733+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T16:34:40.769+0000] {standard_task_runner.py:60} INFO - Started process 139 to run task
+[2024-07-16T16:34:40.781+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpzmxoxg14']
+[2024-07-16T16:34:40.811+0000] {standard_task_runner.py:88} INFO - Job 64: Subtask film_actor
+[2024-07-16T16:34:40.969+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host f77c41d1d1e9
+[2024-07-16T16:34:41.593+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T16:34:41.611+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T16:34:41.692+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 16:34:38.025581
+
+[1 rows x 15 columns]
+[2024-07-16T16:34:41.784+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='DBStaging' and destschema='dvdrental' and desttablename='film_actor';
+[2024-07-16T16:34:41.802+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-16T16:34:41.812+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T163440, end_date=20240716T163441
+[2024-07-16T16:34:41.843+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-16T16:34:41.858+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T17:43:02.440+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:43:02.475+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:43:02.488+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T17:43:02.529+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T17:43:02.563+0000] {standard_task_runner.py:60} INFO - Started process 246 to run task
+[2024-07-16T17:43:02.580+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2u52kuh3']
+[2024-07-16T17:43:02.583+0000] {standard_task_runner.py:88} INFO - Job 27: Subtask film_actor
+[2024-07-16T17:43:02.699+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host e1ba87a2fe19
+[2024-07-16T17:43:02.971+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T17:43:02.985+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T17:43:03.080+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T17:43:03.648+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 16:34:41.800148
+
+[1 rows x 15 columns]
+[2024-07-16T17:43:03.811+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='DBStaging' and destschema='dvdrental' and desttablename='film_actor';
+[2024-07-16T17:43:03.833+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-16T17:43:03.861+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T174302, end_date=20240716T174303
+[2024-07-16T17:43:03.974+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-16T17:43:03.997+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T18:37:57.475+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:37:57.519+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:37:57.528+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:37:57.609+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T18:37:57.627+0000] {standard_task_runner.py:60} INFO - Started process 260 to run task
+[2024-07-16T18:37:57.643+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpf_cur6h6']
+[2024-07-16T18:37:57.665+0000] {standard_task_runner.py:88} INFO - Job 39: Subtask film_actor
+[2024-07-16T18:37:57.901+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host b7021158e377
+[2024-07-16T18:37:58.177+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T18:37:58.179+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:37:58.250+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:37:58.945+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 17:43:03.822668
+
+[1 rows x 15 columns]
+[2024-07-16T18:37:59.214+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.30.0.5), port 9999 failed: FATAL:  database "DBStaging" does not exist
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 28, in execute
+    SqlToStaging().create_incremental().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 65, in some_function
+    fillPosgres(sourceDF, DestDBName, DestSchema, DestTableName, InsertionType)
+  File "/app/myFramework/utils/utils.py", line 38, in fillPosgres
+    df.to_sql(tablename, conn.getEngine(dst_dbname)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2878, in to_sql
+    return sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 768, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 832, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1539, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres_db" (172.30.0.5), port 9999 failed: FATAL:  database "DBStaging" does not exist
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-07-16T18:37:59.293+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T183757, end_date=20240716T183759
+[2024-07-16T18:37:59.363+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 39 for task film_actor ((psycopg2.OperationalError) connection to server at "postgres_db" (172.30.0.5), port 9999 failed: FATAL:  database "DBStaging" does not exist
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 260)
+[2024-07-16T18:37:59.462+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T18:37:59.581+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T18:39:44.178+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:39:44.200+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:39:44.203+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:39:44.260+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T18:39:44.274+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-16T18:39:44.282+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpdxphl82o']
+[2024-07-16T18:39:44.286+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask film_actor
+[2024-07-16T18:39:44.464+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host 7465d1ceecf3
+[2024-07-16T18:39:44.868+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T18:39:44.875+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:39:46.726+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:39:46.799+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 17:43:03.822668
+
+[1 rows x 15 columns]
+[2024-07-16T18:39:46.899+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.31.0.4), port 9999 failed: FATAL:  database "DBStaging" does not exist
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 28, in execute
+    SqlToStaging().create_incremental().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 65, in some_function
+    fillPosgres(sourceDF, DestDBName, DestSchema, DestTableName, InsertionType)
+  File "/app/myFramework/utils/utils.py", line 36, in fillPosgres
+    df.to_sql(tablename, conn.getEngine(dst_dbname)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2878, in to_sql
+    return sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 768, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 832, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1539, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres_db" (172.31.0.4), port 9999 failed: FATAL:  database "DBStaging" does not exist
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-07-16T18:39:46.942+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T183944, end_date=20240716T183946
+[2024-07-16T18:39:46.993+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3 for task film_actor ((psycopg2.OperationalError) connection to server at "postgres_db" (172.31.0.4), port 9999 failed: FATAL:  database "DBStaging" does not exist
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 89)
+[2024-07-16T18:39:47.060+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T18:39:47.078+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T18:45:08.469+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:45:08.534+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:45:08.539+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:45:08.618+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T18:45:08.647+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-16T18:45:08.670+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpd7liatqn']
+[2024-07-16T18:45:08.684+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask film_actor
+[2024-07-16T18:45:08.977+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host 2e3dbb9eb862
+[2024-07-16T18:45:11.939+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T18:45:11.999+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:45:12.217+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:45:12.475+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 17:43:03.822668
+
+[1 rows x 15 columns]
+[2024-07-16T18:45:12.788+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbstaging' and destschema='dvdrental' and desttablename='film_actor';
+[2024-07-16T18:45:12.879+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-16T18:45:12.899+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T184508, end_date=20240716T184512
+[2024-07-16T18:45:13.155+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-16T18:45:13.239+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T18:51:27.455+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:51:27.478+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:51:27.478+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:51:27.536+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T18:51:27.549+0000] {standard_task_runner.py:60} INFO - Started process 160 to run task
+[2024-07-16T18:51:27.584+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp8bhm7blh']
+[2024-07-16T18:51:27.605+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask film_actor
+[2024-07-16T18:51:27.833+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host 7844bece6866
+[2024-07-16T18:51:29.472+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T18:51:29.486+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:51:29.578+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:51:29.652+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 18:45:12.857684
+
+[1 rows x 15 columns]
+[2024-07-16T18:51:29.851+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbstaging' and destschema='dvdrental' and desttablename='film_actor';
+[2024-07-16T18:51:29.879+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-16T18:51:29.888+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T185127, end_date=20240716T185129
+[2024-07-16T18:51:29.929+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-16T18:51:29.956+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T18:53:09.001+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:53:09.093+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:53:09.094+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:53:09.153+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T18:53:09.216+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2024-07-16T18:53:09.226+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpe06yoc3o']
+[2024-07-16T18:53:09.237+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask film_actor
+[2024-07-16T18:53:09.447+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host 6ef7a8da30c0
+[2024-07-16T18:53:11.114+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T18:53:11.119+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:53:11.256+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:53:11.376+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 18:51:29.876704
+
+[1 rows x 15 columns]
+[2024-07-16T18:53:11.730+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbstaging' and destschema='dvdrental' and desttablename='film_actor';
+[2024-07-16T18:53:11.775+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-16T18:53:11.789+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T185309, end_date=20240716T185311
+[2024-07-16T18:53:11.810+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-16T18:53:11.834+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T18:56:02.764+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:56:02.903+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T18:56:02.905+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:56:02.968+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-15 00:00:00+00:00
+[2024-07-16T18:56:03.004+0000] {standard_task_runner.py:60} INFO - Started process 98 to run task
+[2024-07-16T18:56:03.040+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'film_actor', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpy7zz3vh9']
+[2024-07-16T18:56:03.059+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask film_actor
+[2024-07-16T18:56:03.475+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.film_actor scheduled__2024-07-15T00:00:00+00:00 [running]> on host 1733eeb0def3
+[2024-07-16T18:56:06.094+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T18:56:06.186+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:56:06.505+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'sqltostaging'
+[2024-07-16T18:56:07.405+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0  13      film_actor  ...  sqltostaging 2024-07-16 18:53:11.762460
+
+[1 rows x 15 columns]
+[2024-07-16T18:56:09.573+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbstaging' and destschema='dvdrental' and desttablename='film_actor';
+[2024-07-16T18:56:09.754+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-16T18:56:09.900+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=film_actor, execution_date=20240715T000000, start_date=20240716T185602, end_date=20240716T185609
+[2024-07-16T18:56:10.066+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-16T18:56:10.387+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

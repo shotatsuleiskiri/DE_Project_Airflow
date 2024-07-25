@@ -1,0 +1,148 @@
+[2024-07-16T16:54:49.048+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:54:49.057+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:54:49.058+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T16:54:49.079+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_category> on 2024-07-15 00:00:00+00:00
+[2024-07-16T16:54:49.105+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-16T16:54:49.113+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'film_category', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp5zc8hqu0']
+[2024-07-16T16:54:49.131+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask film_category
+[2024-07-16T16:54:49.273+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [running]> on host d9cb41fade7e
+[2024-07-16T16:54:50.431+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='film_category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T16:54:50.465+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T16:54:50.474+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=film_category, execution_date=20240715T000000, start_date=20240716T165449, end_date=20240716T165450
+[2024-07-16T16:54:50.483+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 16 for task film_category (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 100)
+[2024-07-16T16:54:50.499+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T16:54:50.533+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T16:58:22.164+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:58:22.178+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T16:58:22.186+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T16:58:22.246+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_category> on 2024-07-15 00:00:00+00:00
+[2024-07-16T16:58:22.265+0000] {standard_task_runner.py:60} INFO - Started process 109 to run task
+[2024-07-16T16:58:22.288+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'film_category', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpy49n4ko9']
+[2024-07-16T16:58:22.293+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask film_category
+[2024-07-16T16:58:22.409+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [running]> on host bd70e8223b94
+[2024-07-16T16:58:23.987+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='film_category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T16:58:24.021+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T16:58:24.061+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=film_category, execution_date=20240715T000000, start_date=20240716T165822, end_date=20240716T165824
+[2024-07-16T16:58:24.087+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 14 for task film_category (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 109)
+[2024-07-16T16:58:24.152+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T16:58:24.168+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T17:06:16.473+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:06:16.509+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:06:16.515+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T17:06:16.571+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_category> on 2024-07-15 00:00:00+00:00
+[2024-07-16T17:06:16.594+0000] {standard_task_runner.py:60} INFO - Started process 98 to run task
+[2024-07-16T17:06:16.615+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'film_category', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp28gu2vjv']
+[2024-07-16T17:06:16.626+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask film_category
+[2024-07-16T17:06:16.786+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [running]> on host d972e0703431
+[2024-07-16T17:06:18.023+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='film_category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T17:06:18.081+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T17:06:18.107+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=film_category, execution_date=20240715T000000, start_date=20240716T170616, end_date=20240716T170618
+[2024-07-16T17:06:18.128+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task film_category (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 98)
+[2024-07-16T17:06:18.183+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T17:06:18.210+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T17:10:13.284+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:10:13.303+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-16T17:10:13.318+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T17:10:13.384+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_category> on 2024-07-15 00:00:00+00:00
+[2024-07-16T17:10:13.437+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-16T17:10:13.417+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'staigingtodv', 'film_category', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4qfvsqfe']
+[2024-07-16T17:10:13.450+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask film_category
+[2024-07-16T17:10:13.613+0000] {task_command.py:423} INFO - Running <TaskInstance: staigingtodv.film_category scheduled__2024-07-15T00:00:00+00:00 [running]> on host a8165c4616a2
+[2024-07-16T17:10:14.451+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='staigingtodv' AIRFLOW_CTX_TASK_ID='film_category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-16T17:10:14.612+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 40, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 33, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-16T17:10:14.656+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=staigingtodv, task_id=film_category, execution_date=20240715T000000, start_date=20240716T171013, end_date=20240716T171014
+[2024-07-16T17:10:14.685+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3 for task film_category (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 89)
+[2024-07-16T17:10:14.729+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T17:10:14.830+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

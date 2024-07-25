@@ -1,0 +1,585 @@
+[2024-07-03T18:57:43.474+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T18:57:43.493+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T18:57:43.503+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T18:57:43.539+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T18:57:43.576+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-03T18:57:43.583+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp65wn_agz']
+[2024-07-03T18:57:43.595+0000] {standard_task_runner.py:88} INFO - Job 47: Subtask payment
+[2024-07-03T18:57:43.745+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host df9727a9ba29
+[2024-07-03T18:57:44.612+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T18:57:44.617+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T18:57:44.620+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T18:57:44.623+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T18:57:44.686+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 
+ 0    staff
+Name: sourcetablename, dtype: object 
+ 0    public
+Name: sourceschema, dtype: object
+[2024-07-03T18:57:44.694+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-03T18:57:44.710+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T185743, end_date=20240703T185744
+[2024-07-03T18:57:44.780+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-03T18:57:44.833+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T18:59:06.233+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T18:59:06.252+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T18:59:06.262+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T18:59:06.352+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T18:59:06.384+0000] {standard_task_runner.py:60} INFO - Started process 98 to run task
+[2024-07-03T18:59:06.384+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwnqeo1n9']
+[2024-07-03T18:59:06.405+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask payment
+[2024-07-03T18:59:06.609+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 1eca196ca799
+[2024-07-03T18:59:07.676+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T18:59:07.680+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T18:59:07.681+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T18:59:07.681+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T18:59:07.706+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, table)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T18:59:07.718+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T185906, end_date=20240703T185907
+[2024-07-03T18:59:07.732+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 98)
+[2024-07-03T18:59:07.761+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T18:59:07.820+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:04:29.216+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:04:29.233+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:04:29.244+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:04:29.339+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:04:29.374+0000] {standard_task_runner.py:60} INFO - Started process 112 to run task
+[2024-07-03T19:04:29.381+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp9whgo9yv']
+[2024-07-03T19:04:29.397+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask payment
+[2024-07-03T19:04:29.718+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 1e717689b816
+[2024-07-03T19:04:31.086+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:04:31.088+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:04:31.093+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:04:31.100+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T19:04:31.128+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:04:31.161+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T190429, end_date=20240703T190431
+[2024-07-03T19:04:31.207+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 112)
+[2024-07-03T19:04:31.255+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:04:31.361+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:07:23.695+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:07:23.719+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:07:23.728+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:07:23.777+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:07:23.866+0000] {standard_task_runner.py:60} INFO - Started process 110 to run task
+[2024-07-03T19:07:23.880+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqbt8y682']
+[2024-07-03T19:07:23.906+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask payment
+[2024-07-03T19:07:24.181+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 543ad6da9cd9
+[2024-07-03T19:07:25.005+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:07:25.006+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:07:25.011+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:07:25.018+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T19:07:25.062+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:07:25.124+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T190723, end_date=20240703T190725
+[2024-07-03T19:07:25.141+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 13 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 110)
+[2024-07-03T19:07:25.185+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:07:25.255+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:11:44.973+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:11:44.993+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:11:45.003+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:11:45.038+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:11:45.049+0000] {standard_task_runner.py:60} INFO - Started process 120 to run task
+[2024-07-03T19:11:45.054+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp029fnp43']
+[2024-07-03T19:11:45.063+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask payment
+[2024-07-03T19:11:45.300+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 7c298ace0001
+[2024-07-03T19:11:46.251+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:11:46.263+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:11:46.274+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:11:46.277+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T19:11:46.280+0000] {logging_mixin.py:188} INFO - payment sqltostaging
+[2024-07-03T19:11:46.419+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:11:46.499+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T191144, end_date=20240703T191146
+[2024-07-03T19:11:46.531+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 120)
+[2024-07-03T19:11:46.561+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:11:46.639+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:17:15.736+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:17:15.748+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:17:15.754+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:17:15.795+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:17:15.815+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-03T19:17:15.821+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpry3w76e_']
+[2024-07-03T19:17:15.837+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask payment
+[2024-07-03T19:17:16.052+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 55c1c604b2f4
+[2024-07-03T19:17:17.234+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:17:17.240+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:17:17.249+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:17:17.252+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T19:17:17.259+0000] {logging_mixin.py:188} INFO - payment sqltostaging
+[2024-07-03T19:17:17.262+0000] {logging_mixin.py:188} INFO - sqltostaging payment
+[2024-07-03T19:17:17.264+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-03T19:17:17.274+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T191715, end_date=20240703T191717
+[2024-07-03T19:17:17.329+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-03T19:17:17.353+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:21:11.483+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:21:11.522+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:21:11.533+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:21:11.559+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:21:11.594+0000] {standard_task_runner.py:60} INFO - Started process 103 to run task
+[2024-07-03T19:21:11.629+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmptjtq2j95']
+[2024-07-03T19:21:11.669+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask payment
+[2024-07-03T19:21:11.857+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 048fbe570e70
+[2024-07-03T19:21:12.124+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:21:12.133+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:21:12.136+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:21:12.140+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T19:21:12.144+0000] {logging_mixin.py:188} INFO - payment sqltostaging
+[2024-07-03T19:21:12.149+0000] {logging_mixin.py:188} INFO - sqltostaging payment
+[2024-07-03T19:21:12.156+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'sqltostaging' and Stage = 'payment'
+[2024-07-03T19:21:12.198+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:21:12.883+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T192111, end_date=20240703T192112
+[2024-07-03T19:21:12.915+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 17 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 103)
+[2024-07-03T19:21:12.939+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:21:12.968+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:27:20.687+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:27:20.724+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:27:20.727+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:27:20.760+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:27:20.774+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-03T19:27:20.785+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpdilb62_4']
+[2024-07-03T19:27:20.807+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask payment
+[2024-07-03T19:27:20.981+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host be8a642b7fa1
+[2024-07-03T19:27:21.895+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:27:21.907+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:27:21.907+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:27:21.908+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:payment
+[2024-07-03T19:27:21.914+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'staff' and Stage = 'sqltostaging'
+[2024-07-03T19:27:21.967+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table("staff", "sqltostaging")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:27:22.002+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T192720, end_date=20240703T192722
+[2024-07-03T19:27:22.045+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 96)
+[2024-07-03T19:27:22.068+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:27:22.123+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:31:15.787+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:31:15.845+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:31:15.857+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:31:15.916+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:31:15.951+0000] {standard_task_runner.py:60} INFO - Started process 101 to run task
+[2024-07-03T19:31:15.986+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpsgfz4sah']
+[2024-07-03T19:31:16.009+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask payment
+[2024-07-03T19:31:16.182+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 3aa24a0be289
+[2024-07-03T19:31:17.304+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:31:17.314+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:31:17.315+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:31:17.316+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:payment
+[2024-07-03T19:31:17.319+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'staff' and Stage = 'SqlToStaging'
+[2024-07-03T19:31:17.356+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 
+ 0    staff
+Name: sourcetablename, dtype: object 
+ 0    public
+Name: sourceschema, dtype: object
+[2024-07-03T19:31:17.356+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-03T19:31:17.367+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=SqlToStaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T193115, end_date=20240703T193117
+[2024-07-03T19:31:17.391+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-03T19:31:17.408+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:33:30.699+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:33:30.713+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:33:30.719+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:33:30.760+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:33:30.793+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpilta2v71']
+[2024-07-03T19:33:30.787+0000] {standard_task_runner.py:60} INFO - Started process 97 to run task
+[2024-07-03T19:33:30.804+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask payment
+[2024-07-03T19:33:31.019+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 90f97448b910
+[2024-07-03T19:33:31.191+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:33:31.201+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:33:31.204+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:33:31.207+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:payment
+[2024-07-03T19:33:31.208+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'SqlToStaging'
+[2024-07-03T19:33:32.128+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:33:32.148+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T193330, end_date=20240703T193332
+[2024-07-03T19:33:32.161+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 14 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 97)
+[2024-07-03T19:33:32.213+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:33:32.254+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:45:39.345+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:45:39.357+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:45:39.360+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:45:39.388+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:45:39.400+0000] {standard_task_runner.py:60} INFO - Started process 144 to run task
+[2024-07-03T19:45:39.418+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp44zwgxs6']
+[2024-07-03T19:45:39.430+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask payment
+[2024-07-03T19:45:39.578+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 2d80eee2aa9e
+[2024-07-03T19:45:41.058+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:45:41.066+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:45:41.074+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:45:41.086+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:payment
+[2024-07-03T19:45:41.094+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'SqlToStaging'
+[2024-07-03T19:45:41.143+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:45:41.173+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T194539, end_date=20240703T194541
+[2024-07-03T19:45:41.256+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 144)
+[2024-07-03T19:45:41.309+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:45:41.379+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:51:24.005+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:51:24.037+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:51:24.054+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:51:24.130+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:51:24.157+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-03T19:51:24.172+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmppvox_612']
+[2024-07-03T19:51:24.192+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask payment
+[2024-07-03T19:51:24.439+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host f02b6fe92b0c
+[2024-07-03T19:51:25.685+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:51:25.688+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:51:25.689+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:51:25.692+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:payment
+[2024-07-03T19:51:25.695+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'SqlToStaging'
+[2024-07-03T19:51:25.736+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:51:25.757+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T195124, end_date=20240703T195125
+[2024-07-03T19:51:25.767+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 94)
+[2024-07-03T19:51:25.782+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:51:25.852+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:57:27.585+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:57:27.611+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:57:27.613+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:57:27.685+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:57:27.710+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2024-07-03T19:57:27.732+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6cc6q138']
+[2024-07-03T19:57:27.741+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask payment
+[2024-07-03T19:57:27.975+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 94f9954c2898
+[2024-07-03T19:57:29.170+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:57:29.177+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:57:29.183+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:57:29.184+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:payment
+[2024-07-03T19:57:29.185+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'SqlToStaging'
+[2024-07-03T19:57:29.207+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:57:29.220+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T195727, end_date=20240703T195729
+[2024-07-03T19:57:29.233+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 95)
+[2024-07-03T19:57:29.289+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:57:29.329+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:59:31.730+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:59:31.787+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [queued]>
+[2024-07-03T19:59:31.795+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-03T19:59:31.818+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-02 00:00:00+00:00
+[2024-07-03T19:59:31.827+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-03T19:59:31.842+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'payment', 'scheduled__2024-07-02T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpv875_nhw']
+[2024-07-03T19:59:31.853+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask payment
+[2024-07-03T19:59:31.983+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.payment scheduled__2024-07-02T00:00:00+00:00 [running]> on host 091922596b62
+[2024-07-03T19:59:32.214+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-02T00:00:00+00:00'
+[2024-07-03T19:59:32.226+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-03T19:59:32.233+0000] {logging_mixin.py:188} INFO - table: payment
+[2024-07-03T19:59:32.240+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:payment
+[2024-07-03T19:59:32.247+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'SqlToStaging'
+[2024-07-03T19:59:33.346+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-03T19:59:33.365+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=payment, execution_date=20240702T000000, start_date=20240703T195931, end_date=20240703T195933
+[2024-07-03T19:59:33.387+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 89)
+[2024-07-03T19:59:33.471+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-03T19:59:33.496+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

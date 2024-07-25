@@ -1,0 +1,44 @@
+[2024-07-16T18:38:02.554+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.address manual__2024-07-16T18:37:58.179808+00:00 [queued]>
+[2024-07-16T18:38:02.588+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.address manual__2024-07-16T18:37:58.179808+00:00 [queued]>
+[2024-07-16T18:38:02.590+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:38:02.647+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): address> on 2024-07-16 18:37:58.179808+00:00
+[2024-07-16T18:38:02.673+0000] {standard_task_runner.py:60} INFO - Started process 311 to run task
+[2024-07-16T18:38:02.691+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'address', 'manual__2024-07-16T18:37:58.179808+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpbpro7ofm']
+[2024-07-16T18:38:02.698+0000] {standard_task_runner.py:88} INFO - Job 59: Subtask address
+[2024-07-16T18:38:02.888+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.address manual__2024-07-16T18:37:58.179808+00:00 [running]> on host b7021158e377
+[2024-07-16T18:38:03.038+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='address' AIRFLOW_CTX_EXECUTION_DATE='2024-07-16T18:37:58.179808+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-16T18:37:58.179808+00:00'
+[2024-07-16T18:38:03.047+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'address' and Stage = 'sqltostaging'
+[2024-07-16T18:38:03.579+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'address' and Stage = 'sqltostaging'
+[2024-07-16T18:38:03.623+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0   4         address  ...  sqltostaging 2024-07-16 17:43:03.822513
+
+[1 rows x 15 columns]
+[2024-07-16T18:38:03.640+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 26, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 38, in some_function
+    sourceDF = getDF(sourcedbname,sourcetablename , sourceschema)
+  File "/app/myFramework/utils/utils.py", line 29, in getDF
+    cur.execute(query)
+psycopg2.errors.FeatureNotSupported: cross-database references are not implemented: "dbstaging.public.dada"
+LINE 1: select T.* from dbstaging.public.dada T
+                        ^
+
+[2024-07-16T18:38:03.648+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=address, execution_date=20240716T183758, start_date=20240716T183802, end_date=20240716T183803
+[2024-07-16T18:38:03.659+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 59 for task address (cross-database references are not implemented: "dbstaging.public.dada"
+LINE 1: select T.* from dbstaging.public.dada T
+                        ^
+; 311)
+[2024-07-16T18:38:03.710+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T18:38:03.736+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

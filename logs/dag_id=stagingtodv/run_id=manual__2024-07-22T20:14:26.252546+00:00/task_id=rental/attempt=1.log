@@ -1,0 +1,43 @@
+[2024-07-22T20:14:28.605+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.rental manual__2024-07-22T20:14:26.252546+00:00 [queued]>
+[2024-07-22T20:14:28.644+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.rental manual__2024-07-22T20:14:26.252546+00:00 [queued]>
+[2024-07-22T20:14:28.646+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:14:28.709+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): rental> on 2024-07-22 20:14:26.252546+00:00
+[2024-07-22T20:14:28.720+0000] {standard_task_runner.py:60} INFO - Started process 176 to run task
+[2024-07-22T20:14:28.730+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'rental', 'manual__2024-07-22T20:14:26.252546+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp7mqpws0l']
+[2024-07-22T20:14:28.734+0000] {standard_task_runner.py:88} INFO - Job 30: Subtask rental
+[2024-07-22T20:14:28.864+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.rental manual__2024-07-22T20:14:26.252546+00:00 [running]> on host 0a26f4611472
+[2024-07-22T20:14:29.116+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='rental' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T20:14:26.252546+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-22T20:14:26.252546+00:00'
+[2024-07-22T20:14:29.119+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'rental' and Stage = 'stagingtodv'
+[2024-07-22T20:14:29.170+0000] {logging_mixin.py:188} INFO - Staging to dv incremental
+[2024-07-22T20:14:29.828+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0                   1  ...  5                   6
+0          2 2005-05-24 22:54:33  ...  1 2006-02-16 02:30:53
+1          3 2005-05-24 23:03:39  ...  1 2006-02-16 02:30:53
+2          4 2005-05-24 23:04:41  ...  2 2006-02-16 02:30:53
+3          5 2005-05-24 23:05:21  ...  1 2006-02-16 02:30:53
+4          6 2005-05-24 23:08:07  ...  1 2006-02-16 02:30:53
+...      ...                 ...  ... ..                 ...
+16039  16046 2005-08-23 22:26:47  ...  2 2006-02-16 02:30:53
+16040  16047 2005-08-23 22:42:48  ...  2 2006-02-16 02:30:53
+16041  16048 2005-08-23 22:43:07  ...  1 2006-02-16 02:30:53
+16042  16049 2005-08-23 22:50:12  ...  2 2006-02-16 02:30:53
+16043      1 2005-05-24 22:53:30  ...  1 2006-02-15 21:30:53
+
+[16044 rows x 7 columns]
+[2024-07-22T20:14:29.847+0000] {logging_mixin.py:188} INFO - SOURCE DFFF        rental_id         rental_date  ...  staff_id         last_update
+0              2 2005-05-24 22:54:33  ...         1 2006-02-16 02:30:53
+1              3 2005-05-24 23:03:39  ...         1 2006-02-16 02:30:53
+2              4 2005-05-24 23:04:41  ...         2 2006-02-16 02:30:53
+3              5 2005-05-24 23:05:21  ...         1 2006-02-16 02:30:53
+4              6 2005-05-24 23:08:07  ...         1 2006-02-16 02:30:53
+...          ...                 ...  ...       ...                 ...
+16039      16046 2005-08-23 22:26:47  ...         2 2006-02-16 02:30:53
+16040      16047 2005-08-23 22:42:48  ...         2 2006-02-16 02:30:53
+16041      16048 2005-08-23 22:43:07  ...         1 2006-02-16 02:30:53
+16042      16049 2005-08-23 22:50:12  ...         2 2006-02-16 02:30:53
+16043          1 2005-05-24 22:53:30  ...         1 2006-02-15 21:30:53
+
+[16044 rows x 7 columns]
+[2024-07-22T20:14:29.848+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:14:29.865+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=rental, execution_date=20240722T201426, start_date=20240722T201428, end_date=20240722T201429
+[2024-07-22T20:14:29.902+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:14:29.923+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

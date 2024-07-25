@@ -1,0 +1,251 @@
+[2024-07-11T18:17:07.812+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:17:07.826+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:17:07.832+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T18:17:07.932+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T18:17:07.944+0000] {standard_task_runner.py:60} INFO - Started process 82 to run task
+[2024-07-11T18:17:07.969+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp0kka90k0']
+[2024-07-11T18:17:07.977+0000] {standard_task_runner.py:88} INFO - Job 24: Subtask actor
+[2024-07-11T18:17:08.192+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 2bc01acfbd3e
+[2024-07-11T18:17:08.578+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T18:17:09.965+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T18:17:10.280+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T18:17:10.290+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 44, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 26, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 38, in some_function
+    sourceDF = getDF(sourcedbname,sourcetablename , sourceschema)
+TypeError: getDF() missing 3 required positional arguments: 'filterColumn', 'dateFrom', and 'dateTo'
+[2024-07-11T18:17:10.356+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T181707, end_date=20240711T181710
+[2024-07-11T18:17:10.437+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 24 for task actor (getDF() missing 3 required positional arguments: 'filterColumn', 'dateFrom', and 'dateTo'; 82)
+[2024-07-11T18:17:10.531+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-11T18:17:10.681+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T18:42:43.470+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:42:43.503+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:42:43.506+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T18:42:43.540+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T18:42:43.548+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-11T18:42:43.560+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpyjid02co']
+[2024-07-11T18:42:43.591+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask actor
+[2024-07-11T18:42:43.975+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 3cbd40a515d7
+[2024-07-11T18:42:45.092+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T18:42:45.190+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T18:42:45.280+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T18:42:45.283+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T18:42:45.446+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T18:42:45.454+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T184243, end_date=20240711T184245
+[2024-07-11T18:42:45.492+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T18:42:45.508+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T18:51:07.994+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:51:08.028+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:51:08.035+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T18:51:08.079+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T18:51:08.098+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-11T18:51:08.126+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpgqe6pzki']
+[2024-07-11T18:51:08.244+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask actor
+[2024-07-11T18:51:08.383+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 59bc72ebf535
+[2024-07-11T18:51:09.556+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T18:51:09.603+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T18:51:09.639+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T18:51:09.642+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T18:51:10.011+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T18:51:10.022+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T185107, end_date=20240711T185110
+[2024-07-11T18:51:10.084+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T18:51:10.104+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T18:59:13.718+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:59:13.739+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T18:59:13.746+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T18:59:13.806+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T18:59:13.837+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmprxues8xw']
+[2024-07-11T18:59:13.860+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask actor
+[2024-07-11T18:59:13.838+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-11T18:59:14.032+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 40f26a5c62e8
+[2024-07-11T18:59:15.216+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T18:59:15.264+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T18:59:15.328+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T18:59:15.331+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T18:59:15.550+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T18:59:15.565+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T185913, end_date=20240711T185915
+[2024-07-11T18:59:15.607+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T18:59:15.643+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T19:35:13.680+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:35:13.714+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:35:13.717+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T19:35:13.757+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T19:35:13.775+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-11T19:35:13.789+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2uqgi4hd']
+[2024-07-11T19:35:13.795+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask actor
+[2024-07-11T19:35:13.954+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 99be9f831d54
+[2024-07-11T19:35:14.679+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T19:35:14.984+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T19:35:15.078+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T19:35:15.088+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T19:35:15.494+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T19:35:15.503+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T193513, end_date=20240711T193515
+[2024-07-11T19:35:15.557+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T19:35:15.610+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T19:38:52.581+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:38:52.604+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:38:52.605+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T19:38:52.621+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T19:38:52.634+0000] {standard_task_runner.py:60} INFO - Started process 99 to run task
+[2024-07-11T19:38:52.654+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpn6zhr2a1']
+[2024-07-11T19:38:52.665+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask actor
+[2024-07-11T19:38:52.797+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 3370024acb9c
+[2024-07-11T19:38:53.710+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T19:38:53.775+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T19:38:53.947+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T19:38:53.954+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T19:38:54.189+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T19:38:54.203+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T193852, end_date=20240711T193854
+[2024-07-11T19:38:54.244+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T19:38:54.266+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T19:41:03.234+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:41:03.264+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:41:03.277+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T19:41:03.307+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T19:41:03.325+0000] {standard_task_runner.py:60} INFO - Started process 97 to run task
+[2024-07-11T19:41:03.357+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpx2vur5wx']
+[2024-07-11T19:41:03.392+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask actor
+[2024-07-11T19:41:03.608+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 5bec992df9f6
+[2024-07-11T19:41:04.870+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T19:41:04.912+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T19:41:04.976+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T19:41:04.981+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T19:41:05.161+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T19:41:05.173+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T194103, end_date=20240711T194105
+[2024-07-11T19:41:05.224+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T19:41:05.283+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T19:45:57.586+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:45:57.608+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:45:57.613+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T19:45:57.648+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T19:45:57.658+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-11T19:45:57.700+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqdx0mor7']
+[2024-07-11T19:45:57.717+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask actor
+[2024-07-11T19:45:57.926+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 74c26533546f
+[2024-07-11T19:45:59.131+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T19:45:59.194+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T19:45:59.251+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T19:45:59.252+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T19:45:59.471+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T19:45:59.483+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T194557, end_date=20240711T194559
+[2024-07-11T19:45:59.526+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T19:45:59.542+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T19:49:38.641+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:49:38.647+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:49:38.648+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T19:49:38.679+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T19:49:38.698+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-11T19:49:38.715+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwuewqxbz']
+[2024-07-11T19:49:38.721+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask actor
+[2024-07-11T19:49:38.837+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host f4f24e57c5cc
+[2024-07-11T19:49:40.142+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T19:49:40.188+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T19:49:40.238+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T19:49:40.242+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.actor T
+[2024-07-11T19:49:40.501+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='DBStaging' and destschema='dvdrental' and desttablename='actor'
+[2024-07-11T19:49:40.515+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T19:49:40.524+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T194938, end_date=20240711T194940
+[2024-07-11T19:49:40.551+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T19:49:40.566+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T19:58:31.385+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:58:31.406+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T19:58:31.407+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T19:58:31.454+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T19:58:31.479+0000] {standard_task_runner.py:60} INFO - Started process 105 to run task
+[2024-07-11T19:58:31.503+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2ytv5x_9']
+[2024-07-11T19:58:31.521+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask actor
+[2024-07-11T19:58:31.716+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host 45208fcb54ea
+[2024-07-11T19:58:33.065+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T19:58:33.112+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T19:58:33.176+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T19:58:33.347+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestampwhere destdbname='DBStaging' and destschema='dvdrental' and desttablename='actor'
+[2024-07-11T19:58:33.359+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 44, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 26, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 41, in some_function
+    last_run_date_update(DestDBName, DestSchema, DestTableName)
+  File "/app/myFramework/utils/utils.py", line 79, in last_run_date_update
+    cur.execute(query)
+psycopg2.errors.SyntaxError: syntax error at or near "destdbname"
+LINE 1: ...ping T set last_run_date = current_timestampwhere destdbname...
+                                                             ^
+
+[2024-07-11T19:58:33.378+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T195831, end_date=20240711T195833
+[2024-07-11T19:58:33.394+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task actor (syntax error at or near "destdbname"
+LINE 1: ...ping T set last_run_date = current_timestampwhere destdbname...
+                                                             ^
+; 105)
+[2024-07-11T19:58:33.432+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-11T19:58:33.446+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T20:02:09.005+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T20:02:09.029+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [queued]>
+[2024-07-11T20:02:09.039+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-11T20:02:09.073+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-10 00:00:00+00:00
+[2024-07-11T20:02:09.082+0000] {standard_task_runner.py:60} INFO - Started process 97 to run task
+[2024-07-11T20:02:09.107+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'actor', 'scheduled__2024-07-10T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp5uiw7pwr']
+[2024-07-11T20:02:09.134+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask actor
+[2024-07-11T20:02:09.315+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.actor scheduled__2024-07-10T00:00:00+00:00 [running]> on host f77c41d1d1e9
+[2024-07-11T20:02:10.661+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T00:00:00+00:00'
+[2024-07-11T20:02:10.704+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'sqltostaging'
+[2024-07-11T20:02:10.781+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   8           actor    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-11T20:02:11.023+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='DBStaging' and destschema='dvdrental' and desttablename='actor';
+[2024-07-11T20:02:11.064+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-11T20:02:11.077+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=actor, execution_date=20240710T000000, start_date=20240711T200209, end_date=20240711T200211
+[2024-07-11T20:02:11.096+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-11T20:02:11.126+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

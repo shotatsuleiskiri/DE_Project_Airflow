@@ -1,0 +1,416 @@
+[2024-07-02T18:42:24.381+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:42:24.408+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:42:24.410+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T18:42:24.449+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T18:42:24.480+0000] {standard_task_runner.py:60} INFO - Started process 98 to run task
+[2024-07-02T18:42:24.486+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpj2v2xb7j']
+[2024-07-02T18:42:24.496+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask country
+[2024-07-02T18:42:24.620+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 5b7251376729
+[2024-07-02T18:42:25.665+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T18:42:25.679+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: process_table() missing 1 required positional argument: 'table_type'
+[2024-07-02T18:42:25.709+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T184224, end_date=20240702T184225
+[2024-07-02T18:42:25.797+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 11 for task country (process_table() missing 1 required positional argument: 'table_type'; 98)
+[2024-07-02T18:42:25.879+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T18:42:25.962+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T18:50:28.316+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:50:28.338+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T18:50:28.340+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T18:50:28.382+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T18:50:28.404+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-02T18:50:28.410+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpgxyjw975']
+[2024-07-02T18:50:28.418+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask country
+[2024-07-02T18:50:28.559+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host e236fd1115af
+[2024-07-02T18:50:29.709+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T18:50:29.712+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T18:50:29.714+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T18:50:29.719+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T18:50:29.981+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T18:50:29.987+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T185028, end_date=20240702T185029
+[2024-07-02T18:50:30.025+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T18:50:30.046+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:20:13.039+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:20:13.060+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:20:13.066+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:20:13.123+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:20:13.142+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-02T20:20:13.159+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpoelx1sov']
+[2024-07-02T20:20:13.190+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask country
+[2024-07-02T20:20:13.509+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 881b4526a2de
+[2024-07-02T20:20:15.204+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:20:15.211+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:20:15.212+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:20:15.216+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T20:20:15.227+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 29, in some_function
+    print(get_data_from_conf_table("staff", "SqlToStaging"))
+  File "/app/myFramework/utils/utils.py", line 137, in get_data_from_conf_table
+    cur = conn.getCursor("Postgres")
+  File "/app/myFramework/source/posgresql/connect.py", line 6, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.20.0.3), port 9999 failed: FATAL:  database "Postgres" does not exist
+
+[2024-07-02T20:20:15.241+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T202013, end_date=20240702T202015
+[2024-07-02T20:20:15.252+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task country (connection to server at "postgres_db" (172.20.0.3), port 9999 failed: FATAL:  database "Postgres" does not exist
+; 92)
+[2024-07-02T20:20:15.302+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:20:15.336+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:22:14.233+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:22:14.254+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:22:14.257+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:22:14.293+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:22:14.310+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-02T20:22:14.341+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpgngvp8nf']
+[2024-07-02T20:22:14.350+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask country
+[2024-07-02T20:22:14.495+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host b2ca66e4d1f6
+[2024-07-02T20:22:16.145+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:22:16.150+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:22:16.155+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:22:16.157+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T20:22:16.210+0000] {logging_mixin.py:188} INFO -    0      1          2       3     4   ...    10    11    12            13    14
+0   9  staff  dvdrental  public  full  ...  None  None  None  SqlToStaging  None
+
+[1 rows x 15 columns]
+[2024-07-02T20:22:16.214+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:22:16.238+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T202214, end_date=20240702T202216
+[2024-07-02T20:22:16.342+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:22:16.434+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:25:37.662+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:25:37.682+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:25:37.690+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:25:37.730+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:25:37.734+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2024-07-02T20:25:37.765+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmph6xv575y']
+[2024-07-02T20:25:37.783+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask country
+[2024-07-02T20:25:37.941+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host e847a37dafab
+[2024-07-02T20:25:39.210+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:25:39.212+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:25:39.217+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:25:39.220+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T20:25:39.297+0000] {logging_mixin.py:188} INFO - <class 'pandas.core.frame.DataFrame'>
+[2024-07-02T20:25:39.334+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0   9           staff    dvdrental  ...  None  SqlToStaging          None
+
+[1 rows x 15 columns]
+[2024-07-02T20:25:39.356+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:25:39.390+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T202537, end_date=20240702T202539
+[2024-07-02T20:25:39.485+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:25:39.576+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:33:53.576+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:33:53.604+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:33:53.606+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:33:53.642+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:33:53.651+0000] {standard_task_runner.py:60} INFO - Started process 88 to run task
+[2024-07-02T20:33:53.662+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpicktf998']
+[2024-07-02T20:33:53.666+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask country
+[2024-07-02T20:33:53.822+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 99fbc1087931
+[2024-07-02T20:33:54.783+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:33:54.798+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:33:54.804+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:33:54.812+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T20:33:54.939+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'SourceDBName'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    print(f"{df['SourceDBName']} \n {df['SourceTableName']} \n {df['SourceSchema']}")
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'SourceDBName'
+[2024-07-02T20:33:55.003+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T203353, end_date=20240702T203355
+[2024-07-02T20:33:55.048+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task country ('SourceDBName'; 88)
+[2024-07-02T20:33:55.118+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:33:55.242+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:36:07.821+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:36:07.854+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:36:07.855+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:36:07.887+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:36:07.899+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-02T20:36:07.911+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4q2slewt']
+[2024-07-02T20:36:07.922+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask country
+[2024-07-02T20:36:08.005+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 8ef3b2afa95a
+[2024-07-02T20:36:08.220+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:36:08.232+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:36:08.238+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:36:08.242+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T20:36:08.425+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 
+ 0    staff
+Name: sourcetablename, dtype: object 
+ 0    public
+Name: sourceschema, dtype: object
+[2024-07-02T20:36:08.431+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:36:09.220+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T203607, end_date=20240702T203609
+[2024-07-02T20:36:09.266+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:36:09.299+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:40:31.172+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:40:31.196+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:40:31.201+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:40:31.236+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:40:31.307+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpp7i0pmp0']
+[2024-07-02T20:40:31.299+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-02T20:40:31.323+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask country
+[2024-07-02T20:40:31.585+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host f7a45131ad00
+[2024-07-02T20:40:33.138+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:40:33.141+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:40:33.142+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:40:33.143+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T20:40:33.162+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage, "FULL","public")
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 29, in some_function
+    df = get_data_from_conf_table(table, stage)
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-02T20:40:33.181+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T204031, end_date=20240702T204033
+[2024-07-02T20:40:33.198+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task country (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 92)
+[2024-07-02T20:40:33.215+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:40:33.267+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:44:45.096+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:44:45.108+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:44:45.110+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:44:45.153+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:44:45.185+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-02T20:44:45.200+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpx2tam79o']
+[2024-07-02T20:44:45.213+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask country
+[2024-07-02T20:44:45.391+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 28c1247628aa
+[2024-07-02T20:44:46.567+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:44:46.573+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:44:46.574+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:44:46.577+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: FULL 
+ schema: public 
+ table:country
+[2024-07-02T20:44:46.580+0000] {logging_mixin.py:188} INFO - sqltostaging country
+[2024-07-02T20:44:46.583+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:44:46.605+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T204445, end_date=20240702T204446
+[2024-07-02T20:44:46.632+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:44:46.718+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:47:20.755+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:47:20.796+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:47:20.803+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:47:20.880+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:47:20.886+0000] {standard_task_runner.py:60} INFO - Started process 98 to run task
+[2024-07-02T20:47:20.929+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxo9zw3_8']
+[2024-07-02T20:47:20.943+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask country
+[2024-07-02T20:47:21.075+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 0dbf5a897656
+[2024-07-02T20:47:21.348+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:47:21.353+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:47:21.365+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:47:21.368+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+TypeError: execute() missing 2 required positional arguments: 'type' and 'schema'
+[2024-07-02T20:47:21.404+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T204720, end_date=20240702T204721
+[2024-07-02T20:47:22.235+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task country (execute() missing 2 required positional arguments: 'type' and 'schema'; 98)
+[2024-07-02T20:47:22.261+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:47:22.446+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:49:58.201+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:49:58.215+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:49:58.218+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:49:58.265+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:49:58.284+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-07-02T20:49:58.296+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpb8vfulre']
+[2024-07-02T20:49:58.315+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask country
+[2024-07-02T20:49:58.434+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 82e116e15bed
+[2024-07-02T20:49:59.725+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:49:59.747+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:49:59.755+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:49:59.763+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:country
+[2024-07-02T20:49:59.770+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, table)
+TypeError: some_function() missing 2 required positional arguments: 'schema' and 'table'
+[2024-07-02T20:49:59.827+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T204958, end_date=20240702T204959
+[2024-07-02T20:49:59.850+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task country (some_function() missing 2 required positional arguments: 'schema' and 'table'; 91)
+[2024-07-02T20:49:59.928+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:49:59.983+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:51:50.909+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:51:50.936+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:51:50.945+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:51:50.970+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:51:50.997+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-02T20:51:51.008+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqtw46wf9']
+[2024-07-02T20:51:51.093+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask country
+[2024-07-02T20:51:51.287+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host 910796d1882f
+[2024-07-02T20:51:52.684+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:51:52.686+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:51:52.688+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:51:52.695+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:country
+[2024-07-02T20:51:52.769+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(stage, table)
+  File "/app/concretestage/SQLToStaging.py", line 30, in some_function
+    df = get_data_from_conf_table(table, stage)
+  File "/app/myFramework/utils/utils.py", line 142, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-02T20:51:52.811+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T205150, end_date=20240702T205152
+[2024-07-02T20:51:52.889+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 7 for task country (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 90)
+[2024-07-02T20:51:52.946+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-02T20:51:53.006+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T20:54:17.483+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:54:17.506+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2024-07-02T20:54:17.508+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-02T20:54:17.571+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-01 00:00:00+00:00
+[2024-07-02T20:54:17.580+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-02T20:54:17.612+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmplsvxa85t']
+[2024-07-02T20:54:17.644+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask country
+[2024-07-02T20:54:17.856+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-07-01T00:00:00+00:00 [running]> on host df9727a9ba29
+[2024-07-02T20:54:18.869+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2024-07-02T20:54:18.872+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-02T20:54:18.872+0000] {logging_mixin.py:188} INFO - table: country
+[2024-07-02T20:54:18.874+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ table:country
+[2024-07-02T20:54:18.891+0000] {logging_mixin.py:188} INFO - 0    dvdrental
+Name: sourcedbname, dtype: object 
+ 0    staff
+Name: sourcetablename, dtype: object 
+ 0    public
+Name: sourceschema, dtype: object
+[2024-07-02T20:54:18.893+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-02T20:54:18.915+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240701T000000, start_date=20240702T205417, end_date=20240702T205418
+[2024-07-02T20:54:19.064+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-02T20:54:19.095+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

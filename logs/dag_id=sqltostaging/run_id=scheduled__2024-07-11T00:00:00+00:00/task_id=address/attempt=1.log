@@ -1,0 +1,19 @@
+[2024-07-16T16:34:35.721+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.address scheduled__2024-07-11T00:00:00+00:00 [queued]>
+[2024-07-16T16:34:35.743+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.address scheduled__2024-07-11T00:00:00+00:00 [queued]>
+[2024-07-16T16:34:35.747+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T16:34:35.797+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): address> on 2024-07-11 00:00:00+00:00
+[2024-07-16T16:34:35.817+0000] {standard_task_runner.py:60} INFO - Started process 85 to run task
+[2024-07-16T16:34:35.829+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'address', 'scheduled__2024-07-11T00:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpmcxsmklo']
+[2024-07-16T16:34:35.836+0000] {standard_task_runner.py:88} INFO - Job 38: Subtask address
+[2024-07-16T16:34:35.969+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.address scheduled__2024-07-11T00:00:00+00:00 [running]> on host f77c41d1d1e9
+[2024-07-16T16:34:36.811+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='address' AIRFLOW_CTX_EXECUTION_DATE='2024-07-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-11T00:00:00+00:00'
+[2024-07-16T16:34:37.325+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'address' and Stage = 'sqltostaging'
+[2024-07-16T16:34:37.579+0000] {logging_mixin.py:188} INFO -    id sourcetablename  ...         stage              last_run_date
+0   4         address  ...  sqltostaging 2024-07-11 20:12:01.303364
+
+[1 rows x 15 columns]
+[2024-07-16T16:34:38.160+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='DBStaging' and destschema='dvdrental' and desttablename='address';
+[2024-07-16T16:34:38.196+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-16T16:34:38.203+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=address, execution_date=20240711T000000, start_date=20240716T163435, end_date=20240716T163438
+[2024-07-16T16:34:38.246+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-16T16:34:38.287+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

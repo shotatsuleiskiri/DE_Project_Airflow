@@ -1,0 +1,58 @@
+[2024-07-25T18:35:20.248+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country manual__2024-07-25T18:35:18.337757+00:00 [queued]>
+[2024-07-25T18:35:20.262+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country manual__2024-07-25T18:35:18.337757+00:00 [queued]>
+[2024-07-25T18:35:20.270+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-25T18:35:20.294+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-25 18:35:18.337757+00:00
+[2024-07-25T18:35:20.321+0000] {standard_task_runner.py:60} INFO - Started process 273 to run task
+[2024-07-25T18:35:20.327+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'manual__2024-07-25T18:35:18.337757+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkao8c7ew']
+[2024-07-25T18:35:20.343+0000] {standard_task_runner.py:88} INFO - Job 19: Subtask country
+[2024-07-25T18:35:20.466+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country manual__2024-07-25T18:35:18.337757+00:00 [running]> on host 92d017e1ac63
+[2024-07-25T18:35:21.366+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-25T18:35:18.337757+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-25T18:35:18.337757+00:00'
+[2024-07-25T18:35:21.389+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-25T18:35:21.681+0000] {logging_mixin.py:188} INFO - sourceDF     :      country_id               country         last_update
+0             1           Afghanistan 2006-02-15 09:44:00
+1             2               Algeria 2006-02-15 09:44:00
+2             3        American Samoa 2006-02-15 09:44:00
+3             4                Angola 2006-02-15 09:44:00
+4             5              Anguilla 2006-02-15 09:44:00
+..          ...                   ...                 ...
+104         105               Vietnam 2006-02-15 09:44:00
+105         106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106         107                 Yemen 2006-02-15 09:44:00
+107         108            Yugoslavia 2006-02-15 09:44:00
+108         109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-25T18:35:21.831+0000] {logging_mixin.py:188} INFO - dest_col_list ['gen_country_id', 'source_country_id', 'country', 'last_update']
+[2024-07-25T18:35:21.903+0000] {logging_mixin.py:188} INFO - generatenaturalDF      country_id               country         last_update  source_country_id
+0             1           Afghanistan 2006-02-15 09:44:00                  1
+1             2               Algeria 2006-02-15 09:44:00                  2
+2             3        American Samoa 2006-02-15 09:44:00                  3
+3             4                Angola 2006-02-15 09:44:00                  4
+4             5              Anguilla 2006-02-15 09:44:00                  5
+..          ...                   ...                 ...                ...
+104         105               Vietnam 2006-02-15 09:44:00                105
+105         106  Virgin Islands, U.S. 2006-02-15 09:44:00                106
+106         107                 Yemen 2006-02-15 09:44:00                107
+107         108            Yugoslavia 2006-02-15 09:44:00                108
+108         109                Zambia 2006-02-15 09:44:00                109
+
+[109 rows x 4 columns]
+[2024-07-25T18:35:22.013+0000] {logging_mixin.py:188} INFO - genaretedDF      gen_country_id  ...         last_update
+0          10000002  ... 2006-02-15 09:44:00
+1          10000003  ... 2006-02-15 09:44:00
+2          10000004  ... 2006-02-15 09:44:00
+3          10000005  ... 2006-02-15 09:44:00
+4          10000006  ... 2006-02-15 09:44:00
+..              ...  ...                 ...
+104        10000106  ... 2006-02-15 09:44:00
+105        10000107  ... 2006-02-15 09:44:00
+106        10000108  ... 2006-02-15 09:44:00
+107        10000109  ... 2006-02-15 09:44:00
+108        10000110  ... 2006-02-15 09:44:00
+
+[109 rows x 4 columns]
+[2024-07-25T18:35:22.313+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-25T18:35:22.379+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-25T18:35:22.399+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240725T183518, start_date=20240725T183520, end_date=20240725T183522
+[2024-07-25T18:35:22.487+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-25T18:35:22.540+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

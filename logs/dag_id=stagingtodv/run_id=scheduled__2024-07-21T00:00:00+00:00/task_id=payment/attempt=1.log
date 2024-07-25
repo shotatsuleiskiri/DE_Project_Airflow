@@ -1,0 +1,722 @@
+[2024-07-22T18:39:28.523+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:28.574+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:28.584+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T18:39:28.642+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T18:39:28.671+0000] {standard_task_runner.py:60} INFO - Started process 119 to run task
+[2024-07-22T18:39:28.675+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpl7xmctwk']
+[2024-07-22T18:39:28.684+0000] {standard_task_runner.py:88} INFO - Job 38: Subtask payment
+[2024-07-22T18:39:28.770+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host ef8b8dee6045
+[2024-07-22T18:39:28.899+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T18:39:28.930+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T18:39:29.305+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T18:39:29.333+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T183928, end_date=20240722T183929
+[2024-07-22T18:39:29.393+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 38 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 119)
+[2024-07-22T18:39:29.460+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T18:39:29.503+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:05:06.720+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:05:06.737+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:05:06.752+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:05:06.802+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:05:06.807+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-22T19:05:06.821+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpef_4efxb']
+[2024-07-22T19:05:06.835+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask payment
+[2024-07-22T19:05:06.976+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host d97758bf7368
+[2024-07-22T19:05:08.296+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:05:08.310+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:05:08.479+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:05:08.503+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T190506, end_date=20240722T190508
+[2024-07-22T19:05:08.519+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task payment (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 90)
+[2024-07-22T19:05:08.549+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:05:08.581+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:14:27.989+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:14:28.026+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:14:28.026+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:14:28.039+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:14:28.047+0000] {standard_task_runner.py:60} INFO - Started process 83 to run task
+[2024-07-22T19:14:28.058+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkau2i0wl']
+[2024-07-22T19:14:28.073+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask payment
+[2024-07-22T19:14:28.202+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 06b045a8c1a2
+[2024-07-22T19:14:29.614+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:14:29.619+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:14:29.653+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:14:29.678+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T191427, end_date=20240722T191429
+[2024-07-22T19:14:29.706+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:14:29.746+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:18:49.980+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:18:49.994+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:18:49.996+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:18:50.026+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:18:50.048+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2024-07-22T19:18:50.064+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpjodriwy0']
+[2024-07-22T19:18:50.084+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask payment
+[2024-07-22T19:18:50.272+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 59af9ef614d6
+[2024-07-22T19:18:51.635+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:18:51.641+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:18:51.662+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:18:51.676+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T191849, end_date=20240722T191851
+[2024-07-22T19:18:51.752+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:18:51.776+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:25:04.053+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:25:04.073+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:25:04.087+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:25:04.172+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:25:04.185+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-07-22T19:25:04.202+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpa2seupds']
+[2024-07-22T19:25:04.217+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask payment
+[2024-07-22T19:25:04.393+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 54d412404717
+[2024-07-22T19:25:05.331+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:25:05.332+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:25:05.413+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:25:05.446+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T192504, end_date=20240722T192505
+[2024-07-22T19:25:05.544+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:25:05.588+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:28:23.059+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:28:23.087+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:28:23.088+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:28:23.129+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:28:23.145+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-22T19:28:23.172+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp1gt62550']
+[2024-07-22T19:28:23.182+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask payment
+[2024-07-22T19:28:23.322+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host e6f3df1cbf4c
+[2024-07-22T19:28:24.240+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:28:24.246+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:28:24.650+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:28:24.674+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T192823, end_date=20240722T192824
+[2024-07-22T19:28:24.748+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:28:24.780+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:30:31.987+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:30:32.026+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:30:32.027+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:30:32.049+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:30:32.065+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-22T19:30:32.068+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmps9zhfw1x']
+[2024-07-22T19:30:32.082+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask payment
+[2024-07-22T19:30:32.267+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 96cb61053a1d
+[2024-07-22T19:30:33.395+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:30:33.401+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:30:33.634+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:30:33.653+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T193032, end_date=20240722T193033
+[2024-07-22T19:30:33.750+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:30:33.779+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:38:48.857+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:38:48.905+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:38:48.918+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:38:48.955+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:38:48.975+0000] {standard_task_runner.py:60} INFO - Started process 125 to run task
+[2024-07-22T19:38:49.003+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpm9_m0epl']
+[2024-07-22T19:38:49.012+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask payment
+[2024-07-22T19:38:49.169+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host f5ad498ee7ee
+[2024-07-22T19:38:50.227+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:38:50.228+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:38:50.501+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:38:50.550+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T193848, end_date=20240722T193850
+[2024-07-22T19:38:50.635+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:38:50.740+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:43:44.650+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:43:44.679+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:43:44.685+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:43:44.717+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:43:44.728+0000] {standard_task_runner.py:60} INFO - Started process 122 to run task
+[2024-07-22T19:43:44.747+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpaiuoog5e']
+[2024-07-22T19:43:44.772+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask payment
+[2024-07-22T19:43:45.023+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 83712395e44a
+[2024-07-22T19:43:46.203+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:43:46.217+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:43:46.251+0000] {logging_mixin.py:188} INFO - ragacaa---------aaaaa
+[2024-07-22T19:43:46.253+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:43:46.321+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename sourcedbname  ... code        stage last_run_date
+0  25         payment    DBStaging  ...    1  stagingtodv          None
+
+[1 rows x 15 columns]
+[2024-07-22T19:43:46.324+0000] {logging_mixin.py:188} INFO - Modixar?
+[2024-07-22T19:43:46.337+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ... code        stage last_run_date
+0  25         payment    DBStaging  ...    1  stagingtodv          None
+
+[1 rows x 15 columns]
+[2024-07-22T19:43:46.339+0000] {logging_mixin.py:188} INFO - query select T.* from DBStaging.dvdrental.payment T
+[2024-07-22T19:43:46.355+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:43:46.369+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T194344, end_date=20240722T194346
+[2024-07-22T19:43:46.410+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:43:46.447+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:52:46.971+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:52:46.993+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:52:46.996+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:52:47.040+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:52:47.058+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2024-07-22T19:52:47.065+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmprct1u0vx']
+[2024-07-22T19:52:47.076+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask payment
+[2024-07-22T19:52:47.318+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 6e14590d795e
+[2024-07-22T19:52:48.386+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:52:48.405+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:52:48.456+0000] {logging_mixin.py:188} INFO - ragacaa---------aaaaa
+[2024-07-22T19:52:48.457+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:52:48.590+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename sourcedbname  ... code        stage last_run_date
+0  25         payment    DBStaging  ...    1  stagingtodv          None
+
+[1 rows x 15 columns]
+[2024-07-22T19:52:48.591+0000] {logging_mixin.py:188} INFO - Modixar?
+[2024-07-22T19:52:48.615+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ... code        stage last_run_date
+0  25         payment    DBStaging  ...    1  stagingtodv          None
+
+[1 rows x 15 columns]
+[2024-07-22T19:52:48.635+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:52:48.684+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T195246, end_date=20240722T195248
+[2024-07-22T19:52:48.775+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:52:48.826+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:57:18.863+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:57:18.886+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:57:18.890+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:57:18.916+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:57:18.931+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-07-22T19:57:18.966+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp84kurish']
+[2024-07-22T19:57:18.993+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask payment
+[2024-07-22T19:57:19.107+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 1ca6b70ca81e
+[2024-07-22T19:57:20.408+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:57:20.429+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:57:20.540+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T19:57:20.723+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename sourcedbname  ... code        stage last_run_date
+0  25         payment    DBStaging  ...    1  stagingtodv          None
+
+[1 rows x 15 columns]
+[2024-07-22T19:57:20.733+0000] {logging_mixin.py:188} INFO - TRY ragaacccaaa
+[2024-07-22T19:57:20.749+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:57:20.762+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T195718, end_date=20240722T195720
+[2024-07-22T19:57:20.806+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:57:20.859+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:01:00.646+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:01:00.655+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:01:00.665+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:01:00.720+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:01:00.756+0000] {standard_task_runner.py:60} INFO - Started process 114 to run task
+[2024-07-22T20:01:00.765+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp_pgnzvmb']
+[2024-07-22T20:01:00.781+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask payment
+[2024-07-22T20:01:00.935+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 2aa012dff3cf
+[2024-07-22T20:01:02.229+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:01:02.234+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:01:02.348+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:01:02.437+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename sourcedbname  ... code        stage last_run_date
+0  25         payment    DBStaging  ...    1  stagingtodv          None
+
+[1 rows x 15 columns]
+[2024-07-22T20:01:02.461+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:01:02.472+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T200100, end_date=20240722T200102
+[2024-07-22T20:01:02.546+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:01:02.630+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:07:53.284+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:07:53.304+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:07:53.312+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:07:53.362+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:07:53.374+0000] {standard_task_runner.py:60} INFO - Started process 115 to run task
+[2024-07-22T20:07:53.401+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmppfsl689u']
+[2024-07-22T20:07:53.420+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask payment
+[2024-07-22T20:07:53.728+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 05733b1af473
+[2024-07-22T20:07:55.147+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:07:55.153+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:07:55.236+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:07:55.243+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T200753, end_date=20240722T200755
+[2024-07-22T20:07:55.286+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:07:55.317+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:12:24.182+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:12:24.194+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:12:24.204+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:12:24.236+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:12:24.246+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-07-22T20:12:24.265+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpux5vi6cm']
+[2024-07-22T20:12:24.286+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask payment
+[2024-07-22T20:12:24.482+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 0a26f4611472
+[2024-07-22T20:12:25.682+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:12:25.689+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:12:25.815+0000] {logging_mixin.py:188} INFO - Staging to dv incremental
+[2024-07-22T20:12:25.906+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 34, in execute
+    StagingToDV().create_incremental().some_function(table, stage)
+  File "/app/concretestage/StagingToDV.py", line 61, in some_function
+    sourceDF = getDF(sourcedbname,sourcetablename,sourceschema)
+  File "/app/myFramework/utils/utils.py", line 27, in getDF
+    cur = conn.getCursor(source_dbname)
+  File "/app/myFramework/source/posgresql/connect.py", line 9, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.30.0.5), port 9999 failed: FATAL:  database "DBStaging" does not exist
+
+[2024-07-22T20:12:25.943+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T201224, end_date=20240722T201225
+[2024-07-22T20:12:25.978+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3 for task payment (connection to server at "postgres_db" (172.30.0.5), port 9999 failed: FATAL:  database "DBStaging" does not exist
+; 91)
+[2024-07-22T20:12:26.024+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:12:26.107+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:16:39.671+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:16:39.701+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:16:39.703+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:16:39.729+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:16:39.750+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-22T20:16:39.751+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp_5p4zdj7']
+[2024-07-22T20:16:39.761+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask payment
+[2024-07-22T20:16:39.876+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 78ac63ab6c84
+[2024-07-22T20:16:41.257+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:16:41.260+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:16:41.377+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:16:41.387+0000] {logging_mixin.py:188} INFO - SOURCE DFFF        payment_id  customer_id  ...  amount               payment_date
+0           17503          341  ...    7.99 2007-02-15 22:25:46.996577
+1           17504          341  ...    1.99 2007-02-16 17:23:14.996577
+2           17505          341  ...    7.99 2007-02-16 22:41:45.996577
+3           17506          341  ...    2.99 2007-02-19 19:39:56.996577
+4           17507          341  ...    7.99 2007-02-20 17:31:48.996577
+...           ...          ...  ...     ...                        ...
+14591       32094          245  ...    2.99 2007-05-14 13:44:29.996577
+14592       32095          251  ...    0.99 2007-05-14 13:44:29.996577
+14593       32096          252  ...    4.99 2007-05-14 13:44:29.996577
+14594       32097          263  ...    0.99 2007-05-14 13:44:29.996577
+14595       32098          264  ...    2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:16:41.393+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 33, in execute
+    StagingToDV().create_incremental().some_function(table, stage)
+  File "/app/concretestage/StagingToDV.py", line 64, in some_function
+    dest_col_list = list(getDF(DestDBName, DestTableName,DestSchema).columns)
+  File "/app/myFramework/utils/utils.py", line 27, in getDF
+    cur = conn.getCursor(source_dbname)
+  File "/app/myFramework/source/posgresql/connect.py", line 9, in getCursor
+    conn = psycopg2.connect(database = dbname,
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres_db" (172.31.0.5), port 9999 failed: FATAL:  database "DBDV" does not exist
+
+[2024-07-22T20:16:41.403+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T201639, end_date=20240722T201641
+[2024-07-22T20:16:41.416+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 17 for task payment (connection to server at "postgres_db" (172.31.0.5), port 9999 failed: FATAL:  database "DBDV" does not exist
+; 102)
+[2024-07-22T20:16:41.458+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:16:41.480+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:31:14.162+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:31:14.176+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:31:14.178+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:31:14.231+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:31:14.246+0000] {standard_task_runner.py:60} INFO - Started process 88 to run task
+[2024-07-22T20:31:14.266+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp5ip01crm']
+[2024-07-22T20:31:14.276+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask payment
+[2024-07-22T20:31:14.430+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 9126008e9d77
+[2024-07-22T20:31:15.502+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:31:15.512+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:31:15.842+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:31:15.855+0000] {logging_mixin.py:188} INFO - SOURCE DFFF        payment_id  customer_id  ...  amount               payment_date
+0           17503          341  ...    7.99 2007-02-15 22:25:46.996577
+1           17504          341  ...    1.99 2007-02-16 17:23:14.996577
+2           17505          341  ...    7.99 2007-02-16 22:41:45.996577
+3           17506          341  ...    2.99 2007-02-19 19:39:56.996577
+4           17507          341  ...    7.99 2007-02-20 17:31:48.996577
+...           ...          ...  ...     ...                        ...
+14591       32094          245  ...    2.99 2007-05-14 13:44:29.996577
+14592       32095          251  ...    0.99 2007-05-14 13:44:29.996577
+14593       32096          252  ...    4.99 2007-05-14 13:44:29.996577
+14594       32097          263  ...    0.99 2007-05-14 13:44:29.996577
+14595       32098          264  ...    2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:31:15.860+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:31:15.869+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T203114, end_date=20240722T203115
+[2024-07-22T20:31:15.916+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:31:15.929+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:33:01.097+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:33:01.119+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:33:01.125+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:33:01.157+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:33:01.188+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-22T20:33:01.218+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmputtf3k3z']
+[2024-07-22T20:33:01.237+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask payment
+[2024-07-22T20:33:01.459+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host 79b906a44679
+[2024-07-22T20:33:02.674+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:33:02.678+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:33:02.986+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:33:03.095+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF Empty DataFrame
+Columns: []
+Index: []
+[2024-07-22T20:33:03.096+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 33, in execute
+    StagingToDV().create_incremental().some_function(table, stage)
+  File "/app/concretestage/StagingToDV.py", line 64, in some_function
+    dest_col_list = list(getDF(DestDBName, DestTableName,DestSchema).columns)
+  File "/app/myFramework/utils/utils.py", line 32, in getDF
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 7 elements
+[2024-07-22T20:33:03.117+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T203301, end_date=20240722T203303
+[2024-07-22T20:33:03.140+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 11 for task payment (Length mismatch: Expected axis has 0 elements, new values have 7 elements; 90)
+[2024-07-22T20:33:03.187+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:33:03.207+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:35:54.801+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:35:54.846+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:35:54.851+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:35:54.890+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:35:54.909+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-22T20:35:54.925+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp15dckqky']
+[2024-07-22T20:35:54.929+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask payment
+[2024-07-22T20:35:55.052+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host eba0c7ca727b
+[2024-07-22T20:35:56.503+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:35:56.508+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:35:56.767+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:35:56.819+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF Empty DataFrame
+Columns: []
+Index: []
+[2024-07-22T20:35:56.824+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 33, in execute
+    StagingToDV().create_incremental().some_function(table, stage)
+  File "/app/concretestage/StagingToDV.py", line 64, in some_function
+    dest_col_list = getDF(DestDBName, DestTableName,DestSchema).columns
+  File "/app/myFramework/utils/utils.py", line 32, in getDF
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 7 elements
+[2024-07-22T20:35:56.833+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T203554, end_date=20240722T203556
+[2024-07-22T20:35:56.850+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3 for task payment (Length mismatch: Expected axis has 0 elements, new values have 7 elements; 92)
+[2024-07-22T20:35:56.886+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:35:56.915+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:37:38.440+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:37:38.479+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:37:38.488+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:37:38.526+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:37:38.547+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-22T20:37:38.560+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpyd0scqpr']
+[2024-07-22T20:37:38.571+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask payment
+[2024-07-22T20:37:38.789+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host ca612ea69d67
+[2024-07-22T20:37:39.112+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:37:39.132+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:37:40.499+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:37:40.552+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF Empty DataFrame
+Columns: []
+Index: []
+[2024-07-22T20:37:40.566+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 33, in execute
+    StagingToDV().create_incremental().some_function(table, stage)
+  File "/app/concretestage/StagingToDV.py", line 64, in some_function
+    dest_col_list = getDF(DestDBName, DestTableName,DestSchema).columns()
+  File "/app/myFramework/utils/utils.py", line 32, in getDF
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 7 elements
+[2024-07-22T20:37:40.579+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T203738, end_date=20240722T203740
+[2024-07-22T20:37:40.588+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task payment (Length mismatch: Expected axis has 0 elements, new values have 7 elements; 93)
+[2024-07-22T20:37:40.619+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:37:40.641+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:48:35.555+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:48:35.622+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:48:35.627+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:48:35.680+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:48:35.708+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-22T20:48:35.716+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmprqxd9bpe']
+[2024-07-22T20:48:35.734+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask payment
+[2024-07-22T20:48:35.944+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host d9bd7bcefcfd
+[2024-07-22T20:48:37.093+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:48:37.099+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:48:37.568+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:48:37.615+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF      0   1  2     3      4    5                       6
+0  999  99  9  9999  99999  9.0 2024-07-23 00:45:05.657
+[2024-07-22T20:48:37.619+0000] {logging_mixin.py:188} INFO - dest_col_list ['gen_payment_id', 'source_payment_id', 'customer_id', 'staff_id', 'rental_id', 'amount', 'payment_date']
+[2024-07-22T20:48:37.629+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:48:37.660+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T204835, end_date=20240722T204837
+[2024-07-22T20:48:37.702+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:48:37.734+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:50:36.726+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:50:36.749+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:50:36.756+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:50:36.778+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:50:36.784+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-22T20:50:36.808+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4hooselv']
+[2024-07-22T20:50:36.817+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask payment
+[2024-07-22T20:50:37.039+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host c43d948598a9
+[2024-07-22T20:50:38.568+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:50:38.583+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:50:38.757+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:50:38.803+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF      0   1  2     3      4    5                       6
+0  999  99  9  9999  99999  9.0 2024-07-23 00:45:05.657
+[2024-07-22T20:50:38.827+0000] {logging_mixin.py:188} INFO - generatenaturalDF        payment_id  customer_id  ...               payment_date  source_payment_id
+0           17503          341  ... 2007-02-15 22:25:46.996577              17503
+1           17504          341  ... 2007-02-16 17:23:14.996577              17504
+2           17505          341  ... 2007-02-16 22:41:45.996577              17505
+3           17506          341  ... 2007-02-19 19:39:56.996577              17506
+4           17507          341  ... 2007-02-20 17:31:48.996577              17507
+...           ...          ...  ...                        ...                ...
+14591       32094          245  ... 2007-05-14 13:44:29.996577              32094
+14592       32095          251  ... 2007-05-14 13:44:29.996577              32095
+14593       32096          252  ... 2007-05-14 13:44:29.996577              32096
+14594       32097          263  ... 2007-05-14 13:44:29.996577              32097
+14595       32098          264  ... 2007-05-14 13:44:29.996577              32098
+
+[14596 rows x 7 columns]
+[2024-07-22T20:50:38.833+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:50:38.847+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T205036, end_date=20240722T205038
+[2024-07-22T20:50:38.882+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:50:38.904+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:56:52.633+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:56:52.706+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:56:52.715+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:56:52.753+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:56:52.817+0000] {standard_task_runner.py:60} INFO - Started process 113 to run task
+[2024-07-22T20:56:52.837+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpylt0mpw4']
+[2024-07-22T20:56:52.865+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask payment
+[2024-07-22T20:56:53.101+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host b40f86dea2d7
+[2024-07-22T20:56:54.394+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:56:54.400+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:56:54.837+0000] {logging_mixin.py:188} INFO - genaretedDF        gen_payment_id  source_payment_id  ...  amount               payment_date
+0            10017504              17503  ...    7.99 2007-02-15 22:25:46.996577
+1            10017505              17504  ...    1.99 2007-02-16 17:23:14.996577
+2            10017506              17505  ...    7.99 2007-02-16 22:41:45.996577
+3            10017507              17506  ...    2.99 2007-02-19 19:39:56.996577
+4            10017508              17507  ...    7.99 2007-02-20 17:31:48.996577
+...               ...                ...  ...     ...                        ...
+14591        10032095              32094  ...    2.99 2007-05-14 13:44:29.996577
+14592        10032096              32095  ...    0.99 2007-05-14 13:44:29.996577
+14593        10032097              32096  ...    4.99 2007-05-14 13:44:29.996577
+14594        10032098              32097  ...    0.99 2007-05-14 13:44:29.996577
+14595        10032099              32098  ...    2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 7 columns]
+[2024-07-22T20:56:54.853+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:56:54.888+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T205652, end_date=20240722T205654
+[2024-07-22T20:56:54.921+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:56:54.952+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T21:02:40.310+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:02:40.348+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:02:40.350+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T21:02:40.385+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T21:02:40.413+0000] {standard_task_runner.py:60} INFO - Started process 126 to run task
+[2024-07-22T21:02:40.429+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4pz5h54n']
+[2024-07-22T21:02:40.455+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask payment
+[2024-07-22T21:02:40.659+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host fd3c041fbc80
+[2024-07-22T21:02:42.050+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T21:02:42.051+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T21:02:42.659+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T21:02:42.667+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T210240, end_date=20240722T210242
+[2024-07-22T21:02:42.710+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T21:02:42.731+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T21:05:27.994+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:05:28.012+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:05:28.017+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T21:05:28.076+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-21 00:00:00+00:00
+[2024-07-22T21:05:28.095+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-22T21:05:28.123+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkhen6ww2']
+[2024-07-22T21:05:28.149+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask payment
+[2024-07-22T21:05:28.307+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment scheduled__2024-07-21T00:00:00+00:00 [running]> on host f59a56d3cdcb
+[2024-07-22T21:05:29.528+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T21:05:29.532+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T21:05:30.152+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='payment';
+[2024-07-22T21:05:30.161+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T21:05:30.171+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=payment, execution_date=20240721T000000, start_date=20240722T210527, end_date=20240722T210530
+[2024-07-22T21:05:30.209+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T21:05:30.226+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

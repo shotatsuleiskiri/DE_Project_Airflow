@@ -1,0 +1,16 @@
+[2024-07-22T19:12:19.101+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.actor manual__2024-07-22T19:12:15.893907+00:00 [queued]>
+[2024-07-22T19:12:19.112+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.actor manual__2024-07-22T19:12:15.893907+00:00 [queued]>
+[2024-07-22T19:12:19.114+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:12:19.146+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-22 19:12:15.893907+00:00
+[2024-07-22T19:12:19.164+0000] {standard_task_runner.py:60} INFO - Started process 250 to run task
+[2024-07-22T19:12:19.170+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'actor', 'manual__2024-07-22T19:12:15.893907+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmphjskzvt1']
+[2024-07-22T19:12:19.181+0000] {standard_task_runner.py:88} INFO - Job 25: Subtask actor
+[2024-07-22T19:12:19.399+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.actor manual__2024-07-22T19:12:15.893907+00:00 [running]> on host d97758bf7368
+[2024-07-22T19:12:19.578+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T19:12:15.893907+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-22T19:12:15.893907+00:00'
+[2024-07-22T19:12:19.606+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'stagingtodv'
+[2024-07-22T19:12:19.718+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'stagingtodv'
+[2024-07-22T19:12:20.939+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='actor';
+[2024-07-22T19:12:20.971+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:12:20.986+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=actor, execution_date=20240722T191215, start_date=20240722T191219, end_date=20240722T191220
+[2024-07-22T19:12:21.008+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:12:21.023+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

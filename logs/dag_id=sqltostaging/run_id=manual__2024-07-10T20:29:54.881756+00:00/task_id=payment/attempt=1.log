@@ -1,0 +1,33 @@
+[2024-07-10T20:29:57.640+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.payment manual__2024-07-10T20:29:54.881756+00:00 [queued]>
+[2024-07-10T20:29:57.679+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.payment manual__2024-07-10T20:29:54.881756+00:00 [queued]>
+[2024-07-10T20:29:57.682+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-10T20:29:57.740+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-10 20:29:54.881756+00:00
+[2024-07-10T20:29:57.795+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'payment', 'manual__2024-07-10T20:29:54.881756+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpe5w0i3mz']
+[2024-07-10T20:29:57.802+0000] {standard_task_runner.py:88} INFO - Job 43: Subtask payment
+[2024-07-10T20:29:57.795+0000] {standard_task_runner.py:60} INFO - Started process 284 to run task
+[2024-07-10T20:29:58.025+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.payment manual__2024-07-10T20:29:54.881756+00:00 [running]> on host d72f5bf26a9d
+[2024-07-10T20:29:58.361+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T20:29:54.881756+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-10T20:29:54.881756+00:00'
+[2024-07-10T20:29:58.473+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'sqltostaging'
+[2024-07-10T20:29:59.198+0000] {logging_mixin.py:188} INFO -    id sourcetablename sourcedbname  ...  code         stage last_run_date
+0  12         payment    dvdrental  ...  None  sqltostaging          None
+
+[1 rows x 15 columns]
+[2024-07-10T20:29:59.211+0000] {logging_mixin.py:188} INFO - select T.* from dvdrental.public.payment T where payment_date >= '2007-02-15' and payment_date < '2007-02-16' 
+[2024-07-10T20:29:59.295+0000] {logging_mixin.py:188} INFO - SOURCE DFFFFF      payment_id  customer_id  ...  amount               payment_date
+0         17503          341  ...    7.99 2007-02-15 22:25:46.996577
+1         17519          344  ...    3.99 2007-02-15 10:54:44.996577
+2         17520          344  ...    4.99 2007-02-15 19:36:27.996577
+3         17522          345  ...    0.99 2007-02-15 01:26:17.996577
+4         17523          345  ...    4.99 2007-02-15 18:34:15.996577
+..          ...          ...  ...     ...                        ...
+303       19459          255  ...    6.99 2007-02-15 16:24:40.996577
+304       19499          264  ...    4.99 2007-02-15 00:55:33.996577
+305       19505          266  ...    5.99 2007-02-15 06:44:32.996577
+306       19509          267  ...    4.99 2007-02-15 04:44:02.996577
+307       19510          267  ...    4.99 2007-02-15 11:17:28.996577
+
+[308 rows x 6 columns]
+[2024-07-10T20:29:59.506+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-10T20:29:59.518+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=payment, execution_date=20240710T202954, start_date=20240710T202957, end_date=20240710T202959
+[2024-07-10T20:29:59.561+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-10T20:29:59.603+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

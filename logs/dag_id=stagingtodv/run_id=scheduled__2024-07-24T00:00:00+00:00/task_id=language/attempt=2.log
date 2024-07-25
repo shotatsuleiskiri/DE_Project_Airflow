@@ -1,0 +1,39 @@
+[2024-07-25T18:28:42.705+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.language scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:28:42.711+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.language scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T18:28:42.711+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2024-07-25T18:28:42.718+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): language> on 2024-07-24 00:00:00+00:00
+[2024-07-25T18:28:42.721+0000] {standard_task_runner.py:60} INFO - Started process 140 to run task
+[2024-07-25T18:28:42.724+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'language', 'scheduled__2024-07-24T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp64tzoe9i']
+[2024-07-25T18:28:42.725+0000] {standard_task_runner.py:88} INFO - Job 18: Subtask language
+[2024-07-25T18:28:42.754+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.language scheduled__2024-07-24T00:00:00+00:00 [running]> on host 92d017e1ac63
+[2024-07-25T18:28:42.796+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='language' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-24T00:00:00+00:00'
+[2024-07-25T18:28:42.797+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'language' and Stage = 'stagingtodv'
+[2024-07-25T18:28:42.953+0000] {logging_mixin.py:188} INFO - sourceDF     :    language_id                  name         last_update
+0            1  English              2006-02-15 10:02:19
+1            2  Italian              2006-02-15 10:02:19
+2            3  Japanese             2006-02-15 10:02:19
+3            4  Mandarin             2006-02-15 10:02:19
+4            5  French               2006-02-15 10:02:19
+5            6  German               2006-02-15 10:02:19
+[2024-07-25T18:28:42.960+0000] {logging_mixin.py:188} INFO - dest_col_list ['gen_language_id', 'source_language_id', 'name', 'last_update']
+[2024-07-25T18:28:42.963+0000] {logging_mixin.py:188} INFO - generatenaturalDF    language_id                  name         last_update  source_language_id
+0            1  English              2006-02-15 10:02:19                   1
+1            2  Italian              2006-02-15 10:02:19                   2
+2            3  Japanese             2006-02-15 10:02:19                   3
+3            4  Mandarin             2006-02-15 10:02:19                   4
+4            5  French               2006-02-15 10:02:19                   5
+5            6  German               2006-02-15 10:02:19                   6
+[2024-07-25T18:28:42.967+0000] {logging_mixin.py:188} INFO - genaretedDF    gen_language_id  ...         last_update
+0         10000002  ... 2006-02-15 10:02:19
+1         10000003  ... 2006-02-15 10:02:19
+2         10000004  ... 2006-02-15 10:02:19
+3         10000005  ... 2006-02-15 10:02:19
+4         10000006  ... 2006-02-15 10:02:19
+5         10000007  ... 2006-02-15 10:02:19
+
+[6 rows x 4 columns]
+[2024-07-25T18:28:43.009+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='language';
+[2024-07-25T18:28:43.015+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-25T18:28:43.021+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=language, execution_date=20240724T000000, start_date=20240725T182842, end_date=20240725T182843
+[2024-07-25T18:28:43.069+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-25T18:28:43.079+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

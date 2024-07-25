@@ -1,0 +1,29 @@
+[2024-07-22T20:27:46.389+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.actor manual__2024-07-22T20:27:43.482203+00:00 [queued]>
+[2024-07-22T20:27:46.420+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.actor manual__2024-07-22T20:27:43.482203+00:00 [queued]>
+[2024-07-22T20:27:46.424+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:27:46.467+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): actor> on 2024-07-22 20:27:43.482203+00:00
+[2024-07-22T20:27:46.498+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'actor', 'manual__2024-07-22T20:27:43.482203+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpeis2orio']
+[2024-07-22T20:27:46.484+0000] {standard_task_runner.py:60} INFO - Started process 349 to run task
+[2024-07-22T20:27:46.504+0000] {standard_task_runner.py:88} INFO - Job 36: Subtask actor
+[2024-07-22T20:27:46.632+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.actor manual__2024-07-22T20:27:43.482203+00:00 [running]> on host 78ac63ab6c84
+[2024-07-22T20:27:46.796+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T20:27:43.482203+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-22T20:27:43.482203+00:00'
+[2024-07-22T20:27:46.833+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'actor' and Stage = 'stagingtodv'
+[2024-07-22T20:27:47.942+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0         1             2                       3
+0      1  Penelope       Guiness 2013-05-26 14:47:57.620
+1      2      Nick      Wahlberg 2013-05-26 14:47:57.620
+2      3        Ed         Chase 2013-05-26 14:47:57.620
+3      4  Jennifer         Davis 2013-05-26 14:47:57.620
+4      5    Johnny  Lollobrigida 2013-05-26 14:47:57.620
+..   ...       ...           ...                     ...
+195  196      Bela        Walken 2013-05-26 14:47:57.620
+196  197     Reese          West 2013-05-26 14:47:57.620
+197  198      Mary        Keitel 2013-05-26 14:47:57.620
+198  199     Julia       Fawcett 2013-05-26 14:47:57.620
+199  200     Thora        Temple 2013-05-26 14:47:57.620
+
+[200 rows x 4 columns]
+[2024-07-22T20:27:48.176+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='actor';
+[2024-07-22T20:27:48.221+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:27:48.229+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=actor, execution_date=20240722T202743, start_date=20240722T202746, end_date=20240722T202748
+[2024-07-22T20:27:48.266+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:27:48.301+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

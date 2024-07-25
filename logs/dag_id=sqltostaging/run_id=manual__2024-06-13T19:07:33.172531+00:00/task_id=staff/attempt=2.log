@@ -1,0 +1,19 @@
+[2024-06-13T19:08:55.187+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.staff manual__2024-06-13T19:07:33.172531+00:00 [queued]>
+[2024-06-13T19:08:55.193+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.staff manual__2024-06-13T19:07:33.172531+00:00 [queued]>
+[2024-06-13T19:08:55.193+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2024-06-13T19:08:55.200+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): staff> on 2024-06-13 19:07:33.172531+00:00
+[2024-06-13T19:08:55.203+0000] {standard_task_runner.py:60} INFO - Started process 223 to run task
+[2024-06-13T19:08:55.206+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'staff', 'manual__2024-06-13T19:07:33.172531+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpyafad6xp']
+[2024-06-13T19:08:55.208+0000] {standard_task_runner.py:88} INFO - Job 34: Subtask staff
+[2024-06-13T19:08:55.234+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.staff manual__2024-06-13T19:07:33.172531+00:00 [running]> on host 8a078fc0234e
+[2024-06-13T19:08:55.274+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='staff' AIRFLOW_CTX_EXECUTION_DATE='2024-06-13T19:07:33.172531+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-13T19:07:33.172531+00:00'
+[2024-06-13T19:08:55.276+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-06-13T19:08:55.277+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: full 
+ schema: public 
+ table:staff
+[2024-06-13T19:08:55.532+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-13T19:08:55.538+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=staff, execution_date=20240613T190733, start_date=20240613T190855, end_date=20240613T190855
+[2024-06-13T19:08:55.565+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-13T19:08:55.576+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

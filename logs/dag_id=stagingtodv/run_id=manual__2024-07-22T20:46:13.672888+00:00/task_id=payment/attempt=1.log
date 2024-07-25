@@ -1,0 +1,47 @@
+[2024-07-22T20:46:15.645+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.payment manual__2024-07-22T20:46:13.672888+00:00 [queued]>
+[2024-07-22T20:46:15.657+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.payment manual__2024-07-22T20:46:13.672888+00:00 [queued]>
+[2024-07-22T20:46:15.658+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:46:15.700+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): payment> on 2024-07-22 20:46:13.672888+00:00
+[2024-07-22T20:46:15.733+0000] {standard_task_runner.py:60} INFO - Started process 265 to run task
+[2024-07-22T20:46:15.746+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'payment', 'manual__2024-07-22T20:46:13.672888+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqeqq8bmv']
+[2024-07-22T20:46:15.759+0000] {standard_task_runner.py:88} INFO - Job 22: Subtask payment
+[2024-07-22T20:46:15.929+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.payment manual__2024-07-22T20:46:13.672888+00:00 [running]> on host ca612ea69d67
+[2024-07-22T20:46:16.145+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='payment' AIRFLOW_CTX_EXECUTION_DATE='2024-07-22T20:46:13.672888+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-22T20:46:13.672888+00:00'
+[2024-07-22T20:46:16.160+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'payment' and Stage = 'stagingtodv'
+[2024-07-22T20:46:17.296+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF            0    1  2      3     4                          5
+0      17503  341  2   1520  7.99 2007-02-15 22:25:46.996577
+1      17504  341  1   1778  1.99 2007-02-16 17:23:14.996577
+2      17505  341  1   1849  7.99 2007-02-16 22:41:45.996577
+3      17506  341  2   2829  2.99 2007-02-19 19:39:56.996577
+4      17507  341  2   3130  7.99 2007-02-20 17:31:48.996577
+...      ...  ... ..    ...   ...                        ...
+14591  32094  245  2  12682  2.99 2007-05-14 13:44:29.996577
+14592  32095  251  1  14107  0.99 2007-05-14 13:44:29.996577
+14593  32096  252  2  13756  4.99 2007-05-14 13:44:29.996577
+14594  32097  263  1  15293  0.99 2007-05-14 13:44:29.996577
+14595  32098  264  2  14243  2.99 2007-05-14 13:44:29.996577
+
+[14596 rows x 6 columns]
+[2024-07-22T20:46:17.410+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF      0   1  2     3      4    5                       6
+0  999  99  9  9999  99999  9.0 2024-07-23 00:45:05.657
+[2024-07-22T20:46:17.417+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 33, in execute
+    StagingToDV().create_incremental().some_function(table, stage)
+  File "/app/concretestage/StagingToDV.py", line 64, in some_function
+    dest_col_list = getDF(DestDBName, DestTableName,DestSchema).columns()
+TypeError: 'Index' object is not callable
+[2024-07-22T20:46:17.464+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=payment, execution_date=20240722T204613, start_date=20240722T204615, end_date=20240722T204617
+[2024-07-22T20:46:17.499+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 22 for task payment ('Index' object is not callable; 265)
+[2024-07-22T20:46:17.544+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:46:17.642+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

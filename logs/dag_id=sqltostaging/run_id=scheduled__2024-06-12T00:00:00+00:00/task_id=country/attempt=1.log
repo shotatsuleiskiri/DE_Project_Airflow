@@ -1,0 +1,278 @@
+[2024-06-13T18:35:27.703+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:35:27.717+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:35:27.726+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-13T18:35:27.766+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-06-12 00:00:00+00:00
+[2024-06-13T18:35:27.781+0000] {standard_task_runner.py:60} INFO - Started process 332 to run task
+[2024-06-13T18:35:27.808+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-06-12T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp_roensxd']
+[2024-06-13T18:35:27.823+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask country
+[2024-06-13T18:35:27.934+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [running]> on host 01e60193086e
+[2024-06-13T18:35:29.515+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-06-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-12T00:00:00+00:00'
+[2024-06-13T18:35:29.520+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-06-13T18:35:29.528+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: full 
+ schema: public 
+ table:category
+[2024-06-13T18:35:29.619+0000] {logging_mixin.py:188} INFO - <class 'list'>
+[2024-06-13T18:35:29.623+0000] {logging_mixin.py:188} INFO - [(1, 'Action', datetime.datetime(2006, 2, 15, 9, 46, 27)), (2, 'Animation', datetime.datetime(2006, 2, 15, 9, 46, 27)), (3, 'Children', datetime.datetime(2006, 2, 15, 9, 46, 27)), (4, 'Classics', datetime.datetime(2006, 2, 15, 9, 46, 27)), (5, 'Comedy', datetime.datetime(2006, 2, 15, 9, 46, 27)), (6, 'Documentary', datetime.datetime(2006, 2, 15, 9, 46, 27)), (7, 'Drama', datetime.datetime(2006, 2, 15, 9, 46, 27)), (8, 'Family', datetime.datetime(2006, 2, 15, 9, 46, 27)), (9, 'Foreign', datetime.datetime(2006, 2, 15, 9, 46, 27)), (10, 'Games', datetime.datetime(2006, 2, 15, 9, 46, 27)), (11, 'Horror', datetime.datetime(2006, 2, 15, 9, 46, 27)), (12, 'Music', datetime.datetime(2006, 2, 15, 9, 46, 27)), (13, 'New', datetime.datetime(2006, 2, 15, 9, 46, 27)), (14, 'Sci-Fi', datetime.datetime(2006, 2, 15, 9, 46, 27)), (15, 'Sports', datetime.datetime(2006, 2, 15, 9, 46, 27)), (16, 'Travel', datetime.datetime(2006, 2, 15, 9, 46, 27))] 
+: sourceDF
+[2024-06-13T18:35:29.625+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-13T18:35:29.636+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240612T000000, start_date=20240613T183527, end_date=20240613T183529
+[2024-06-13T18:35:29.713+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-13T18:35:29.733+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-13T18:42:32.826+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:42:32.845+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:42:32.855+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-13T18:42:32.903+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-06-12 00:00:00+00:00
+[2024-06-13T18:42:32.921+0000] {standard_task_runner.py:60} INFO - Started process 87 to run task
+[2024-06-13T18:42:32.931+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-06-12T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwelfi9su']
+[2024-06-13T18:42:32.946+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask country
+[2024-06-13T18:42:33.088+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [running]> on host 52e9fcc277c9
+[2024-06-13T18:42:34.207+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-06-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-12T00:00:00+00:00'
+[2024-06-13T18:42:34.208+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-06-13T18:42:34.212+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: full 
+ schema: public 
+ table:category
+[2024-06-13T18:42:34.334+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table_stage, table_type, schema, table)
+  File "/app/main.py", line 24, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 26, in some_function
+    sourceDF = getDF(yaml.getSourceDBName(), yaml.getTSourceTableName(),yaml.getSourceSchema())
+  File "/app/myFramework/utils/utils.py", line 27, in getDF
+    df.columns = cur.keys()
+AttributeError: 'psycopg2.extensions.cursor' object has no attribute 'keys'
+[2024-06-13T18:42:34.357+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240612T000000, start_date=20240613T184232, end_date=20240613T184234
+[2024-06-13T18:42:34.378+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task country ('psycopg2.extensions.cursor' object has no attribute 'keys'; 87)
+[2024-06-13T18:42:34.429+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-06-13T18:42:34.464+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-13T18:53:55.314+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:53:55.358+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:53:55.360+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-13T18:53:55.417+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-06-12 00:00:00+00:00
+[2024-06-13T18:53:55.433+0000] {standard_task_runner.py:60} INFO - Started process 101 to run task
+[2024-06-13T18:53:55.444+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-06-12T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpannfkjet']
+[2024-06-13T18:53:55.454+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask country
+[2024-06-13T18:53:55.721+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [running]> on host 431bb22026d8
+[2024-06-13T18:53:56.694+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-06-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-12T00:00:00+00:00'
+[2024-06-13T18:53:56.697+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-06-13T18:53:56.698+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: full 
+ schema: public 
+ table:category
+[2024-06-13T18:53:56.808+0000] {logging_mixin.py:188} INFO -     category_id         name         last_update
+0             1       Action 2006-02-15 09:46:27
+1             2    Animation 2006-02-15 09:46:27
+2             3     Children 2006-02-15 09:46:27
+3             4     Classics 2006-02-15 09:46:27
+4             5       Comedy 2006-02-15 09:46:27
+5             6  Documentary 2006-02-15 09:46:27
+6             7        Drama 2006-02-15 09:46:27
+7             8       Family 2006-02-15 09:46:27
+8             9      Foreign 2006-02-15 09:46:27
+9            10        Games 2006-02-15 09:46:27
+10           11       Horror 2006-02-15 09:46:27
+11           12        Music 2006-02-15 09:46:27
+12           13          New 2006-02-15 09:46:27
+13           14       Sci-Fi 2006-02-15 09:46:27
+14           15       Sports 2006-02-15 09:46:27
+15           16       Travel 2006-02-15 09:46:27
+[2024-06-13T18:53:56.812+0000] {logging_mixin.py:188} INFO -     category_id         name         last_update
+0             1       Action 2006-02-15 09:46:27
+1             2    Animation 2006-02-15 09:46:27
+2             3     Children 2006-02-15 09:46:27
+3             4     Classics 2006-02-15 09:46:27
+4             5       Comedy 2006-02-15 09:46:27
+5             6  Documentary 2006-02-15 09:46:27
+6             7        Drama 2006-02-15 09:46:27
+7             8       Family 2006-02-15 09:46:27
+8             9      Foreign 2006-02-15 09:46:27
+9            10        Games 2006-02-15 09:46:27
+10           11       Horror 2006-02-15 09:46:27
+11           12        Music 2006-02-15 09:46:27
+12           13          New 2006-02-15 09:46:27
+13           14       Sci-Fi 2006-02-15 09:46:27
+14           15       Sports 2006-02-15 09:46:27
+15           16       Travel 2006-02-15 09:46:27 
+: sourceDF
+[2024-06-13T18:53:56.813+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-13T18:53:56.822+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=sqltostaging, task_id=country, execution_date=20240612T000000, start_date=20240613T185355, end_date=20240613T185356
+[2024-06-13T18:53:56.841+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-13T18:53:56.874+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-13T18:57:30.509+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:57:30.525+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T18:57:30.527+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-13T18:57:30.555+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-06-12 00:00:00+00:00
+[2024-06-13T18:57:30.558+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-06-13T18:57:30.567+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-06-12T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpj7wyqt8w']
+[2024-06-13T18:57:30.574+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask country
+[2024-06-13T18:57:30.747+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [running]> on host 96dba295aa41
+[2024-06-13T18:57:31.708+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-06-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-12T00:00:00+00:00'
+[2024-06-13T18:57:31.713+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-06-13T18:57:31.714+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: full 
+ schema: public 
+ table:category
+[2024-06-13T18:57:32.077+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table_stage, table_type, schema, table)
+  File "/app/main.py", line 24, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 34, in some_function
+    fillPosgres(sourceDF,f'{yaml.getDestDBName()}',f'{yaml.getDestSchema()}',yaml.getDestTbaleName(), yaml.getInsertionType())
+  File "/app/myFramework/utils/readYaml.py", line 55, in getInsertionType
+    return self.getYaml()['InsertionType']
+KeyError: 'InsertionType'
+[2024-06-13T18:57:32.109+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240612T000000, start_date=20240613T185730, end_date=20240613T185732
+[2024-06-13T18:57:32.158+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task country ('InsertionType'; 89)
+[2024-06-13T18:57:32.212+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-06-13T18:57:32.268+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-13T19:04:07.630+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T19:04:07.650+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [queued]>
+[2024-06-13T19:04:07.663+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-13T19:04:07.720+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-06-12 00:00:00+00:00
+[2024-06-13T19:04:07.751+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-06-13T19:04:07.773+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'sqltostaging', 'country', 'scheduled__2024-06-12T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpklxt_0jw']
+[2024-06-13T19:04:07.795+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask country
+[2024-06-13T19:04:08.111+0000] {task_command.py:423} INFO - Running <TaskInstance: sqltostaging.country scheduled__2024-06-12T00:00:00+00:00 [running]> on host 8a078fc0234e
+[2024-06-13T19:04:08.610+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sqltostaging' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-06-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-12T00:00:00+00:00'
+[2024-06-13T19:04:08.622+0000] {logging_mixin.py:188} INFO - dvtobv
+[2024-06-13T19:04:08.629+0000] {logging_mixin.py:188} INFO - 
+ stage: sqltostaging 
+ type: full 
+ schema: public 
+ table:staff
+[2024-06-13T19:04:10.353+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidSchemaName: schema "dvdrental" does not exist
+LINE 2: CREATE TABLE dvdrental.staff (
+                     ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table_stage, table_type, schema, table)
+  File "/app/main.py", line 24, in execute
+    SqlToStaging().create_full().some_function(stage, type, schema, table)
+  File "/app/concretestage/SQLToStaging.py", line 34, in some_function
+    fillPosgres(sourceDF,f'{yaml.getDestDBName()}',f'{yaml.getDestSchema()}',yaml.getDestTbaleName(), yaml.getInsertionType())
+  File "/app/myFramework/utils/utils.py", line 33, in fillPosgres
+    df.to_sql(tablename, conn.getEngine(dst_dbname)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2878, in to_sql
+    return sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 769, in to_sql
+    return pandas_sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1910, in to_sql
+    table = self.prep_table(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1814, in prep_table
+    table.create()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 914, in create
+    self._execute_create()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 900, in _execute_create
+    self.table.create(bind=self.pd_sql.con)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/sql/schema.py", line 962, in create
+    bind._run_ddl_visitor(ddl.SchemaGenerator, self, checkfirst=checkfirst)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2221, in _run_ddl_visitor
+    visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/sql/visitors.py", line 524, in traverse_single
+    return meth(obj, **kw)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/sql/ddl.py", line 899, in visit_table
+    self.connection.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/sql/ddl.py", line 80, in _execute_on_connection
+    return connection._execute_ddl(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1477, in _execute_ddl
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.InvalidSchemaName) schema "dvdrental" does not exist
+LINE 2: CREATE TABLE dvdrental.staff (
+                     ^
+
+[SQL: 
+CREATE TABLE dvdrental.staff (
+	staff_id BIGINT, 
+	first_name TEXT, 
+	last_name TEXT, 
+	address_id BIGINT, 
+	email TEXT, 
+	store_id BIGINT, 
+	active BOOLEAN, 
+	username TEXT, 
+	password TEXT, 
+	last_update TIMESTAMP WITHOUT TIME ZONE, 
+	picture TEXT
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2024-06-13T19:04:10.378+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=sqltostaging, task_id=country, execution_date=20240612T000000, start_date=20240613T190407, end_date=20240613T190410
+[2024-06-13T19:04:10.405+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task country ((psycopg2.errors.InvalidSchemaName) schema "dvdrental" does not exist
+LINE 2: CREATE TABLE dvdrental.staff (
+                     ^
+
+[SQL: 
+CREATE TABLE dvdrental.staff (
+	staff_id BIGINT, 
+	first_name TEXT, 
+	last_name TEXT, 
+	address_id BIGINT, 
+	email TEXT, 
+	store_id BIGINT, 
+	active BOOLEAN, 
+	username TEXT, 
+	password TEXT, 
+	last_update TIMESTAMP WITHOUT TIME ZONE, 
+	picture TEXT
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/14/f405); 91)
+[2024-06-13T19:04:10.484+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-06-13T19:04:10.523+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

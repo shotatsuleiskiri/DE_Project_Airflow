@@ -1,0 +1,47 @@
+[2024-07-08T18:13:43.691+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SqlToStaging.film_actor scheduled__2024-07-03T00:00:00+00:00 [queued]>
+[2024-07-08T18:13:43.701+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SqlToStaging.film_actor scheduled__2024-07-03T00:00:00+00:00 [queued]>
+[2024-07-08T18:13:43.702+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-08T18:13:43.749+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): film_actor> on 2024-07-03 00:00:00+00:00
+[2024-07-08T18:13:43.756+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-08T18:13:43.789+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SqlToStaging', 'film_actor', 'scheduled__2024-07-03T00:00:00+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6py1or1j']
+[2024-07-08T18:13:43.797+0000] {standard_task_runner.py:88} INFO - Job 29: Subtask film_actor
+[2024-07-08T18:13:43.963+0000] {task_command.py:423} INFO - Running <TaskInstance: SqlToStaging.film_actor scheduled__2024-07-03T00:00:00+00:00 [running]> on host 091922596b62
+[2024-07-08T18:13:44.238+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SqlToStaging' AIRFLOW_CTX_TASK_ID='film_actor' AIRFLOW_CTX_EXECUTION_DATE='2024-07-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-03T00:00:00+00:00'
+[2024-07-08T18:13:44.251+0000] {logging_mixin.py:188} INFO - dvtobv :dag_id
+[2024-07-08T18:13:44.252+0000] {logging_mixin.py:188} INFO - table: film_actor
+[2024-07-08T18:13:44.258+0000] {logging_mixin.py:188} INFO - 
+ stage: SqlToStaging 
+ table:film_actor
+[2024-07-08T18:13:44.258+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'film_actor' and Stage = 'SqlToStaging'
+[2024-07-08T18:13:44.430+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 22, in process_table
+    return  execute(table, stage)
+  File "/app/main.py", line 25, in execute
+    SqlToStaging().create_full().some_function(table, stage)
+  File "/app/concretestage/SQLToStaging.py", line 31, in some_function
+    df = get_data_from_conf_table(f"{table}", f"{stage}")
+  File "/app/myFramework/utils/utils.py", line 143, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-08T18:13:45.237+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=SqlToStaging, task_id=film_actor, execution_date=20240703T000000, start_date=20240708T181343, end_date=20240708T181345
+[2024-07-08T18:13:45.279+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 29 for task film_actor (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 90)
+[2024-07-08T18:13:45.315+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-08T18:13:45.387+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

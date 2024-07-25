@@ -1,0 +1,43 @@
+[2024-07-16T18:34:06.533+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.category manual__2024-07-16T18:34:03.769659+00:00 [queued]>
+[2024-07-16T18:34:06.556+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.category manual__2024-07-16T18:34:03.769659+00:00 [queued]>
+[2024-07-16T18:34:06.564+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-16T18:34:06.605+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): category> on 2024-07-16 18:34:03.769659+00:00
+[2024-07-16T18:34:06.617+0000] {standard_task_runner.py:60} INFO - Started process 169 to run task
+[2024-07-16T18:34:06.624+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'category', 'manual__2024-07-16T18:34:03.769659+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmprep3s4uq']
+[2024-07-16T18:34:06.637+0000] {standard_task_runner.py:88} INFO - Job 30: Subtask category
+[2024-07-16T18:34:06.738+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.category manual__2024-07-16T18:34:03.769659+00:00 [running]> on host b7021158e377
+[2024-07-16T18:34:06.990+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='category' AIRFLOW_CTX_EXECUTION_DATE='2024-07-16T18:34:03.769659+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-16T18:34:03.769659+00:00'
+[2024-07-16T18:34:07.010+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'stagingtodv'
+[2024-07-16T18:34:07.188+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'category' and Stage = 'stagingtodv'
+[2024-07-16T18:34:07.877+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 45, in process_table
+    return  execute(table, stage, tabletype)
+  File "/app/main.py", line 31, in execute
+    (StagingToDV().create_full().some_function(table, stage))
+  File "/app/concretestage/StagingToDV.py", line 36, in some_function
+    sourceDF = getDF(sourcedbname,sourcetablename , sourceschema)
+  File "/app/myFramework/utils/utils.py", line 32, in getDF
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 1 elements
+[2024-07-16T18:34:07.935+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=category, execution_date=20240716T183403, start_date=20240716T183406, end_date=20240716T183407
+[2024-07-16T18:34:07.963+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 30 for task category (Length mismatch: Expected axis has 0 elements, new values have 1 elements; 169)
+[2024-07-16T18:34:08.007+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-16T18:34:08.075+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

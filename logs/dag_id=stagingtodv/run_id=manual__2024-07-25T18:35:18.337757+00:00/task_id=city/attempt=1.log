@@ -1,0 +1,58 @@
+[2024-07-25T18:35:20.796+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.city manual__2024-07-25T18:35:18.337757+00:00 [queued]>
+[2024-07-25T18:35:20.805+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.city manual__2024-07-25T18:35:18.337757+00:00 [queued]>
+[2024-07-25T18:35:20.807+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-25T18:35:20.853+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): city> on 2024-07-25 18:35:18.337757+00:00
+[2024-07-25T18:35:20.865+0000] {standard_task_runner.py:60} INFO - Started process 281 to run task
+[2024-07-25T18:35:20.903+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'city', 'manual__2024-07-25T18:35:18.337757+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp81yzjfxa']
+[2024-07-25T18:35:20.907+0000] {standard_task_runner.py:88} INFO - Job 28: Subtask city
+[2024-07-25T18:35:21.045+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.city manual__2024-07-25T18:35:18.337757+00:00 [running]> on host 92d017e1ac63
+[2024-07-25T18:35:22.580+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='city' AIRFLOW_CTX_EXECUTION_DATE='2024-07-25T18:35:18.337757+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-25T18:35:18.337757+00:00'
+[2024-07-25T18:35:22.585+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'city' and Stage = 'stagingtodv'
+[2024-07-25T18:35:22.727+0000] {logging_mixin.py:188} INFO - sourceDF     :      city_id                city  country_id         last_update
+0          1  A Corua (La Corua)          87 2006-02-15 09:45:25
+1          2                Abha          82 2006-02-15 09:45:25
+2          3           Abu Dhabi         101 2006-02-15 09:45:25
+3          4                Acua          60 2006-02-15 09:45:25
+4          5               Adana          97 2006-02-15 09:45:25
+..       ...                 ...         ...                 ...
+595      596               Zaria          69 2006-02-15 09:45:25
+596      597        Zeleznogorsk          80 2006-02-15 09:45:25
+597      598         Zhezqazghan          51 2006-02-15 09:45:25
+598      599            Zhoushan          23 2006-02-15 09:45:25
+599      600          Ziguinchor          83 2006-02-15 09:45:25
+
+[600 rows x 4 columns]
+[2024-07-25T18:35:22.805+0000] {logging_mixin.py:188} INFO - dest_col_list ['gen_city_id', 'source_city_id', 'city', 'country_id', 'last_update']
+[2024-07-25T18:35:22.829+0000] {logging_mixin.py:188} INFO - generatenaturalDF      city_id                city  ...         last_update source_city_id
+0          1  A Corua (La Corua)  ... 2006-02-15 09:45:25              1
+1          2                Abha  ... 2006-02-15 09:45:25              2
+2          3           Abu Dhabi  ... 2006-02-15 09:45:25              3
+3          4                Acua  ... 2006-02-15 09:45:25              4
+4          5               Adana  ... 2006-02-15 09:45:25              5
+..       ...                 ...  ...                 ...            ...
+595      596               Zaria  ... 2006-02-15 09:45:25            596
+596      597        Zeleznogorsk  ... 2006-02-15 09:45:25            597
+597      598         Zhezqazghan  ... 2006-02-15 09:45:25            598
+598      599            Zhoushan  ... 2006-02-15 09:45:25            599
+599      600          Ziguinchor  ... 2006-02-15 09:45:25            600
+
+[600 rows x 5 columns]
+[2024-07-25T18:35:22.849+0000] {logging_mixin.py:188} INFO - genaretedDF      gen_city_id  source_city_id  ... country_id         last_update
+0       10000002               1  ...         87 2006-02-15 09:45:25
+1       10000003               2  ...         82 2006-02-15 09:45:25
+2       10000004               3  ...        101 2006-02-15 09:45:25
+3       10000005               4  ...         60 2006-02-15 09:45:25
+4       10000006               5  ...         97 2006-02-15 09:45:25
+..           ...             ...  ...        ...                 ...
+595     10000597             596  ...         69 2006-02-15 09:45:25
+596     10000598             597  ...         80 2006-02-15 09:45:25
+597     10000599             598  ...         51 2006-02-15 09:45:25
+598     10000600             599  ...         23 2006-02-15 09:45:25
+599     10000601             600  ...         83 2006-02-15 09:45:25
+
+[600 rows x 5 columns]
+[2024-07-25T18:35:23.031+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='city';
+[2024-07-25T18:35:23.076+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-25T18:35:23.088+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=city, execution_date=20240725T183518, start_date=20240725T183520, end_date=20240725T183523
+[2024-07-25T18:35:23.152+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-25T18:35:23.171+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

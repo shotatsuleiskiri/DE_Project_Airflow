@@ -1,0 +1,202 @@
+[2024-07-24T18:08:20.339+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:08:20.369+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:08:20.382+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T18:08:20.461+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T18:08:20.518+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-24T18:08:20.556+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpifdrrq72']
+[2024-07-24T18:08:20.599+0000] {standard_task_runner.py:88} INFO - Job 24: Subtask store
+[2024-07-24T18:08:20.866+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host b19a9c320dfd
+[2024-07-24T18:08:21.196+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T18:08:21.208+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T18:08:22.991+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T18:08:23.008+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T180820, end_date=20240724T180823
+[2024-07-24T18:08:23.039+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T18:08:23.062+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T18:10:28.499+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:10:28.529+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:10:28.531+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T18:10:28.568+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T18:10:28.582+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2024-07-24T18:10:28.606+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkocv_8_1']
+[2024-07-24T18:10:28.615+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask store
+[2024-07-24T18:10:28.915+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host 61620dbbe313
+[2024-07-24T18:10:30.857+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T18:10:30.876+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T18:10:31.722+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T18:10:31.756+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T181028, end_date=20240724T181031
+[2024-07-24T18:10:31.853+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T18:10:31.970+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T18:16:25.095+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:16:25.111+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:16:25.113+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T18:16:25.178+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T18:16:25.211+0000] {standard_task_runner.py:60} INFO - Started process 124 to run task
+[2024-07-24T18:16:25.216+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpdrg0_8c9']
+[2024-07-24T18:16:25.232+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask store
+[2024-07-24T18:16:25.446+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host 498c16fd9e64
+[2024-07-24T18:16:26.330+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T18:16:26.332+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T18:16:26.725+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T18:16:26.731+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T181625, end_date=20240724T181626
+[2024-07-24T18:16:26.752+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T18:16:26.775+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T18:23:31.280+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:23:31.296+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:23:31.299+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T18:23:31.335+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T18:23:31.363+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-07-24T18:23:31.372+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpu80xt07m']
+[2024-07-24T18:23:31.386+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask store
+[2024-07-24T18:23:31.550+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host bbd1d7010f8c
+[2024-07-24T18:23:32.919+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T18:23:32.926+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T18:23:33.297+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T18:23:33.304+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T182331, end_date=20240724T182333
+[2024-07-24T18:23:33.369+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T18:23:33.431+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T18:25:40.606+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:25:40.650+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T18:25:40.653+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T18:25:40.686+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T18:25:40.699+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-24T18:25:40.717+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpottwj49w']
+[2024-07-24T18:25:40.725+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask store
+[2024-07-24T18:25:40.886+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host 5d8e7c9bb9aa
+[2024-07-24T18:25:41.933+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T18:25:41.936+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T18:25:42.310+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T18:25:42.325+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T182540, end_date=20240724T182542
+[2024-07-24T18:25:42.372+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T18:25:42.389+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T19:31:51.678+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T19:31:51.701+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T19:31:51.707+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T19:31:51.742+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T19:31:51.768+0000] {standard_task_runner.py:60} INFO - Started process 111 to run task
+[2024-07-24T19:31:51.807+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2zf9drf8']
+[2024-07-24T19:31:51.823+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask store
+[2024-07-24T19:31:52.087+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host 3e0bdef1d250
+[2024-07-24T19:31:53.832+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T19:31:53.834+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T19:31:54.298+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T19:31:54.309+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T193151, end_date=20240724T193154
+[2024-07-24T19:31:54.387+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T19:31:54.406+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T20:10:31.544+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:10:31.561+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:10:31.572+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T20:10:31.612+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T20:10:31.668+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-24T20:10:31.749+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpp5sx75st']
+[2024-07-24T20:10:31.816+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask store
+[2024-07-24T20:10:32.351+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host 2b5a76a23048
+[2024-07-24T20:10:33.331+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T20:10:33.337+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T20:10:33.927+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T20:10:33.941+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T201031, end_date=20240724T201033
+[2024-07-24T20:10:33.999+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T20:10:34.015+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T20:12:42.626+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:12:42.646+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:12:42.650+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T20:12:42.687+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T20:12:42.799+0000] {standard_task_runner.py:60} INFO - Started process 98 to run task
+[2024-07-24T20:12:42.856+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmps622lpjz']
+[2024-07-24T20:12:42.885+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask store
+[2024-07-24T20:12:43.208+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host c86ab2f6676c
+[2024-07-24T20:12:43.667+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T20:12:43.712+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T20:12:46.760+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T20:12:46.785+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T201242, end_date=20240724T201246
+[2024-07-24T20:12:46.865+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T20:12:46.894+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T20:14:53.237+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:14:53.259+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:14:53.264+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T20:14:53.306+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T20:14:53.334+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-24T20:14:53.354+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpneu14tdy']
+[2024-07-24T20:14:53.367+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask store
+[2024-07-24T20:14:53.560+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host 86e5a5fada4c
+[2024-07-24T20:14:54.257+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T20:14:54.266+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T20:14:55.029+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T20:14:55.037+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T201453, end_date=20240724T201455
+[2024-07-24T20:14:55.076+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T20:14:55.101+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T20:23:46.186+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:23:46.221+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:23:46.223+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T20:23:46.246+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T20:23:46.251+0000] {standard_task_runner.py:60} INFO - Started process 136 to run task
+[2024-07-24T20:23:46.261+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6ef_g4xk']
+[2024-07-24T20:23:46.290+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask store
+[2024-07-24T20:23:46.445+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host fd6805ab8e96
+[2024-07-24T20:23:48.038+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T20:23:48.051+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T20:23:48.832+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T20:23:48.869+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T202346, end_date=20240724T202348
+[2024-07-24T20:23:48.948+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T20:23:48.988+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T20:35:58.795+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:35:58.844+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [queued]>
+[2024-07-24T20:35:58.847+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-24T20:35:58.879+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): store> on 2024-07-23 00:00:00+00:00
+[2024-07-24T20:35:58.901+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-24T20:35:58.915+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'store', 'scheduled__2024-07-23T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp86grqesk']
+[2024-07-24T20:35:58.931+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask store
+[2024-07-24T20:35:59.170+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.store scheduled__2024-07-23T00:00:00+00:00 [running]> on host 7dd317f3ab25
+[2024-07-24T20:36:00.584+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='store' AIRFLOW_CTX_EXECUTION_DATE='2024-07-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-23T00:00:00+00:00'
+[2024-07-24T20:36:00.598+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'store' and Stage = 'stagingtodv'
+[2024-07-24T20:36:01.053+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-24T20:36:01.070+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=store, execution_date=20240723T000000, start_date=20240724T203558, end_date=20240724T203601
+[2024-07-24T20:36:01.121+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-24T20:44:26.131+0000] {taskinstance.py:3318} INFO - Skipping mini scheduling run due to exception: SELECT dag_run.state AS dag_run_state, dag_run.id AS dag_run_id, dag_run.dag_id AS dag_run_dag_id, dag_run.queued_at AS dag_run_queued_at, dag_run.execution_date AS dag_run_execution_date, dag_run.start_date AS dag_run_start_date, dag_run.end_date AS dag_run_end_date, dag_run.run_id AS dag_run_run_id, dag_run.creating_job_id AS dag_run_creating_job_id, dag_run.external_trigger AS dag_run_external_trigger, dag_run.run_type AS dag_run_run_type, dag_run.conf AS dag_run_conf, dag_run.data_interval_start AS dag_run_data_interval_start, dag_run.data_interval_end AS dag_run_data_interval_end, dag_run.last_scheduling_decision AS dag_run_last_scheduling_decision, dag_run.dag_hash AS dag_run_dag_hash, dag_run.log_template_id AS dag_run_log_template_id, dag_run.updated_at AS dag_run_updated_at, dag_run.clear_number AS dag_run_clear_number 
+FROM dag_run 
+WHERE dag_run.dag_id = %(dag_id_1)s AND dag_run.run_id = %(run_id_1)s FOR UPDATE
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 3267, in _schedule_downstream_tasks
+    dag_run = with_row_locks(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT dag_run.state AS dag_run_state, dag_run.id AS dag_run_id, dag_run.dag_id AS dag_run_dag_id, dag_run.queued_at AS dag_run_queued_at, dag_run.execution_date AS dag_run_execution_date, dag_run.start_date AS dag_run_start_date, dag_run.end_date AS dag_run_end_date, dag_run.run_id AS dag_run_run_id, dag_run.creating_job_id AS dag_run_creating_job_id, dag_run.external_trigger AS dag_run_external_trigger, dag_run.run_type AS dag_run_run_type, dag_run.conf AS dag_run_conf, dag_run.data_interval_start AS dag_run_data_interval_start, dag_run.data_interval_end AS dag_run_data_interval_end, dag_run.last_scheduling_decision AS dag_run_last_scheduling_decision, dag_run.dag_hash AS dag_run_dag_hash, dag_run.log_template_id AS dag_run_log_template_id, dag_run.updated_at AS dag_run_updated_at, dag_run.clear_number AS dag_run_clear_number 
+FROM dag_run 
+WHERE dag_run.dag_id = %(dag_id_1)s AND dag_run.run_id = %(run_id_1)s FOR UPDATE]
+[parameters: {'dag_id_1': 'stagingtodv', 'run_id_1': 'scheduled__2024-07-23T00:00:00+00:00'}]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

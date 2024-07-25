@@ -1,0 +1,1275 @@
+[2024-07-02T18:40:47.729+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:40:47.734+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:40:47.736+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:40:47.736+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:40:47.741+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:40:47.757+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.034 seconds
+[2024-07-02T18:41:55.908+0000] {processor.py:161} INFO - Started process (PID=34) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:41:55.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:41:55.911+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:41:55.911+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:41:55.918+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:41:55.934+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T18:42:26.215+0000] {processor.py:161} INFO - Started process (PID=53) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:42:26.216+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:42:26.220+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:42:26.220+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:42:26.227+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:42:26.239+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T18:42:56.868+0000] {processor.py:161} INFO - Started process (PID=65) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:42:56.869+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:42:56.872+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:42:56.871+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:42:56.875+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:42:56.889+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T18:43:27.521+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:43:27.522+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:43:27.524+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:43:27.523+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:43:27.528+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:43:27.540+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T18:43:58.040+0000] {processor.py:161} INFO - Started process (PID=99) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:43:58.042+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:43:58.045+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:43:58.044+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:43:58.049+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:43:58.060+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T18:44:28.562+0000] {processor.py:161} INFO - Started process (PID=111) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:44:28.564+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:44:28.566+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:44:28.565+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:44:28.569+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:44:28.580+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T18:44:59.126+0000] {processor.py:161} INFO - Started process (PID=123) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:44:59.129+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:44:59.132+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:44:59.131+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:44:59.136+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:44:59.150+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.030 seconds
+[2024-07-02T18:45:29.705+0000] {processor.py:161} INFO - Started process (PID=144) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:45:29.706+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:45:29.710+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:45:29.710+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:45:29.714+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:45:29.726+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T18:46:00.360+0000] {processor.py:161} INFO - Started process (PID=156) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:46:00.362+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:46:00.364+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:46:00.364+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:46:00.368+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:46:00.380+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T18:46:31.019+0000] {processor.py:161} INFO - Started process (PID=168) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:46:31.020+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:46:31.022+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:46:31.022+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:46:31.026+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:46:31.037+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T18:47:01.647+0000] {processor.py:161} INFO - Started process (PID=189) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:47:01.648+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:47:01.651+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:47:01.651+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:47:01.655+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:47:01.667+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T18:47:32.262+0000] {processor.py:161} INFO - Started process (PID=201) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:47:32.263+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:47:32.264+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:47:32.264+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:47:32.267+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:47:32.279+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T18:48:02.725+0000] {processor.py:161} INFO - Started process (PID=213) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:48:02.726+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:48:02.729+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:48:02.729+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:48:02.734+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:48:02.750+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T18:48:32.947+0000] {processor.py:161} INFO - Started process (PID=225) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:48:32.948+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:48:32.957+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:48:32.956+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:48:32.969+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:48:33.030+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.105 seconds
+[2024-07-02T18:49:39.969+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:49:39.970+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:49:39.971+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:49:39.971+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:49:39.977+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:49:39.989+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T18:50:10.274+0000] {processor.py:161} INFO - Started process (PID=46) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:50:10.276+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:50:10.277+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:50:10.277+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:50:10.281+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:50:10.291+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T18:50:40.769+0000] {processor.py:161} INFO - Started process (PID=67) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:50:40.771+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:50:40.773+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:50:40.773+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:50:40.778+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:50:40.791+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T18:51:11.387+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:51:11.388+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:51:11.390+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:51:11.389+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:51:11.394+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:51:11.404+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T18:51:41.989+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:51:41.991+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:51:41.996+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:51:41.995+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:51:42.000+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:51:42.012+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T18:52:12.619+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:52:12.620+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:52:12.621+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:52:12.621+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:52:12.626+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:52:12.638+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T18:52:43.227+0000] {processor.py:161} INFO - Started process (PID=115) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:52:43.230+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:52:43.231+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:52:43.231+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:52:43.235+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:52:43.248+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T18:53:13.839+0000] {processor.py:161} INFO - Started process (PID=127) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:53:13.840+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:53:13.842+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:53:13.842+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:53:13.846+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:53:13.859+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T18:53:44.502+0000] {processor.py:161} INFO - Started process (PID=139) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:53:44.503+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:53:44.505+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:53:44.504+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:53:44.507+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:53:44.518+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T18:54:15.160+0000] {processor.py:161} INFO - Started process (PID=151) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:54:15.161+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:54:15.163+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:54:15.163+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:54:15.166+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:54:15.178+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T18:54:45.714+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:54:45.716+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:54:45.718+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:54:45.718+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:54:45.721+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:54:45.733+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T18:55:16.197+0000] {processor.py:161} INFO - Started process (PID=175) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:55:16.198+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:55:16.200+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:55:16.200+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:55:16.203+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:55:16.214+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T18:55:46.816+0000] {processor.py:161} INFO - Started process (PID=186) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:55:46.817+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:55:46.819+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:55:46.819+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:55:46.822+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:55:46.831+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.018 seconds
+[2024-07-02T18:56:17.469+0000] {processor.py:161} INFO - Started process (PID=198) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:56:17.470+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:56:17.473+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:56:17.472+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:56:17.479+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:56:17.494+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T18:56:48.081+0000] {processor.py:161} INFO - Started process (PID=210) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:56:48.083+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:56:48.085+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:56:48.085+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:56:48.091+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:56:48.105+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T18:57:18.718+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:57:18.720+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:57:18.723+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:57:18.722+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:57:18.729+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:57:18.741+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T18:57:49.315+0000] {processor.py:161} INFO - Started process (PID=234) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:57:49.316+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:57:49.317+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:57:49.317+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:57:49.320+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:57:49.332+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T18:58:19.986+0000] {processor.py:161} INFO - Started process (PID=245) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:58:19.988+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:58:19.992+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:58:19.992+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:58:19.997+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:58:20.009+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T18:58:50.671+0000] {processor.py:161} INFO - Started process (PID=256) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:58:50.672+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:58:50.673+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:58:50.673+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:58:50.677+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:58:50.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T18:59:21.356+0000] {processor.py:161} INFO - Started process (PID=268) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:59:21.357+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:59:21.358+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:59:21.358+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:59:21.361+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:59:21.375+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T18:59:51.925+0000] {processor.py:161} INFO - Started process (PID=280) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T18:59:51.926+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T18:59:51.928+0000] {logging_mixin.py:188} INFO - [2024-07-02T18:59:51.927+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:59:51.932+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T18:59:51.944+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:00:22.580+0000] {processor.py:161} INFO - Started process (PID=291) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:00:22.581+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:00:22.583+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:00:22.583+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:00:22.586+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:00:22.598+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:00:53.135+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:00:53.136+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:00:53.138+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:00:53.138+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:00:53.142+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:00:53.153+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:01:23.793+0000] {processor.py:161} INFO - Started process (PID=314) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:01:23.795+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:01:23.797+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:01:23.797+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:01:23.801+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:01:23.812+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:01:54.409+0000] {processor.py:161} INFO - Started process (PID=326) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:01:54.410+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:01:54.412+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:01:54.412+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:01:54.416+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:01:54.428+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T19:02:25.038+0000] {processor.py:161} INFO - Started process (PID=338) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:02:25.039+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:02:25.041+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:02:25.041+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:02:25.045+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:02:25.062+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T19:02:55.699+0000] {processor.py:161} INFO - Started process (PID=349) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:02:55.700+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:02:55.702+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:02:55.701+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:02:55.705+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:02:55.715+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T19:03:26.350+0000] {processor.py:161} INFO - Started process (PID=361) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:03:26.351+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:03:26.354+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:03:26.353+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:03:26.358+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:03:26.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:03:56.998+0000] {processor.py:161} INFO - Started process (PID=373) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:03:57.000+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:03:57.004+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:03:57.004+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:03:57.011+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:03:57.029+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.038 seconds
+[2024-07-02T19:04:27.628+0000] {processor.py:161} INFO - Started process (PID=385) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:04:27.630+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:04:27.632+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:04:27.631+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:04:27.636+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:04:27.649+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:04:58.262+0000] {processor.py:161} INFO - Started process (PID=397) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:04:58.264+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:04:58.267+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:04:58.266+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:04:58.270+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:04:58.281+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:05:28.872+0000] {processor.py:161} INFO - Started process (PID=409) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:05:28.873+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:05:28.875+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:05:28.875+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:05:28.878+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:05:28.890+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:05:59.433+0000] {processor.py:161} INFO - Started process (PID=421) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:05:59.433+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:05:59.435+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:05:59.435+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:05:59.440+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:05:59.452+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:06:30.002+0000] {processor.py:161} INFO - Started process (PID=433) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:06:30.003+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:06:30.006+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:06:30.005+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:06:30.011+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:06:30.023+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:07:00.573+0000] {processor.py:161} INFO - Started process (PID=444) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:07:00.575+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:07:00.577+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:07:00.577+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:07:00.580+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:07:00.591+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:07:31.197+0000] {processor.py:161} INFO - Started process (PID=456) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:07:31.198+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:07:31.201+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:07:31.201+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:07:31.206+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:07:31.222+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T19:08:01.817+0000] {processor.py:161} INFO - Started process (PID=468) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:08:01.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:08:01.822+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:08:01.822+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:08:01.827+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:08:01.840+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:08:32.456+0000] {processor.py:161} INFO - Started process (PID=480) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:08:32.458+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:08:32.460+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:08:32.460+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:08:32.464+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:08:32.479+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:09:03.137+0000] {processor.py:161} INFO - Started process (PID=492) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:09:03.138+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:09:03.141+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:09:03.141+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:09:03.155+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:09:03.172+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.037 seconds
+[2024-07-02T19:09:33.705+0000] {processor.py:161} INFO - Started process (PID=510) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:09:33.706+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:09:33.708+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:09:33.707+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:09:33.711+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:09:33.721+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T19:10:04.330+0000] {processor.py:161} INFO - Started process (PID=522) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:10:04.331+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:10:04.333+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:10:04.333+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:10:04.336+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:10:04.350+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:10:34.973+0000] {processor.py:161} INFO - Started process (PID=534) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:10:34.974+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:10:34.977+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:10:34.976+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:10:34.980+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:10:34.991+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:11:05.579+0000] {processor.py:161} INFO - Started process (PID=546) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:11:05.580+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:11:05.583+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:11:05.582+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:11:05.587+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:11:05.602+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T19:11:36.279+0000] {processor.py:161} INFO - Started process (PID=558) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:11:36.280+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:11:36.282+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:11:36.281+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:11:36.285+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:11:36.294+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.018 seconds
+[2024-07-02T19:12:06.926+0000] {processor.py:161} INFO - Started process (PID=570) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:12:06.928+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:12:06.931+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:12:06.930+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:12:06.936+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:12:06.953+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.032 seconds
+[2024-07-02T19:12:37.599+0000] {processor.py:161} INFO - Started process (PID=582) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:12:37.600+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:12:37.602+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:12:37.602+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:12:37.606+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:12:37.620+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.030 seconds
+[2024-07-02T19:13:08.553+0000] {processor.py:161} INFO - Started process (PID=594) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:13:08.556+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:13:08.596+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:13:08.592+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:13:08.613+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:13:08.800+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.264 seconds
+[2024-07-02T19:13:39.712+0000] {processor.py:161} INFO - Started process (PID=606) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:13:39.715+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:13:39.725+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:13:39.724+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:13:39.733+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:13:39.762+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.076 seconds
+[2024-07-02T19:14:10.448+0000] {processor.py:161} INFO - Started process (PID=618) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:14:10.449+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:14:10.454+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:14:10.453+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:14:10.461+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:14:10.481+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.040 seconds
+[2024-07-02T19:14:41.199+0000] {processor.py:161} INFO - Started process (PID=630) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:14:41.200+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:14:41.202+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:14:41.202+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:14:41.208+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:14:41.221+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T19:15:12.103+0000] {processor.py:161} INFO - Started process (PID=642) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:15:12.105+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:15:12.110+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:15:12.109+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:15:12.116+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:15:12.137+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.042 seconds
+[2024-07-02T19:15:42.915+0000] {processor.py:161} INFO - Started process (PID=654) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:15:42.916+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:15:42.919+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:15:42.918+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:15:42.922+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:15:42.934+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:16:13.474+0000] {processor.py:161} INFO - Started process (PID=666) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:16:13.475+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:16:13.476+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:16:13.476+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:16:13.479+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:16:13.488+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.017 seconds
+[2024-07-02T19:16:44.084+0000] {processor.py:161} INFO - Started process (PID=678) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:16:44.085+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:16:44.087+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:16:44.087+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:16:44.090+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:16:44.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:17:14.620+0000] {processor.py:161} INFO - Started process (PID=690) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:17:14.621+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:17:14.623+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:17:14.623+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:17:14.626+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:17:14.638+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:17:45.198+0000] {processor.py:161} INFO - Started process (PID=702) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:17:45.199+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:17:45.200+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:17:45.200+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:17:45.206+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:17:45.217+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:18:15.876+0000] {processor.py:161} INFO - Started process (PID=714) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:18:15.876+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:18:15.878+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:18:15.878+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:18:15.881+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:18:15.891+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.017 seconds
+[2024-07-02T19:18:46.490+0000] {processor.py:161} INFO - Started process (PID=726) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:18:46.491+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:18:46.493+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:18:46.493+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:18:46.496+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:18:46.511+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:19:17.095+0000] {processor.py:161} INFO - Started process (PID=738) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:19:17.098+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:19:17.101+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:19:17.100+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:19:17.105+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:19:17.119+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T19:19:47.754+0000] {processor.py:161} INFO - Started process (PID=750) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:19:47.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:19:47.756+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:19:47.756+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:19:47.761+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:19:47.775+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:20:18.412+0000] {processor.py:161} INFO - Started process (PID=762) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:20:18.414+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:20:18.415+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:20:18.415+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:20:18.421+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:20:18.436+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T19:20:49.128+0000] {processor.py:161} INFO - Started process (PID=774) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:20:49.133+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:20:49.138+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:20:49.137+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:20:49.144+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:20:49.160+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.036 seconds
+[2024-07-02T19:21:19.853+0000] {processor.py:161} INFO - Started process (PID=785) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:21:19.857+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:21:19.860+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:21:19.860+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:21:19.863+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:21:19.876+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T19:21:50.520+0000] {processor.py:161} INFO - Started process (PID=796) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:21:50.521+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:21:50.524+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:21:50.524+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:21:50.530+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:21:50.549+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T19:22:21.204+0000] {processor.py:161} INFO - Started process (PID=808) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:22:21.205+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:22:21.207+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:22:21.207+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:22:21.210+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:22:21.225+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:22:51.949+0000] {processor.py:161} INFO - Started process (PID=820) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:22:51.950+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:22:51.952+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:22:51.952+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:22:51.955+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:22:51.968+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:23:22.461+0000] {processor.py:161} INFO - Started process (PID=832) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:23:22.462+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:23:22.464+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:23:22.464+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:23:22.468+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:23:22.480+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:23:53.092+0000] {processor.py:161} INFO - Started process (PID=844) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:23:53.094+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:23:53.096+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:23:53.096+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:23:53.100+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:23:53.114+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:24:23.686+0000] {processor.py:161} INFO - Started process (PID=856) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:24:23.687+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:24:23.689+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:24:23.688+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:24:23.693+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:24:23.709+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:24:54.405+0000] {processor.py:161} INFO - Started process (PID=868) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:24:54.406+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:24:54.407+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:24:54.407+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:24:54.410+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:24:54.422+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:25:25.043+0000] {processor.py:161} INFO - Started process (PID=880) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:25:25.044+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:25:25.046+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:25:25.046+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:25:25.050+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:25:25.062+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:25:55.651+0000] {processor.py:161} INFO - Started process (PID=892) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:25:55.652+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:25:55.653+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:25:55.653+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:25:55.656+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:25:55.670+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:26:26.273+0000] {processor.py:161} INFO - Started process (PID=904) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:26:26.275+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:26:26.278+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:26:26.278+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:26:26.281+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:26:26.293+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:26:56.860+0000] {processor.py:161} INFO - Started process (PID=915) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:26:56.861+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:26:56.863+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:26:56.862+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:26:56.868+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:26:56.879+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:27:27.458+0000] {processor.py:161} INFO - Started process (PID=926) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:27:27.459+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:27:27.460+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:27:27.460+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:27:27.463+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:27:27.473+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T19:27:58.087+0000] {processor.py:161} INFO - Started process (PID=938) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:27:58.088+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:27:58.089+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:27:58.089+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:27:58.093+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:27:58.105+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:28:28.746+0000] {processor.py:161} INFO - Started process (PID=950) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:28:28.747+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:28:28.749+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:28:28.748+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:28:28.752+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:28:28.765+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:28:59.409+0000] {processor.py:161} INFO - Started process (PID=961) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:28:59.410+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:28:59.412+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:28:59.412+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:28:59.415+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:28:59.426+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:29:29.969+0000] {processor.py:161} INFO - Started process (PID=973) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:29:29.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:29:29.973+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:29:29.972+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:29:29.976+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:29:29.985+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T19:30:00.605+0000] {processor.py:161} INFO - Started process (PID=985) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:30:00.606+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:30:00.608+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:30:00.607+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:30:00.611+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:30:00.624+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:30:31.155+0000] {processor.py:161} INFO - Started process (PID=997) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:30:31.156+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:30:31.157+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:30:31.157+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:30:31.162+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:30:31.175+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T19:31:01.765+0000] {processor.py:161} INFO - Started process (PID=1009) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:31:01.766+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:31:01.768+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:31:01.767+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:31:01.772+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:31:01.783+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:31:32.394+0000] {processor.py:161} INFO - Started process (PID=1021) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:31:32.395+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:31:32.397+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:31:32.396+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:31:32.401+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:31:32.411+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T19:32:03.086+0000] {processor.py:161} INFO - Started process (PID=1033) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:32:03.087+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:32:03.090+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:32:03.090+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:32:03.094+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:32:03.108+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:32:33.701+0000] {processor.py:161} INFO - Started process (PID=1045) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:32:33.702+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:32:33.704+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:32:33.704+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:32:33.707+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:32:33.724+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T19:33:04.420+0000] {processor.py:161} INFO - Started process (PID=1057) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:33:04.421+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:33:04.424+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:33:04.423+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:33:04.427+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:33:04.438+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:33:35.028+0000] {processor.py:161} INFO - Started process (PID=1069) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:33:35.029+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:33:35.031+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:33:35.030+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:33:35.034+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:33:35.048+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:34:05.595+0000] {processor.py:161} INFO - Started process (PID=1081) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:34:05.597+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:34:05.599+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:34:05.599+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:34:05.602+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:34:05.615+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:34:36.240+0000] {processor.py:161} INFO - Started process (PID=1093) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:34:36.242+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:34:36.248+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:34:36.247+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:34:36.259+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:34:36.271+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T19:35:06.907+0000] {processor.py:161} INFO - Started process (PID=1110) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:35:06.908+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:35:06.910+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:35:06.909+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:35:06.913+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:35:06.924+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:35:37.511+0000] {processor.py:161} INFO - Started process (PID=1122) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:35:37.512+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:35:37.513+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:35:37.513+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:35:37.516+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:35:37.527+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T19:36:08.148+0000] {processor.py:161} INFO - Started process (PID=1134) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:36:08.149+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:36:08.151+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:36:08.151+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:36:08.154+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:36:08.166+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:36:38.760+0000] {processor.py:161} INFO - Started process (PID=1145) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:36:38.761+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:36:38.762+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:36:38.762+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:36:38.765+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:36:38.776+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T19:37:09.437+0000] {processor.py:161} INFO - Started process (PID=1157) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:37:09.438+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:37:09.441+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:37:09.440+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:37:09.444+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:37:09.455+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T19:37:39.993+0000] {processor.py:161} INFO - Started process (PID=1169) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:37:39.994+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:37:39.997+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:37:39.996+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:37:40.001+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:37:40.015+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:38:10.671+0000] {processor.py:161} INFO - Started process (PID=1181) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:38:10.672+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:38:10.674+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:38:10.674+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:38:10.678+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:38:10.689+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:38:41.335+0000] {processor.py:161} INFO - Started process (PID=1193) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:38:41.336+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:38:41.337+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:38:41.337+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:38:41.341+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:38:41.353+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:39:12.421+0000] {processor.py:161} INFO - Started process (PID=1205) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:39:12.424+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:39:12.430+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:39:12.429+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:39:12.437+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:39:12.458+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.047 seconds
+[2024-07-02T19:39:43.201+0000] {processor.py:161} INFO - Started process (PID=1217) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:39:43.202+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:39:43.205+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:39:43.204+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:39:43.210+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:39:43.223+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:40:13.833+0000] {processor.py:161} INFO - Started process (PID=1229) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:40:13.834+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:40:13.836+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:40:13.836+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:40:13.842+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:40:13.855+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T19:40:44.490+0000] {processor.py:161} INFO - Started process (PID=1241) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:40:44.491+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:40:44.495+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:40:44.494+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:40:44.498+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:40:44.515+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T19:41:15.146+0000] {processor.py:161} INFO - Started process (PID=1253) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:41:15.148+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:41:15.150+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:41:15.150+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:41:15.156+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:41:15.171+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T19:41:45.744+0000] {processor.py:161} INFO - Started process (PID=1264) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:41:45.745+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:41:45.747+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:41:45.747+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:41:45.752+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:41:45.765+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T19:42:16.377+0000] {processor.py:161} INFO - Started process (PID=1276) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:42:16.379+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:42:16.381+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:42:16.380+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:42:16.385+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:42:16.400+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:42:47.080+0000] {processor.py:161} INFO - Started process (PID=1288) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:42:47.081+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:42:47.083+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:42:47.083+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:42:47.086+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:42:47.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:43:17.755+0000] {processor.py:161} INFO - Started process (PID=1300) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:43:17.756+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:43:17.760+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:43:17.759+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:43:17.765+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:43:17.784+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.036 seconds
+[2024-07-02T19:43:48.431+0000] {processor.py:161} INFO - Started process (PID=1311) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:43:48.433+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:43:48.438+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:43:48.437+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:43:48.443+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:43:48.463+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.038 seconds
+[2024-07-02T19:44:19.120+0000] {processor.py:161} INFO - Started process (PID=1323) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:44:19.122+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:44:19.125+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:44:19.124+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:44:19.130+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:44:19.149+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T19:44:49.821+0000] {processor.py:161} INFO - Started process (PID=1335) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:44:49.822+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:44:49.826+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:44:49.825+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:44:49.832+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:44:49.847+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T19:45:20.541+0000] {processor.py:161} INFO - Started process (PID=1347) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:45:20.543+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:45:20.547+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:45:20.547+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:45:20.553+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:45:20.576+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.040 seconds
+[2024-07-02T19:45:51.230+0000] {processor.py:161} INFO - Started process (PID=1359) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:45:51.232+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:45:51.234+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:45:51.234+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:45:51.239+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:45:51.253+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T19:46:21.899+0000] {processor.py:161} INFO - Started process (PID=1371) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:46:21.901+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:46:21.904+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:46:21.903+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:46:21.909+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:46:21.926+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.032 seconds
+[2024-07-02T19:46:52.583+0000] {processor.py:161} INFO - Started process (PID=1383) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:46:52.584+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:46:52.587+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:46:52.587+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:46:52.592+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:46:52.614+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.036 seconds
+[2024-07-02T19:47:23.412+0000] {processor.py:161} INFO - Started process (PID=1395) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:47:23.415+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:47:23.420+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:47:23.419+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:47:23.425+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:47:23.447+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.048 seconds
+[2024-07-02T19:47:54.155+0000] {processor.py:161} INFO - Started process (PID=1406) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:47:54.156+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:47:54.161+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:47:54.160+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:47:54.169+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:47:54.211+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.064 seconds
+[2024-07-02T19:48:24.835+0000] {processor.py:161} INFO - Started process (PID=1418) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:48:24.838+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:48:24.842+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:48:24.841+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:48:24.848+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:48:24.868+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.040 seconds
+[2024-07-02T19:48:55.541+0000] {processor.py:161} INFO - Started process (PID=1430) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:48:55.543+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:48:55.545+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:48:55.545+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:48:55.549+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:48:55.561+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:49:26.192+0000] {processor.py:161} INFO - Started process (PID=1442) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:49:26.194+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:49:26.198+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:49:26.198+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:49:26.202+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:49:26.213+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:49:56.855+0000] {processor.py:161} INFO - Started process (PID=1454) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:49:56.856+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:49:56.859+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:49:56.859+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:49:56.864+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:49:56.878+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T19:50:27.526+0000] {processor.py:161} INFO - Started process (PID=1466) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:50:27.527+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:50:27.530+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:50:27.530+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:50:27.535+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:50:27.552+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.030 seconds
+[2024-07-02T19:50:58.216+0000] {processor.py:161} INFO - Started process (PID=1477) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:50:58.217+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:50:58.219+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:50:58.219+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:50:58.224+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:50:58.236+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:51:28.827+0000] {processor.py:161} INFO - Started process (PID=1489) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:51:28.829+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:51:28.831+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:51:28.831+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:51:28.836+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:51:28.851+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T19:51:59.509+0000] {processor.py:161} INFO - Started process (PID=1501) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:51:59.510+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:51:59.517+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:51:59.516+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:51:59.523+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:51:59.541+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.037 seconds
+[2024-07-02T19:52:30.208+0000] {processor.py:161} INFO - Started process (PID=1513) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:52:30.209+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:52:30.213+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:52:30.212+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:52:30.219+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:52:30.238+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.035 seconds
+[2024-07-02T19:53:00.942+0000] {processor.py:161} INFO - Started process (PID=1525) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:53:00.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:53:00.946+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:53:00.946+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:53:00.951+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:53:00.966+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T19:53:31.594+0000] {processor.py:161} INFO - Started process (PID=1537) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:53:31.596+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:53:31.598+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:53:31.598+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:53:31.602+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:53:31.617+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T19:54:02.302+0000] {processor.py:161} INFO - Started process (PID=1549) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:54:02.304+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:54:02.309+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:54:02.308+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:54:02.315+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:54:02.334+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.039 seconds
+[2024-07-02T19:54:33.096+0000] {processor.py:161} INFO - Started process (PID=1561) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:54:33.097+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:54:33.100+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:54:33.100+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:54:33.105+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:54:33.118+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:55:03.812+0000] {processor.py:161} INFO - Started process (PID=1573) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:55:03.814+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:55:03.816+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:55:03.816+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:55:03.821+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:55:03.840+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T19:55:34.613+0000] {processor.py:161} INFO - Started process (PID=1585) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:55:34.614+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:55:34.617+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:55:34.617+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:55:34.622+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:55:34.637+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T19:56:05.318+0000] {processor.py:161} INFO - Started process (PID=1597) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:56:05.319+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:56:05.320+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:56:05.320+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:56:05.323+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:56:05.334+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T19:56:36.043+0000] {processor.py:161} INFO - Started process (PID=1609) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:56:36.044+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:56:36.046+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:56:36.046+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:56:36.049+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:56:36.061+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:57:06.633+0000] {processor.py:161} INFO - Started process (PID=1621) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:57:06.634+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:57:06.636+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:57:06.636+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:57:06.639+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:57:06.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T19:57:37.333+0000] {processor.py:161} INFO - Started process (PID=1633) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:57:37.334+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:57:37.337+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:57:37.336+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:57:37.341+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:57:37.356+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:58:08.005+0000] {processor.py:161} INFO - Started process (PID=1645) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:58:08.006+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:58:08.007+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:58:08.007+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:58:08.010+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:58:08.020+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.018 seconds
+[2024-07-02T19:58:38.590+0000] {processor.py:161} INFO - Started process (PID=1657) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:58:38.591+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:58:38.593+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:58:38.592+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:58:38.596+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:58:38.609+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T19:59:09.279+0000] {processor.py:161} INFO - Started process (PID=1675) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:59:09.280+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:59:09.282+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:59:09.282+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:59:09.285+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:59:09.296+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T19:59:39.948+0000] {processor.py:161} INFO - Started process (PID=1687) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T19:59:39.950+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T19:59:39.952+0000] {logging_mixin.py:188} INFO - [2024-07-02T19:59:39.952+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:59:39.955+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T19:59:39.966+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T20:00:10.628+0000] {processor.py:161} INFO - Started process (PID=1699) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:00:10.630+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:00:10.634+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:00:10.634+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:00:10.639+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:00:10.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.032 seconds
+[2024-07-02T20:00:41.242+0000] {processor.py:161} INFO - Started process (PID=1711) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:00:41.243+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:00:41.245+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:00:41.245+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:00:41.249+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:00:41.260+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T20:01:11.914+0000] {processor.py:161} INFO - Started process (PID=1723) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:01:11.915+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:01:11.918+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:01:11.917+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:01:11.923+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:01:11.935+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T20:01:42.586+0000] {processor.py:161} INFO - Started process (PID=1735) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:01:42.587+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:01:42.588+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:01:42.588+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:01:42.591+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:01:42.604+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T20:02:13.396+0000] {processor.py:161} INFO - Started process (PID=1747) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:02:13.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:02:13.422+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:02:13.419+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:02:13.433+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:02:13.451+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.062 seconds
+[2024-07-02T20:02:44.100+0000] {processor.py:161} INFO - Started process (PID=1759) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:02:44.101+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:02:44.104+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:02:44.103+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:02:44.109+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:02:44.123+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T20:03:14.742+0000] {processor.py:161} INFO - Started process (PID=1771) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:03:14.744+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:03:14.745+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:03:14.745+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:03:14.750+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:03:14.762+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:03:45.341+0000] {processor.py:161} INFO - Started process (PID=1783) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:03:45.342+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:03:45.346+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:03:45.345+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:03:45.352+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:03:45.372+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.038 seconds
+[2024-07-02T20:04:15.836+0000] {processor.py:161} INFO - Started process (PID=1795) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:04:15.837+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:04:15.840+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:04:15.840+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:04:15.845+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:04:15.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.034 seconds
+[2024-07-02T20:04:46.670+0000] {processor.py:161} INFO - Started process (PID=1807) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:04:46.672+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:04:46.678+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:04:46.677+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:04:46.687+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:04:46.716+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.056 seconds
+[2024-07-02T20:05:17.634+0000] {processor.py:161} INFO - Started process (PID=1819) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:05:17.636+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:05:17.652+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:05:17.651+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:05:17.660+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:05:17.682+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.058 seconds
+[2024-07-02T20:05:48.481+0000] {processor.py:161} INFO - Started process (PID=1830) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:05:48.482+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:05:48.485+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:05:48.485+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:05:48.489+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:05:48.504+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.027 seconds
+[2024-07-02T20:06:19.199+0000] {processor.py:161} INFO - Started process (PID=1842) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:06:19.201+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:06:19.210+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:06:19.208+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:06:19.226+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:06:19.248+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.059 seconds
+[2024-07-02T20:06:50.005+0000] {processor.py:161} INFO - Started process (PID=1854) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:06:50.009+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:06:50.031+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:06:50.030+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:06:50.040+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:06:50.076+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.077 seconds
+[2024-07-02T20:07:20.727+0000] {processor.py:161} INFO - Started process (PID=1865) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:07:20.730+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:07:20.735+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:07:20.734+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:07:20.742+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:07:20.762+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.042 seconds
+[2024-07-02T20:07:51.351+0000] {processor.py:161} INFO - Started process (PID=1876) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:07:51.352+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:07:51.355+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:07:51.354+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:07:51.362+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:07:51.380+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T20:08:22.026+0000] {processor.py:161} INFO - Started process (PID=1888) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:08:22.029+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:08:22.033+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:08:22.032+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:08:22.037+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:08:22.054+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.036 seconds
+[2024-07-02T20:08:52.650+0000] {processor.py:161} INFO - Started process (PID=1900) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:08:52.651+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:08:52.655+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:08:52.655+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:08:52.660+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:08:52.676+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T20:09:23.371+0000] {processor.py:161} INFO - Started process (PID=1912) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:09:23.372+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:09:23.375+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:09:23.375+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:09:23.381+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:09:23.398+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T20:09:54.142+0000] {processor.py:161} INFO - Started process (PID=1924) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:09:54.143+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:09:54.145+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:09:54.145+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:09:54.151+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:09:54.168+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T20:10:24.782+0000] {processor.py:161} INFO - Started process (PID=1935) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:10:24.784+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:10:24.794+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:10:24.793+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:10:24.808+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:10:24.827+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.058 seconds
+[2024-07-02T20:10:55.533+0000] {processor.py:161} INFO - Started process (PID=1947) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:10:55.534+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:10:55.538+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:10:55.538+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:10:55.544+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:10:55.566+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.039 seconds
+[2024-07-02T20:11:26.343+0000] {processor.py:161} INFO - Started process (PID=1959) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:11:26.346+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:11:26.351+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:11:26.350+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:11:26.358+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:11:26.391+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.060 seconds
+[2024-07-02T20:11:57.175+0000] {processor.py:161} INFO - Started process (PID=1971) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:11:57.177+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:11:57.184+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:11:57.183+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:11:57.198+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:11:57.254+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.089 seconds
+[2024-07-02T20:12:28.037+0000] {processor.py:161} INFO - Started process (PID=1983) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:12:28.039+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:12:28.043+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:12:28.042+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:12:28.049+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:12:28.068+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.037 seconds
+[2024-07-02T20:12:58.796+0000] {processor.py:161} INFO - Started process (PID=1995) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:12:58.798+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:12:58.805+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:12:58.804+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:12:58.816+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:12:58.861+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.089 seconds
+[2024-07-02T20:13:29.733+0000] {processor.py:161} INFO - Started process (PID=2007) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:13:29.736+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:13:29.748+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:13:29.746+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:13:29.759+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:13:29.783+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.058 seconds
+[2024-07-02T20:14:00.643+0000] {processor.py:161} INFO - Started process (PID=2019) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:14:00.645+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:14:00.649+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:14:00.648+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:14:00.654+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:14:00.673+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.035 seconds
+[2024-07-02T20:14:31.307+0000] {processor.py:161} INFO - Started process (PID=2031) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:14:31.308+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:14:31.312+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:14:31.311+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:14:31.316+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:14:31.336+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.036 seconds
+[2024-07-02T20:15:02.078+0000] {processor.py:161} INFO - Started process (PID=2043) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:15:02.079+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:15:02.082+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:15:02.082+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:15:02.085+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:15:02.096+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:15:32.644+0000] {processor.py:161} INFO - Started process (PID=2055) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:15:32.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:15:32.649+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:15:32.649+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:15:32.656+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:15:32.673+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.034 seconds
+[2024-07-02T20:16:03.391+0000] {processor.py:161} INFO - Started process (PID=2067) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:16:03.399+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:16:03.405+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:16:03.405+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:16:03.413+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:16:03.454+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.082 seconds
+[2024-07-02T20:16:34.266+0000] {processor.py:161} INFO - Started process (PID=2078) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:16:34.268+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:16:34.273+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:16:34.272+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:16:34.291+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:16:34.317+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.062 seconds
+[2024-07-02T20:17:05.069+0000] {processor.py:161} INFO - Started process (PID=2089) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:17:05.070+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:17:05.073+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:17:05.072+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:17:05.077+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:17:05.093+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T20:17:35.788+0000] {processor.py:161} INFO - Started process (PID=2101) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:17:35.790+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:17:35.796+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:17:35.795+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:17:35.806+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:17:35.828+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.051 seconds
+[2024-07-02T20:18:06.548+0000] {processor.py:161} INFO - Started process (PID=2112) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:18:06.550+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:18:06.553+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:18:06.553+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:18:06.559+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:18:06.576+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.034 seconds
+[2024-07-02T20:18:37.190+0000] {processor.py:161} INFO - Started process (PID=2124) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:18:37.191+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:18:37.192+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:18:37.192+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:18:37.196+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:18:37.208+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T20:19:44.990+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:19:44.991+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:19:44.994+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:19:44.994+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:19:44.997+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:19:45.017+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.030 seconds
+[2024-07-02T20:20:15.479+0000] {processor.py:161} INFO - Started process (PID=55) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:20:15.480+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:20:15.482+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:20:15.482+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:20:15.486+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:20:15.498+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:20:46.198+0000] {processor.py:161} INFO - Started process (PID=67) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:20:46.199+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:20:46.201+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:20:46.201+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:20:46.206+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:20:46.226+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.035 seconds
+[2024-07-02T20:21:51.440+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:21:51.444+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:21:51.447+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:21:51.447+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:21:51.456+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:21:51.468+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.032 seconds
+[2024-07-02T20:22:22.188+0000] {processor.py:161} INFO - Started process (PID=55) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:22:22.188+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:22:22.191+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:22:22.190+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:22:22.195+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:22:22.208+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T20:22:52.884+0000] {processor.py:161} INFO - Started process (PID=67) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:22:52.885+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:22:52.887+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:22:52.887+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:22:52.896+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:22:52.907+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T20:23:23.537+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:23:23.538+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:23:23.539+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:23:23.539+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:23:23.544+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:23:23.556+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:23:54.191+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:23:54.192+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:23:54.194+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:23:54.194+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:23:54.198+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:23:54.210+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:24:24.850+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:24:24.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:24:24.852+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:24:24.852+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:24:24.855+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:24:24.865+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.018 seconds
+[2024-07-02T20:25:17.187+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:25:17.188+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:25:17.190+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:25:17.190+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:25:17.194+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:25:17.213+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T20:25:47.274+0000] {processor.py:161} INFO - Started process (PID=55) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:25:47.275+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:25:47.277+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:25:47.277+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:25:47.281+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:25:47.292+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T20:26:18.014+0000] {processor.py:161} INFO - Started process (PID=67) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:26:18.015+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:26:18.016+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:26:18.016+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:26:18.019+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:26:18.030+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.018 seconds
+[2024-07-02T20:26:48.652+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:26:48.653+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:26:48.655+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:26:48.654+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:26:48.657+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:26:48.666+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.016 seconds
+[2024-07-02T20:27:19.258+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:27:19.259+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:27:19.261+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:27:19.261+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:27:19.265+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:27:19.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:27:49.913+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:27:49.913+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:27:49.915+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:27:49.915+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:27:49.918+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:27:49.930+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T20:28:20.545+0000] {processor.py:161} INFO - Started process (PID=115) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:28:20.546+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:28:20.549+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:28:20.548+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:28:20.552+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:28:20.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T20:28:51.165+0000] {processor.py:161} INFO - Started process (PID=127) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:28:51.166+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:28:51.168+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:28:51.168+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:28:51.171+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:28:51.182+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T20:29:21.834+0000] {processor.py:161} INFO - Started process (PID=139) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:29:21.835+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:29:21.837+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:29:21.836+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:29:21.840+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:29:21.852+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T20:29:52.506+0000] {processor.py:161} INFO - Started process (PID=151) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:29:52.507+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:29:52.508+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:29:52.508+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:29:52.511+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:29:52.523+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T20:30:23.174+0000] {processor.py:161} INFO - Started process (PID=163) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:30:23.175+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:30:23.177+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:30:23.176+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:30:23.182+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:30:23.192+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T20:30:53.826+0000] {processor.py:161} INFO - Started process (PID=175) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:30:53.827+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:30:53.828+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:30:53.828+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:30:53.831+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:30:53.842+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T20:31:24.423+0000] {processor.py:161} INFO - Started process (PID=187) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:31:24.424+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:31:24.425+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:31:24.425+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:31:24.428+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:31:24.438+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T20:31:55.051+0000] {processor.py:161} INFO - Started process (PID=199) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:31:55.052+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:31:55.054+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:31:55.054+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:31:55.056+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:31:55.070+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T20:32:25.760+0000] {processor.py:161} INFO - Started process (PID=211) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:32:25.761+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:32:25.762+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:32:25.762+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:32:25.766+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:32:25.777+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T20:33:23.924+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:33:23.925+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:33:23.927+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:33:23.927+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:33:23.934+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:33:23.951+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.030 seconds
+[2024-07-02T20:33:54.132+0000] {processor.py:161} INFO - Started process (PID=55) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:33:54.145+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:33:54.157+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:33:54.156+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:33:54.195+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:33:54.248+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.139 seconds
+[2024-07-02T20:34:25.040+0000] {processor.py:161} INFO - Started process (PID=67) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:34:25.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:34:25.044+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:34:25.044+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:34:25.050+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:34:25.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.032 seconds
+[2024-07-02T20:34:55.634+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:34:55.639+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:34:55.640+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:34:55.640+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:34:55.643+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:34:55.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T20:35:46.356+0000] {processor.py:161} INFO - Started process (PID=34) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:35:46.360+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:35:46.366+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:35:46.365+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:35:46.385+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:35:46.456+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.103 seconds
+[2024-07-02T20:36:16.983+0000] {processor.py:161} INFO - Started process (PID=54) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:36:16.984+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:36:16.986+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:36:16.986+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:36:16.990+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:36:17.001+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T20:36:47.628+0000] {processor.py:161} INFO - Started process (PID=66) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:36:47.629+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:36:47.630+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:36:47.630+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:36:47.633+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:36:47.643+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T20:37:18.197+0000] {processor.py:161} INFO - Started process (PID=78) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:37:18.199+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:37:18.202+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:37:18.201+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:37:18.207+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:37:18.223+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T20:37:48.850+0000] {processor.py:161} INFO - Started process (PID=89) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:37:48.851+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:37:48.853+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:37:48.853+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:37:48.859+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:37:48.871+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T20:38:19.422+0000] {processor.py:161} INFO - Started process (PID=101) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:38:19.424+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:38:19.426+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:38:19.426+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:38:19.429+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:38:19.440+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T20:38:50.028+0000] {processor.py:161} INFO - Started process (PID=113) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:38:50.030+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:38:50.032+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:38:50.031+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:38:50.035+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:38:50.047+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:39:58.373+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:39:58.375+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:39:58.379+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:39:58.378+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:39:58.384+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:39:58.407+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.041 seconds
+[2024-07-02T20:40:28.852+0000] {processor.py:161} INFO - Started process (PID=56) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:40:28.856+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:40:28.863+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:40:28.863+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:40:28.880+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:40:28.943+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.102 seconds
+[2024-07-02T20:40:59.047+0000] {processor.py:161} INFO - Started process (PID=68) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:40:59.048+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:40:59.050+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:40:59.049+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:40:59.054+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:40:59.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:41:29.760+0000] {processor.py:161} INFO - Started process (PID=80) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:41:29.762+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:41:29.767+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:41:29.767+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:41:29.772+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:41:29.785+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T20:42:00.331+0000] {processor.py:161} INFO - Started process (PID=92) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:42:00.332+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:42:00.335+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:42:00.334+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:42:00.339+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:42:00.349+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.020 seconds
+[2024-07-02T20:42:30.976+0000] {processor.py:161} INFO - Started process (PID=104) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:42:30.978+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:42:30.980+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:42:30.979+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:42:30.983+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:42:30.993+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T20:43:01.592+0000] {processor.py:161} INFO - Started process (PID=116) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:43:01.595+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:43:01.597+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:43:01.597+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:43:01.600+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:43:01.612+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.025 seconds
+[2024-07-02T20:44:16.407+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:44:16.410+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:44:16.414+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:44:16.414+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:44:16.422+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:44:16.437+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds
+[2024-07-02T20:44:46.799+0000] {processor.py:161} INFO - Started process (PID=54) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:44:46.800+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:44:46.802+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:44:46.802+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:44:46.807+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:44:46.817+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:45:17.352+0000] {processor.py:161} INFO - Started process (PID=66) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:45:17.353+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:45:17.356+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:45:17.356+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:45:17.362+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:45:17.376+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.029 seconds
+[2024-07-02T20:45:47.955+0000] {processor.py:161} INFO - Started process (PID=78) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:45:47.957+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:45:47.959+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:45:47.959+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:45:47.964+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:45:47.977+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T20:47:01.794+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:47:01.796+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:47:01.799+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:47:01.798+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:47:01.839+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:47:01.862+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.074 seconds
+[2024-07-02T20:47:32.332+0000] {processor.py:161} INFO - Started process (PID=54) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:47:32.333+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:47:32.335+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:47:32.334+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:47:32.339+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:47:32.350+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.021 seconds
+[2024-07-02T20:48:02.960+0000] {processor.py:161} INFO - Started process (PID=66) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:48:02.962+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:48:02.965+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:48:02.964+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:48:02.972+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:48:02.988+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T20:49:18.434+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:49:18.436+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:49:18.438+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:49:18.438+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:49:18.446+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:49:18.462+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T20:49:48.854+0000] {processor.py:161} INFO - Started process (PID=46) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:49:48.855+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:49:48.857+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:49:48.857+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:49:48.863+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:49:48.875+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T20:50:19.453+0000] {processor.py:161} INFO - Started process (PID=66) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:50:19.454+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:50:19.456+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:50:19.456+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:50:19.462+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:50:19.484+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.034 seconds
+[2024-07-02T20:51:30.182+0000] {processor.py:161} INFO - Started process (PID=34) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:51:30.187+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:51:30.192+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:51:30.191+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:51:30.198+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:51:30.213+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.034 seconds
+[2024-07-02T20:52:00.353+0000] {processor.py:161} INFO - Started process (PID=54) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:52:00.355+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:52:00.357+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:52:00.357+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:52:00.361+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:52:00.373+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.026 seconds
+[2024-07-02T20:52:30.947+0000] {processor.py:161} INFO - Started process (PID=66) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:52:30.948+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:52:30.954+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:52:30.953+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:52:30.959+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:52:30.973+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T20:53:01.556+0000] {processor.py:161} INFO - Started process (PID=77) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:53:01.557+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:53:01.560+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:53:01.559+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:53:01.566+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:53:01.581+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.028 seconds
+[2024-07-02T20:53:56.734+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:53:56.746+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:53:56.756+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:53:56.755+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:53:56.777+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:53:56.792+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.070 seconds
+[2024-07-02T20:54:27.226+0000] {processor.py:161} INFO - Started process (PID=55) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:54:27.227+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:54:27.229+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:54:27.228+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:54:27.233+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:54:27.244+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.022 seconds
+[2024-07-02T20:54:57.853+0000] {processor.py:161} INFO - Started process (PID=67) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:54:57.855+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:54:57.858+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:54:57.858+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:54:57.864+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:54:57.878+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.032 seconds
+[2024-07-02T20:55:28.413+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:55:28.414+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:55:28.416+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:55:28.415+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:55:28.420+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:55:28.432+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.023 seconds
+[2024-07-02T20:55:59.065+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:55:59.066+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:55:59.068+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:55:59.068+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:55:59.073+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:55:59.086+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.024 seconds
+[2024-07-02T20:56:29.681+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:56:29.682+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:56:29.684+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:56:29.683+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:56:29.688+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:56:29.698+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.019 seconds
+[2024-07-02T20:57:00.231+0000] {processor.py:161} INFO - Started process (PID=115) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:57:00.233+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:57:00.237+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:57:00.236+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:57:00.243+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:57:00.258+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.031 seconds
+[2024-07-02T20:57:30.918+0000] {processor.py:161} INFO - Started process (PID=127) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:57:30.920+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:57:30.922+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:57:30.922+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:57:30.928+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:57:30.946+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.034 seconds
+[2024-07-02T20:58:01.615+0000] {processor.py:161} INFO - Started process (PID=139) to work on /opt/airflow/dags/tostaging.py
+[2024-07-02T20:58:01.616+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tostaging.py for tasks to queue
+[2024-07-02T20:58:01.619+0000] {logging_mixin.py:188} INFO - [2024-07-02T20:58:01.619+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:58:01.624+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tostaging.py
+[2024-07-02T20:58:01.642+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tostaging.py took 0.033 seconds

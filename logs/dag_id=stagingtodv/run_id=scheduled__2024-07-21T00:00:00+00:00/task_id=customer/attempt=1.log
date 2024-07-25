@@ -1,0 +1,912 @@
+[2024-07-22T18:39:28.869+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:28.889+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:28.891+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T18:39:28.928+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T18:39:28.941+0000] {standard_task_runner.py:60} INFO - Started process 124 to run task
+[2024-07-22T18:39:28.958+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpz8dgu72r']
+[2024-07-22T18:39:28.980+0000] {standard_task_runner.py:88} INFO - Job 43: Subtask customer
+[2024-07-22T18:39:29.140+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host ef8b8dee6045
+[2024-07-22T18:39:29.441+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T18:39:29.452+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T18:39:29.804+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T18:39:29.886+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T183928, end_date=20240722T183929
+[2024-07-22T18:39:29.920+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 43 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 124)
+[2024-07-22T18:39:29.960+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T18:39:29.996+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:05:06.804+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:05:06.813+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:05:06.815+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:05:06.842+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:05:06.851+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2024-07-22T19:05:06.874+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmph7278q97']
+[2024-07-22T19:05:06.883+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask customer
+[2024-07-22T19:05:07.041+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host d97758bf7368
+[2024-07-22T19:05:08.384+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:05:08.409+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:05:08.528+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:05:08.563+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T190506, end_date=20240722T190508
+[2024-07-22T19:05:08.587+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 91)
+[2024-07-22T19:05:08.606+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:05:08.632+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:14:28.018+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:14:28.065+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:14:28.070+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:14:28.105+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:14:28.136+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-22T19:14:28.143+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmptea8n9i_']
+[2024-07-22T19:14:28.155+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask customer
+[2024-07-22T19:14:28.339+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 06b045a8c1a2
+[2024-07-22T19:14:29.720+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:14:29.725+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:14:29.751+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:14:29.761+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T191428, end_date=20240722T191429
+[2024-07-22T19:14:29.773+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 90)
+[2024-07-22T19:14:29.823+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:14:29.843+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:18:49.812+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:18:49.860+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:18:49.866+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:18:49.920+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:18:49.930+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-22T19:18:49.939+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmphn4nm5cv']
+[2024-07-22T19:18:49.949+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask customer
+[2024-07-22T19:18:50.108+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 59af9ef614d6
+[2024-07-22T19:18:51.147+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:18:51.151+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:18:51.210+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:18:51.256+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T191849, end_date=20240722T191851
+[2024-07-22T19:18:51.287+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 90)
+[2024-07-22T19:18:51.387+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:18:51.412+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:25:04.138+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:25:04.181+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:25:04.189+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:25:04.220+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:25:04.237+0000] {standard_task_runner.py:60} INFO - Started process 94 to run task
+[2024-07-22T19:25:04.241+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp7av7k15n']
+[2024-07-22T19:25:04.251+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask customer
+[2024-07-22T19:25:04.426+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 54d412404717
+[2024-07-22T19:25:05.543+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:25:05.547+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:25:05.600+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:25:05.637+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T192504, end_date=20240722T192505
+[2024-07-22T19:25:05.659+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 94)
+[2024-07-22T19:25:05.687+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:25:05.729+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:28:23.175+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:28:23.191+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:28:23.193+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:28:23.222+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:28:23.234+0000] {standard_task_runner.py:60} INFO - Started process 101 to run task
+[2024-07-22T19:28:23.246+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmphw9wszpc']
+[2024-07-22T19:28:23.266+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask customer
+[2024-07-22T19:28:23.410+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host e6f3df1cbf4c
+[2024-07-22T19:28:24.721+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:28:24.732+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:28:24.824+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:28:24.861+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T192823, end_date=20240722T192824
+[2024-07-22T19:28:24.875+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 17 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 101)
+[2024-07-22T19:28:24.906+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:28:24.925+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:30:31.990+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:30:32.009+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:30:32.017+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:30:32.051+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:30:32.058+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2024-07-22T19:30:32.072+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxawws225']
+[2024-07-22T19:30:32.089+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask customer
+[2024-07-22T19:30:32.258+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 96cb61053a1d
+[2024-07-22T19:30:33.460+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:30:33.477+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:30:33.641+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:30:33.690+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T193031, end_date=20240722T193033
+[2024-07-22T19:30:33.725+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 95)
+[2024-07-22T19:30:33.791+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:30:33.820+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:38:48.904+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:38:48.928+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:38:48.937+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:38:48.972+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:38:49.001+0000] {standard_task_runner.py:60} INFO - Started process 126 to run task
+[2024-07-22T19:38:49.039+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpmo5kmv0y']
+[2024-07-22T19:38:49.065+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask customer
+[2024-07-22T19:38:49.202+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host f5ad498ee7ee
+[2024-07-22T19:38:50.745+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:38:50.753+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:38:50.841+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:38:50.872+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T193848, end_date=20240722T193850
+[2024-07-22T19:38:50.894+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 126)
+[2024-07-22T19:38:50.915+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:38:50.944+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:43:44.516+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:43:44.533+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:43:44.536+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:43:44.575+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:43:44.602+0000] {standard_task_runner.py:60} INFO - Started process 114 to run task
+[2024-07-22T19:43:44.610+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpo5nbrk1l']
+[2024-07-22T19:43:44.660+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask customer
+[2024-07-22T19:43:44.885+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 83712395e44a
+[2024-07-22T19:43:46.170+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:43:46.175+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:43:46.251+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:43:46.288+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T194344, end_date=20240722T194346
+[2024-07-22T19:43:46.306+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 114)
+[2024-07-22T19:43:46.357+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:43:46.386+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:52:47.195+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:52:47.211+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:52:47.217+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:52:47.250+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:52:47.257+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-22T19:52:47.274+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmphe1vg196']
+[2024-07-22T19:52:47.296+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask customer
+[2024-07-22T19:52:47.482+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 6e14590d795e
+[2024-07-22T19:52:48.760+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:52:48.778+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:52:48.830+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:52:48.854+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T195247, end_date=20240722T195248
+[2024-07-22T19:52:48.869+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 16 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 102)
+[2024-07-22T19:52:48.897+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:52:48.939+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:57:18.988+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:57:19.028+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:57:19.038+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:57:19.090+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:57:19.107+0000] {standard_task_runner.py:60} INFO - Started process 101 to run task
+[2024-07-22T19:57:19.132+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpjftutx7_']
+[2024-07-22T19:57:19.155+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask customer
+[2024-07-22T19:57:19.327+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 1ca6b70ca81e
+[2024-07-22T19:57:20.604+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:57:20.617+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T19:57:20.670+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T19:57:20.687+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T195718, end_date=20240722T195720
+[2024-07-22T19:57:20.735+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 15 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 101)
+[2024-07-22T19:57:20.763+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T19:57:20.841+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:01:00.730+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:01:00.762+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:01:00.763+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:01:00.796+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:01:00.830+0000] {standard_task_runner.py:60} INFO - Started process 125 to run task
+[2024-07-22T20:01:00.861+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmporj2ykwt']
+[2024-07-22T20:01:00.883+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask customer
+[2024-07-22T20:01:01.051+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 2aa012dff3cf
+[2024-07-22T20:01:02.445+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:01:02.446+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:01:02.486+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:01:02.510+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T200100, end_date=20240722T200102
+[2024-07-22T20:01:02.533+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 14 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 125)
+[2024-07-22T20:01:02.577+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:01:02.641+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:07:53.243+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:07:53.280+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:07:53.305+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:07:53.379+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:07:53.393+0000] {standard_task_runner.py:60} INFO - Started process 116 to run task
+[2024-07-22T20:07:53.404+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmppbs18697']
+[2024-07-22T20:07:53.414+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask customer
+[2024-07-22T20:07:53.630+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 05733b1af473
+[2024-07-22T20:07:55.209+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:07:55.211+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:07:55.234+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:07:55.246+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T200753, end_date=20240722T200755
+[2024-07-22T20:07:55.260+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 13 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 116)
+[2024-07-22T20:07:55.287+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:07:55.307+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:12:24.160+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:12:24.180+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:12:24.186+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:12:24.213+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:12:24.228+0000] {standard_task_runner.py:60} INFO - Started process 88 to run task
+[2024-07-22T20:12:24.233+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmph2a9w8mt']
+[2024-07-22T20:12:24.242+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask customer
+[2024-07-22T20:12:24.391+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 0a26f4611472
+[2024-07-22T20:12:25.221+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:12:25.231+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:12:25.491+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:12:25.578+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T201224, end_date=20240722T201225
+[2024-07-22T20:12:25.644+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 88)
+[2024-07-22T20:12:25.735+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:12:25.881+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:16:39.442+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:16:39.457+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:16:39.460+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:16:39.483+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:16:39.501+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-22T20:16:39.505+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp99f7jkc3']
+[2024-07-22T20:16:39.521+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask customer
+[2024-07-22T20:16:39.669+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 78ac63ab6c84
+[2024-07-22T20:16:40.412+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:16:40.415+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:16:40.855+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:16:40.928+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T201639, end_date=20240722T201640
+[2024-07-22T20:16:40.988+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 89)
+[2024-07-22T20:16:41.053+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:16:41.097+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:31:14.281+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:31:14.302+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:31:14.308+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:31:14.342+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:31:14.382+0000] {standard_task_runner.py:60} INFO - Started process 99 to run task
+[2024-07-22T20:31:14.399+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwgmrigrx']
+[2024-07-22T20:31:14.412+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask customer
+[2024-07-22T20:31:14.564+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 9126008e9d77
+[2024-07-22T20:31:15.618+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:31:15.620+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:31:15.677+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:31:15.698+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T203114, end_date=20240722T203115
+[2024-07-22T20:31:15.727+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 11 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 99)
+[2024-07-22T20:31:15.738+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:31:15.775+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:33:01.085+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:33:01.122+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:33:01.126+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:33:01.158+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:33:01.175+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-22T20:33:01.192+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp265kq7di']
+[2024-07-22T20:33:01.211+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask customer
+[2024-07-22T20:33:01.410+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host 79b906a44679
+[2024-07-22T20:33:02.622+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:33:02.632+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:33:02.680+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:33:02.800+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T203301, end_date=20240722T203302
+[2024-07-22T20:33:02.926+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 89)
+[2024-07-22T20:33:02.980+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:33:03.014+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:35:55.011+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:35:55.042+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:35:55.051+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:35:55.104+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:35:55.134+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-22T20:35:55.154+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp57b6bpvn']
+[2024-07-22T20:35:55.173+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask customer
+[2024-07-22T20:35:55.314+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host eba0c7ca727b
+[2024-07-22T20:35:56.340+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:35:56.351+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:35:56.386+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:35:56.422+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T203555, end_date=20240722T203556
+[2024-07-22T20:35:56.457+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 13 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 100)
+[2024-07-22T20:35:56.513+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:35:56.573+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:37:38.616+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:37:38.649+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:37:38.653+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:37:38.689+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:37:38.710+0000] {standard_task_runner.py:60} INFO - Started process 99 to run task
+[2024-07-22T20:37:38.738+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpp4ytwfcg']
+[2024-07-22T20:37:38.751+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask customer
+[2024-07-22T20:37:39.020+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host ca612ea69d67
+[2024-07-22T20:37:40.460+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:37:40.464+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:37:40.514+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:37:40.532+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T203738, end_date=20240722T203740
+[2024-07-22T20:37:40.557+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 99)
+[2024-07-22T20:37:40.599+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:37:40.627+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:48:35.717+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:48:35.769+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:48:35.771+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:48:35.840+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:48:35.852+0000] {standard_task_runner.py:60} INFO - Started process 109 to run task
+[2024-07-22T20:48:35.864+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpa13gh_o_']
+[2024-07-22T20:48:35.919+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask customer
+[2024-07-22T20:48:36.125+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host d9bd7bcefcfd
+[2024-07-22T20:48:37.447+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:48:37.450+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:48:37.491+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:48:37.525+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T204835, end_date=20240722T204837
+[2024-07-22T20:48:37.563+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 16 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 109)
+[2024-07-22T20:48:37.621+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:48:37.662+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:50:36.665+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:50:36.684+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:50:36.690+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:50:36.714+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:50:36.721+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-22T20:50:36.725+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpimx7sx5w']
+[2024-07-22T20:50:36.743+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask customer
+[2024-07-22T20:50:36.916+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host c43d948598a9
+[2024-07-22T20:50:38.340+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:50:38.352+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:50:38.405+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:50:38.507+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T205036, end_date=20240722T205038
+[2024-07-22T20:50:38.566+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 89)
+[2024-07-22T20:50:38.618+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:50:38.689+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:56:52.513+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:56:52.535+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:56:52.553+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:56:52.604+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:56:52.618+0000] {standard_task_runner.py:60} INFO - Started process 106 to run task
+[2024-07-22T20:56:52.648+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp508tf84j']
+[2024-07-22T20:56:52.658+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask customer
+[2024-07-22T20:56:52.827+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host b40f86dea2d7
+[2024-07-22T20:56:53.818+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:56:53.819+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T20:56:53.944+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T20:56:53.996+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T205652, end_date=20240722T205653
+[2024-07-22T20:56:54.085+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 106)
+[2024-07-22T20:56:54.160+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T20:56:54.253+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T21:02:40.184+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:02:40.215+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:02:40.217+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T21:02:40.253+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T21:02:40.267+0000] {standard_task_runner.py:60} INFO - Started process 116 to run task
+[2024-07-22T21:02:40.284+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmphfbiei60']
+[2024-07-22T21:02:40.299+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask customer
+[2024-07-22T21:02:40.465+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host fd3c041fbc80
+[2024-07-22T21:02:41.698+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T21:02:41.715+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T21:02:41.790+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T21:02:41.807+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T210240, end_date=20240722T210241
+[2024-07-22T21:02:41.831+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 116)
+[2024-07-22T21:02:41.851+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T21:02:41.870+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T21:05:27.994+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:05:28.010+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:05:28.011+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T21:05:28.038+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): customer> on 2024-07-21 00:00:00+00:00
+[2024-07-22T21:05:28.078+0000] {standard_task_runner.py:60} INFO - Started process 99 to run task
+[2024-07-22T21:05:28.085+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'customer', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwlok5pat']
+[2024-07-22T21:05:28.110+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask customer
+[2024-07-22T21:05:28.299+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.customer scheduled__2024-07-21T00:00:00+00:00 [running]> on host f59a56d3cdcb
+[2024-07-22T21:05:29.290+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='customer' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T21:05:29.297+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'customer' and Stage = 'stagingtodv'
+[2024-07-22T21:05:29.393+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 41, in process_table
+    tabletype = get_data_from_conf_table(table,stage)['tabletype'].values[0]
+  File "/opt/airflow/dags/dag.py", line 34, in get_data_from_conf_table
+    df.columns = [desc[0] for desc in cur.description]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 6002, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 730, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/managers.py", line 225, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/internals/base.py", line 70, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 15 elements
+[2024-07-22T21:05:29.440+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=stagingtodv, task_id=customer, execution_date=20240721T000000, start_date=20240722T210527, end_date=20240722T210529
+[2024-07-22T21:05:29.456+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 14 for task customer (Length mismatch: Expected axis has 0 elements, new values have 15 elements; 99)
+[2024-07-22T21:05:29.523+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-22T21:05:29.553+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

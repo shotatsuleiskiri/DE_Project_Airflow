@@ -1,0 +1,578 @@
+[2024-07-22T18:39:28.287+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:28.311+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T18:39:28.316+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T18:39:28.335+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T18:39:28.380+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp31303p7o']
+[2024-07-22T18:39:28.391+0000] {standard_task_runner.py:88} INFO - Job 36: Subtask country
+[2024-07-22T18:39:28.375+0000] {standard_task_runner.py:60} INFO - Started process 117 to run task
+[2024-07-22T18:39:28.538+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host ef8b8dee6045
+[2024-07-22T18:39:28.742+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T18:39:28.749+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T18:39:29.255+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T18:39:29.715+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T18:39:29.889+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T18:39:29.900+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T183928, end_date=20240722T183929
+[2024-07-22T18:39:29.962+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T18:39:30.009+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:05:06.852+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:05:06.890+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:05:06.892+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:05:06.946+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:05:06.962+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-22T19:05:06.970+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpm05m5cga']
+[2024-07-22T19:05:06.986+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T19:05:07.134+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host d97758bf7368
+[2024-07-22T19:05:08.363+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:05:08.397+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:05:08.516+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:05:08.831+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:05:08.844+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:05:08.853+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T190506, end_date=20240722T190508
+[2024-07-22T19:05:08.881+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:05:08.900+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:14:28.075+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:14:28.106+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:14:28.110+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:14:28.148+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:14:28.162+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-22T19:14:28.169+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp5i461y_m']
+[2024-07-22T19:14:28.182+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T19:14:28.372+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 06b045a8c1a2
+[2024-07-22T19:14:29.375+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:14:29.378+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:14:29.439+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:14:29.885+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:14:29.909+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:14:29.915+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T191428, end_date=20240722T191429
+[2024-07-22T19:14:29.933+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:14:29.949+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:18:50.140+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:18:50.167+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:18:50.170+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:18:50.199+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:18:50.227+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-22T19:18:50.256+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2dtdphb9']
+[2024-07-22T19:18:50.269+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask country
+[2024-07-22T19:18:50.464+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 59af9ef614d6
+[2024-07-22T19:18:50.765+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:18:50.770+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:18:51.404+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:18:51.513+0000] {logging_mixin.py:188} INFO - query select T.* from dbstaging.dvdrental.country T
+[2024-07-22T19:18:51.783+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:18:51.803+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:18:51.812+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T191850, end_date=20240722T191851
+[2024-07-22T19:18:51.844+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:18:51.856+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:25:03.995+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:25:04.009+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:25:04.010+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:25:04.040+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:25:04.054+0000] {standard_task_runner.py:60} INFO - Started process 89 to run task
+[2024-07-22T19:25:04.070+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpq0ufegbh']
+[2024-07-22T19:25:04.078+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask country
+[2024-07-22T19:25:04.262+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 54d412404717
+[2024-07-22T19:25:04.899+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:25:04.905+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:25:05.128+0000] {logging_mixin.py:188} INFO - select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:25:05.381+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:18:51.797576
+
+[1 rows x 15 columns]
+[2024-07-22T19:25:05.388+0000] {logging_mixin.py:188} INFO - query select T.* from dbstaging.dvdrental.country T
+[2024-07-22T19:25:05.965+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:25:05.986+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:25:05.993+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T192504, end_date=20240722T192505
+[2024-07-22T19:25:06.042+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:25:06.114+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:28:23.160+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:28:23.186+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:28:23.187+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:28:23.214+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:28:23.221+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-22T19:28:23.250+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpvf7a3yas']
+[2024-07-22T19:28:23.277+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T19:28:23.420+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host e6f3df1cbf4c
+[2024-07-22T19:28:24.888+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:28:24.893+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:28:24.918+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:28:24.951+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:25:05.973191
+
+[1 rows x 15 columns]
+[2024-07-22T19:28:24.954+0000] {logging_mixin.py:188} INFO - query select T.* from dbstaging.dvdrental.country T
+[2024-07-22T19:28:25.044+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:28:25.058+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:28:25.066+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T192823, end_date=20240722T192825
+[2024-07-22T19:28:25.112+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:28:25.125+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:30:32.071+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:30:32.104+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:30:32.116+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:30:32.144+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:30:32.162+0000] {standard_task_runner.py:60} INFO - Started process 102 to run task
+[2024-07-22T19:30:32.173+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp1xt52789']
+[2024-07-22T19:30:32.182+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask country
+[2024-07-22T19:30:32.360+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 96cb61053a1d
+[2024-07-22T19:30:33.713+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:30:33.720+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:30:33.776+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:30:33.843+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:28:25.053349
+
+[1 rows x 15 columns]
+[2024-07-22T19:30:33.849+0000] {logging_mixin.py:188} INFO - query select T.* from dbstaging.dvdrental.country T
+[2024-07-22T19:30:33.963+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:30:33.975+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:30:33.982+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T193032, end_date=20240722T193033
+[2024-07-22T19:30:34.015+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:30:34.034+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:38:48.993+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:38:49.006+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:38:49.018+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:38:49.045+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:38:49.055+0000] {standard_task_runner.py:60} INFO - Started process 130 to run task
+[2024-07-22T19:38:49.075+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpyphn0vxf']
+[2024-07-22T19:38:49.096+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask country
+[2024-07-22T19:38:49.229+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host f5ad498ee7ee
+[2024-07-22T19:38:50.772+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:38:50.783+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:38:50.868+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:38:50.932+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:30:33.973435
+
+[1 rows x 15 columns]
+[2024-07-22T19:38:50.936+0000] {logging_mixin.py:188} INFO - query select T.* from dbstaging.dvdrental.country T
+[2024-07-22T19:38:51.131+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:38:51.148+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:38:51.159+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T193848, end_date=20240722T193851
+[2024-07-22T19:38:51.188+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:38:51.204+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:43:44.530+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:43:44.549+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:43:44.550+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:43:44.589+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:43:44.651+0000] {standard_task_runner.py:60} INFO - Started process 117 to run task
+[2024-07-22T19:43:44.668+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp7fano7pr']
+[2024-07-22T19:43:44.687+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask country
+[2024-07-22T19:43:44.883+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 83712395e44a
+[2024-07-22T19:43:46.221+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:43:46.223+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:43:46.271+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:43:46.339+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:38:51.141301
+
+[1 rows x 15 columns]
+[2024-07-22T19:43:46.346+0000] {logging_mixin.py:188} INFO - query select T.* from dbstaging.dvdrental.country T
+[2024-07-22T19:43:46.553+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:43:46.567+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:43:46.577+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T194344, end_date=20240722T194346
+[2024-07-22T19:43:46.616+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:43:46.642+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:52:46.854+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:52:46.903+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:52:46.907+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:52:46.942+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:52:46.954+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-07-22T19:52:46.965+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpe2wro5ci']
+[2024-07-22T19:52:46.983+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask country
+[2024-07-22T19:52:47.158+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 6e14590d795e
+[2024-07-22T19:52:47.376+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:52:47.386+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:52:48.652+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:52:48.796+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:43:46.562944
+
+[1 rows x 15 columns]
+[2024-07-22T19:52:48.851+0000] {logging_mixin.py:188} INFO - DFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T19:52:49.043+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:52:49.063+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:52:49.070+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T195246, end_date=20240722T195249
+[2024-07-22T19:52:49.112+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:52:49.138+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T19:57:18.906+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:57:18.930+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T19:57:18.932+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T19:57:18.955+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T19:57:18.964+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2024-07-22T19:57:18.974+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmposyp14_0']
+[2024-07-22T19:57:18.987+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask country
+[2024-07-22T19:57:19.198+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 1ca6b70ca81e
+[2024-07-22T19:57:20.709+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T19:57:20.719+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:57:20.790+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T19:57:20.853+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:52:49.054955
+
+[1 rows x 15 columns]
+[2024-07-22T19:57:20.910+0000] {logging_mixin.py:188} INFO - DFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T19:57:21.029+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T19:57:21.039+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T19:57:21.048+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T195718, end_date=20240722T195721
+[2024-07-22T19:57:21.071+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T19:57:21.092+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:01:00.734+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:01:00.769+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:01:00.769+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:01:00.793+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:01:00.852+0000] {standard_task_runner.py:60} INFO - Started process 127 to run task
+[2024-07-22T20:01:00.892+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpmp0koj_1']
+[2024-07-22T20:01:00.907+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask country
+[2024-07-22T20:01:01.039+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 2aa012dff3cf
+[2024-07-22T20:01:02.403+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:01:02.409+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:01:02.452+0000] {logging_mixin.py:188} INFO - query select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:01:02.517+0000] {logging_mixin.py:188} INFO - DFFFFFFF    id sourcetablename  ...        stage              last_run_date
+0  17         country  ...  stagingtodv 2024-07-22 19:57:21.037308
+
+[1 rows x 15 columns]
+[2024-07-22T20:01:02.567+0000] {logging_mixin.py:188} INFO - DFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:01:02.747+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:01:02.761+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:01:02.768+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T200100, end_date=20240722T200102
+[2024-07-22T20:01:02.817+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:01:02.845+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:07:53.161+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:07:53.177+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:07:53.178+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:07:53.252+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:07:53.274+0000] {standard_task_runner.py:60} INFO - Started process 107 to run task
+[2024-07-22T20:07:53.299+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp__lb1aou']
+[2024-07-22T20:07:53.321+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask country
+[2024-07-22T20:07:53.627+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 05733b1af473
+[2024-07-22T20:07:55.162+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:07:55.166+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:07:55.266+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:07:55.427+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:07:55.440+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:07:55.448+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T200753, end_date=20240722T200755
+[2024-07-22T20:07:55.507+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:07:55.543+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:12:24.297+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:12:24.353+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:12:24.358+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:12:24.413+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:12:24.435+0000] {standard_task_runner.py:60} INFO - Started process 106 to run task
+[2024-07-22T20:12:24.446+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp0kv7ntrr']
+[2024-07-22T20:12:24.454+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T20:12:24.706+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 0a26f4611472
+[2024-07-22T20:12:25.988+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:12:25.994+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:12:26.215+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:12:26.487+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:12:26.513+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:12:26.521+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T201224, end_date=20240722T201226
+[2024-07-22T20:12:26.548+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:12:26.568+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:16:39.547+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:16:39.576+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:16:39.577+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:16:39.607+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:16:39.617+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-22T20:16:39.632+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpd2w4fuu0']
+[2024-07-22T20:16:39.644+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T20:16:39.785+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 78ac63ab6c84
+[2024-07-22T20:16:40.690+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:16:40.695+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:16:41.146+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:16:41.368+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:16:41.392+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:16:41.401+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T201639, end_date=20240722T201641
+[2024-07-22T20:16:41.452+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:16:41.470+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:31:14.276+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:31:14.297+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:31:14.300+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:31:14.339+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:31:14.374+0000] {standard_task_runner.py:60} INFO - Started process 101 to run task
+[2024-07-22T20:31:14.385+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxgyjinba']
+[2024-07-22T20:31:14.394+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask country
+[2024-07-22T20:31:14.551+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 9126008e9d77
+[2024-07-22T20:31:15.681+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:31:15.688+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:31:15.793+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:31:16.005+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:31:16.024+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:31:16.031+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T203114, end_date=20240722T203116
+[2024-07-22T20:31:16.071+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:31:16.097+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:33:01.102+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:33:01.117+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:33:01.119+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:33:01.141+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:33:01.152+0000] {standard_task_runner.py:60} INFO - Started process 87 to run task
+[2024-07-22T20:33:01.189+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp3q66vhd1']
+[2024-07-22T20:33:01.204+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T20:33:01.430+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host 79b906a44679
+[2024-07-22T20:33:02.086+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:33:02.091+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:33:02.934+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:33:03.278+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:33:03.296+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:33:03.303+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T203301, end_date=20240722T203303
+[2024-07-22T20:33:03.356+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:33:03.400+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:35:54.914+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:35:54.971+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:35:54.976+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:35:55.026+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:35:55.045+0000] {standard_task_runner.py:60} INFO - Started process 96 to run task
+[2024-07-22T20:35:55.111+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpusjvxopi']
+[2024-07-22T20:35:55.133+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask country
+[2024-07-22T20:35:55.360+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host eba0c7ca727b
+[2024-07-22T20:35:56.748+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:35:56.753+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:35:56.899+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:35:57.077+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:35:57.093+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:35:57.101+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T203554, end_date=20240722T203557
+[2024-07-22T20:35:57.144+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:35:57.162+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:37:38.696+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:37:38.727+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:37:38.732+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:37:38.781+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:37:38.795+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-07-22T20:37:38.811+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpx4ltw68h']
+[2024-07-22T20:37:38.823+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T20:37:38.979+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host ca612ea69d67
+[2024-07-22T20:37:40.529+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:37:40.532+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:37:40.620+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:37:40.728+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:37:40.742+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:37:40.751+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T203738, end_date=20240722T203740
+[2024-07-22T20:37:40.784+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:37:40.798+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:48:35.775+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:48:35.806+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:48:35.812+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:48:35.852+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:48:35.896+0000] {standard_task_runner.py:60} INFO - Started process 110 to run task
+[2024-07-22T20:48:35.913+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpras4j4il']
+[2024-07-22T20:48:35.957+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask country
+[2024-07-22T20:48:36.152+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host d9bd7bcefcfd
+[2024-07-22T20:48:36.480+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:48:36.486+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:48:37.685+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:48:37.838+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:48:37.859+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:48:37.871+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T204835, end_date=20240722T204837
+[2024-07-22T20:48:37.903+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:48:37.925+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:50:36.831+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:50:36.876+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:50:36.893+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:50:36.954+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:50:36.977+0000] {standard_task_runner.py:60} INFO - Started process 103 to run task
+[2024-07-22T20:50:37.002+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmps09_qw0c']
+[2024-07-22T20:50:37.009+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask country
+[2024-07-22T20:50:37.193+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host c43d948598a9
+[2024-07-22T20:50:38.740+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:50:38.746+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:50:38.864+0000] {logging_mixin.py:188} INFO - DFFFFFFFFFDFFFFFFFFF        0                     1                   2
+0      1           Afghanistan 2006-02-15 09:44:00
+1      2               Algeria 2006-02-15 09:44:00
+2      3        American Samoa 2006-02-15 09:44:00
+3      4                Angola 2006-02-15 09:44:00
+4      5              Anguilla 2006-02-15 09:44:00
+..   ...                   ...                 ...
+104  105               Vietnam 2006-02-15 09:44:00
+105  106  Virgin Islands, U.S. 2006-02-15 09:44:00
+106  107                 Yemen 2006-02-15 09:44:00
+107  108            Yugoslavia 2006-02-15 09:44:00
+108  109                Zambia 2006-02-15 09:44:00
+
+[109 rows x 3 columns]
+[2024-07-22T20:50:39.002+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:50:39.027+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:50:39.038+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T205036, end_date=20240722T205039
+[2024-07-22T20:50:39.076+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:50:39.106+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T20:56:52.515+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:56:52.534+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T20:56:52.548+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T20:56:52.610+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T20:56:52.642+0000] {standard_task_runner.py:60} INFO - Started process 108 to run task
+[2024-07-22T20:56:52.652+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4e7hm8c5']
+[2024-07-22T20:56:52.660+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask country
+[2024-07-22T20:56:52.916+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host b40f86dea2d7
+[2024-07-22T20:56:54.192+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T20:56:54.211+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T20:56:54.807+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T20:56:54.936+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T20:56:54.966+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T205652, end_date=20240722T205654
+[2024-07-22T20:56:55.041+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T20:56:55.082+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T21:02:40.470+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:02:40.523+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:02:40.525+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T21:02:40.563+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T21:02:40.580+0000] {standard_task_runner.py:60} INFO - Started process 127 to run task
+[2024-07-22T21:02:40.588+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpt66fy0qy']
+[2024-07-22T21:02:40.593+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask country
+[2024-07-22T21:02:40.852+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host fd3c041fbc80
+[2024-07-22T21:02:42.068+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T21:02:42.070+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T21:02:42.236+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T21:02:42.261+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T21:02:42.268+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T210240, end_date=20240722T210242
+[2024-07-22T21:02:42.316+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T21:02:42.340+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-22T21:05:27.929+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:05:27.952+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [queued]>
+[2024-07-22T21:05:27.953+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-07-22T21:05:27.976+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): country> on 2024-07-21 00:00:00+00:00
+[2024-07-22T21:05:27.985+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2024-07-22T21:05:27.996+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'stagingtodv', 'country', 'scheduled__2024-07-21T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2yo2lerk']
+[2024-07-22T21:05:28.023+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask country
+[2024-07-22T21:05:28.214+0000] {task_command.py:423} INFO - Running <TaskInstance: stagingtodv.country scheduled__2024-07-21T00:00:00+00:00 [running]> on host f59a56d3cdcb
+[2024-07-22T21:05:29.517+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stagingtodv' AIRFLOW_CTX_TASK_ID='country' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-21T00:00:00+00:00'
+[2024-07-22T21:05:29.521+0000] {logging_mixin.py:188} INFO - -------------------------------------------- select *  from etlconf.Etl_Process_Mapping where SourceTableName = 'country' and Stage = 'stagingtodv'
+[2024-07-22T21:05:29.693+0000] {logging_mixin.py:188} INFO - update etlconf.Etl_Process_Mapping T set last_run_date = current_timestamp where destdbname='dbdv' and destschema='dvdrental' and desttablename='country';
+[2024-07-22T21:05:29.710+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-07-22T21:05:29.724+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=stagingtodv, task_id=country, execution_date=20240721T000000, start_date=20240722T210527, end_date=20240722T210529
+[2024-07-22T21:05:29.751+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-07-22T21:05:29.783+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
